@@ -1,11 +1,12 @@
-#ifndef CLIENT_H
-#define CLIENT_H
+#ifndef CLIENTS_H
+#define CLIENTS_H
 
 
-class client
+class clients
 {
 public:
-    client();
+    clients();
+    ~clients();
 };
 
-#endif // CLIENT_H
+#endif // CLIENTS_H

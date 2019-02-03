@@ -1,22 +1,27 @@
 #ifndef STUFFWINDOW_H
 #define STUFFWINDOW_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
-class stuffwindow;
+class StuffWindow;
 }
 
-class stuffwindow : public QWidget
+class StuffWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit stuffwindow(QWidget *parent = 0);
-    ~stuffwindow();
+    explicit StuffWindow(QWidget *parent = 0);
+    ~StuffWindow();
+
+private slots:
+    void on_animalList_clicked(const QModelIndex &index);
+
 
 private:
-    Ui::stuffwindow *ui;
+    Ui::StuffWindow *ui;
+
 };
 
 #endif // STUFFWINDOW_H

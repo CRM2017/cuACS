@@ -12,3 +12,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
+void MainWindow::on_stuffButton_clicked()
+{
+
+    stuffWindow = new StuffWindow(this);
+    stuffWindow->show();
+
+}

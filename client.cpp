@@ -1,6 +1,6 @@
-#include "client.h"
+#include "clients.h"
 
-client::client()
+clients::clients()
 {
 
 }

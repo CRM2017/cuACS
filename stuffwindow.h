@@ -17,14 +17,15 @@ class StuffWindow : public QDialog
 public:
     explicit StuffWindow(StuffControl &control ,QWidget *parent = 0);
     ~StuffWindow();
+    void displayAnimalList();
 
 private slots:
     void on_addAnimalButton_clicked();
 
 private:
     StuffControl &_control;
-    //Ui::stuffwindow *ui;
-    std::unique_ptr<Ui::StuffWindow> ui;
+    Ui::StuffWindow *ui;
+//    std::unique_ptr<Ui::StuffWindow> ui;
 };
 
 #endif // STUFFWINDOW_H

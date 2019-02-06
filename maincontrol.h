@@ -13,7 +13,7 @@ public:
     MainControl();
     ~MainControl();
     void displayStuffWindow();
-    void displayClinetWindow();
+    void displayClientWindow();
 
 private:
     std::unique_ptr<MainWindow> _view;

@@ -35,29 +35,32 @@
      <x>10</x>
      <y>20</y>
      <width>331</width>
-     <height>306</height>
+     <height>335</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="id"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_24">
       <property name="text">
        <string>name</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="name"/>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="typeLabel">
       <property name="text">
        <string>type</string>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="type"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_3">
@@ -75,6 +78,9 @@
        <string>gender</string>
       </property>
      </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="comboBox_4"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_5">
@@ -113,6 +119,9 @@
       </property>
      </widget>
     </item>
+    <item row="8" column="1">
+     <widget class="QComboBox" name="comboBox_3"/>
+    </item>
     <item row="9" column="0">
      <widget class="QLabel" name="label_9">
       <property name="text">
@@ -123,21 +132,12 @@
     <item row="9" column="1">
      <widget class="QComboBox" name="comboBox_2"/>
     </item>
-    <item row="8" column="1">
-     <widget class="QComboBox" name="comboBox_3"/>
-    </item>
-    <item row="4" column="1">
-     <widget class="QComboBox" name="comboBox_4"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_24">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
       <property name="text">
        <string>ID</string>
       </property>
      </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="ID"/>
     </item>
    </layout>
   </widget>
@@ -193,7 +193,7 @@
     <item row="3" column="0">
      <widget class="QLabel" name="label_13">
       <property name="text">
-       <string>persionality</string>
+       <string>personality</string>
       </property>
      </widget>
     </item>
@@ -301,8 +301,8 @@
   <widget class="QWidget" name="formLayoutWidget_3">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>329</y>
+     <x>10</x>
+     <y>330</y>
      <width>331</width>
      <height>291</height>
     </rect>

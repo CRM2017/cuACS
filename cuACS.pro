@@ -3,12 +3,13 @@
 # Project created by QtCreator 2019-01-27T20:57:27
 #
 #-------------------------------------------------
-
+QT       += core sql
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = cuACS
+CONFIG   += console
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,7 +26,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     animalprofile.cpp \
-    animals.cpp \
     client.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -33,11 +33,13 @@ SOURCES += \
     stuffwindow.cpp \
     stuffcontrol.cpp \
     manageanimalwindow.cpp \
-    manageanimalcontrol.cpp
+    manageanimalcontrol.cpp \
+    animal.cpp \
+    database.cpp \
+    databasecontrol.cpp
 
 HEADERS += \
     animalprofile.h \
-    animals.h \
     mainwindow.h \
     client.h \
     maincontrol.h \
@@ -45,7 +47,10 @@ HEADERS += \
     stuffcontrol.h \
     storgePtrCollection.h \
     manageanimalwindow.h \
-    manageanimalcontrol.h
+    manageanimalcontrol.h \
+    animal.h \
+    database.h \
+    databasecontrol.h
 
 
 FORMS += \

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="clinetButton">
+   <widget class="QPushButton" name="clientButton">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -24,13 +24,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>Clinet</string>
+     <string>Client</string>
     </property>
    </widget>
    <widget class="QPushButton" name="stuffButton">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>90</x>
       <y>100</y>
       <width>83</width>
       <height>25</height>

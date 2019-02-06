@@ -9,6 +9,7 @@ class ManageAnimalControl
 public:
     ManageAnimalControl();
     ~ManageAnimalControl();
+    void createAnimal(int id, QString name, QString type);
 
 private:
     ManageAnimalWindow _view;

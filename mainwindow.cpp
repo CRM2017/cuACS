@@ -4,9 +4,9 @@
 
 MainWindow::MainWindow(MainControl &control, QWidget *parent) :
     QMainWindow(parent), _control(control),
-    _ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow)
 {
-    _ui->setupUi(this);
+    ui->setupUi(this);
 }
 
 MainWindow::~MainWindow()
@@ -18,6 +18,6 @@ void MainWindow::on_stuffButton_clicked(){
     _control.displayStuffWindow();
 }
 
-void MainWindow::on_clinetButton_clicked(){
-    //D1 do nothing
+void MainWindow::on_clientButton_clicked(){
+
 }

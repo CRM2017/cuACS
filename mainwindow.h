@@ -20,11 +20,12 @@ public:
 
 private slots:
     void on_stuffButton_clicked();
-    void on_clinetButton_clicked();
+    void on_clientButton_clicked();
 
 private:
     MainControl& _control;
-    std::unique_ptr<Ui::MainWindow> _ui;
+    Ui:: MainWindow *ui;
+//  std::unique_ptr<Ui::MainWindow> _ui;
 };
 
 #endif // MAINWINDOW_H

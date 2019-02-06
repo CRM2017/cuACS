@@ -17,7 +17,7 @@ void MainControl::displayStuffWindow(){
 
 }
 
-void MainControl::displayClinetWindow(){
+void MainControl::displayClientWindow(){
     //D1 do nothing
 }
 

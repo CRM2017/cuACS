@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>783</width>
-    <height>614</height>
+    <width>792</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-10</y>
+     <y>10</y>
      <width>781</width>
      <height>621</height>
     </rect>
@@ -35,15 +35,29 @@
        <widget class="QWidget" name="verticalLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>-1</x>
-          <y>-6</y>
+          <x>0</x>
+          <y>0</y>
           <width>771</width>
           <height>561</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0" rowspan="3">
-          <widget class="QTableWidget" name="AnimalInfoTable">
+         <item row="1" column="1">
+          <widget class="QPushButton" name="detailsButton">
+           <property name="text">
+            <string>details..</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="addAnimalButton">
+           <property name="text">
+            <string>add animal</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="6">
+          <widget class="QTableWidget" name="AnimalListTable">
            <column>
             <property name="text">
              <string>ID</string>
@@ -59,20 +73,6 @@
              <string>Type</string>
             </property>
            </column>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="addAnimalButton">
-           <property name="text">
-            <string>add animal</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="pushButton">
-           <property name="text">
-            <string>details..</string>
-           </property>
           </widget>
          </item>
         </layout>
@@ -95,7 +95,7 @@
          <item row="0" column="0">
           <widget class="QPushButton" name="pushButton_2">
            <property name="text">
-            <string>add clinet</string>
+            <string>add client</string>
            </property>
           </widget>
          </item>

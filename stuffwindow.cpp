@@ -9,7 +9,7 @@ StuffWindow::StuffWindow(StuffControl &control , QWidget *parent) :
     QDialog(parent),
     ui(new Ui::StuffWindow)
 {
-
+    ui->setupUi(this);
     displayAnimalList();
 
 }
@@ -20,7 +20,7 @@ StuffWindow::~StuffWindow()
 }
 
 void StuffWindow:: displayAnimalList(){
-    ui->setupUi(this);
+
     DatabaseControl _dbcontrol;
 
     int _animalsNum = _dbcontrol.getIDList().size();

@@ -6,7 +6,7 @@ using namespace std;
 class Animal
 {
 public:
-    Animal(int id, QString name, QString type);
+    Animal(const int id, const QString &name, const QString &type);
     ~Animal();
     int getId() const;
     QString getName() const;

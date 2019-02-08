@@ -29,10 +29,12 @@ private slots:
     void on_type_textEdited(const QString &arg1);
 
 
+    void on_submitButton_clicked();
+
 private:
     ManageAnimalControl &_control;
     Ui:: ManageAnimalWindow *ui;
-    QString _id;
+    int _id;
     QString _name;
     QString _type;
 //    std::unique_ptr<Ui::ManageAnimalWindow> ui;

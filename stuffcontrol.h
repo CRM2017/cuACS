@@ -11,6 +11,7 @@ public:
     StuffControl();
     ~StuffControl();
     void displayAnimalInfoWindow();
+    void show();
 
 private:
     StuffWindow _view;

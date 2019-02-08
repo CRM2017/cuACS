@@ -11,7 +11,7 @@ public:
     ~Database();
     void disconnectDB();
     void createAnimalTable();
-    void addAnimal(Animal aAnimal);
+    void addAnimal(Animal *aAnimal);
     void queryID();
     vector <int> getIDList();
     QString getNameByID();

@@ -12,10 +12,13 @@ MainControl::MainControl()
 MainControl::~MainControl(){}
 
 void MainControl::displayStuffWindow(){
-    _view->close();
+
     StuffControl st;
 
+
 }
+
+
 
 void MainControl::displayClientWindow(){
     //D1 do nothing

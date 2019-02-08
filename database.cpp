@@ -42,7 +42,7 @@ void Database:: createAnimalTable(){
 
 }
 
-void Database:: addAnimal(Animal aAnimal){
+void Database:: addAnimal(Animal *aAnimal){
 
     QString insertAnimal = "INSERT INTO animaltable ("
                            "ID,"
@@ -51,9 +51,9 @@ void Database:: addAnimal(Animal aAnimal){
                            "VALUES (:ID,:Name,:Type);";
     QSqlQuery qry;
     qry.prepare(insertAnimal);
-    qry.addBindValue(aAnimal.getId());
-    qry.addBindValue(aAnimal.getName());
-    qry.addBindValue(aAnimal.getType());
+    qry.addBindValue(aAnimal->getId());
+    qry.addBindValue(aAnimal->getName());
+    qry.addBindValue(aAnimal->getType());
     if (!qry.exec())
     {
         qDebug()<<"Adding Error"<< qry.lastError();

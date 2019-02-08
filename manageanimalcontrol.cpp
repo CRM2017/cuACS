@@ -12,7 +12,11 @@ ManageAnimalControl::ManageAnimalControl() : _view(*this)
 ManageAnimalControl::~ManageAnimalControl(){
 }
 
-void ManageAnimalControl::createAnimal(int id, QString name, QString type){
-    Animal animal(id, name, type);
+//void ManageAnimalControl::createAnimal(int id, const QString &name, QString &type){
+//    Animal animal(id, name, type);
 
+//}
+
+void ManageAnimalControl:: close(){
+    _view.close();
 }

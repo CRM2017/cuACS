@@ -2,7 +2,7 @@
 #include "databasecontrol.h"
 
 
-Animal::Animal(int id, QString name, QString type): _id(id), _name(name), _type(type)
+Animal::Animal(const int id, const QString& name, const QString &type): _id(id), _name(name), _type(type)
 {
 
 }

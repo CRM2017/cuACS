@@ -12,7 +12,7 @@ public:
     DatabaseControl();
     ~DatabaseControl();
     void initAnimals();
-    void insertAnimal(Animal a);
+    void insertAnimal(Animal *a);
     vector <int> getIDList();
     QString getNameByID();
     QString getTyoeByID();

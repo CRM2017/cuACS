@@ -9,14 +9,17 @@ class Database
 public:
     Database();
     ~Database();
+    void disconnectDB();
     void createAnimalTable();
     void addAnimal(Animal aAnimal);
-    vector<int> getIDList();
+    void queryID();
+    vector <int> getIDList();
     QString getNameByID();
     QString getTyoeByID();
 
 private:
     QSqlDatabase _db;
+    vector <int> _IDList;
 };
 
 #endif // DATABASE_H

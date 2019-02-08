@@ -12,11 +12,15 @@ Database::Database()
 
 Database:: ~Database()
 {
-    if (_db.isOpen())
-        {
-            _db.close();
-             qDebug()<<"Database closed";
-        }
+
+}
+
+void Database:: disconnectDB(){
+    if (!_db.open()){
+        _db.close();
+         qDebug()<<"Database closed: ";
+    }
+
 }
 
 void Database:: createAnimalTable(){
@@ -56,7 +60,7 @@ void Database:: addAnimal(Animal aAnimal){
     }
 }
 
-vector<int> Database::getIDList(){
+void Database::queryID(){
     vector<int> ids;
      QString selectID = "select ID from animaltable;";
      QSqlQuery qry;
@@ -73,9 +77,14 @@ vector<int> Database::getIDList(){
          }
      }
 
-     return ids;
+      _IDList = ids;
 }
 
+vector<int> Database:: getIDList(){
+    queryID();
+    qDebug()<<"in databse: getid:"<< _IDList.at(0);
+    return _IDList;
+}
 QString Database:: getNameByID(){}
 QString Database:: getTyoeByID(){}
 

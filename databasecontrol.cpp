@@ -3,13 +3,13 @@
 
 DatabaseControl::DatabaseControl() :_db (new Database())
 {
-
     initAnimals();
 
 }
 
 DatabaseControl:: ~DatabaseControl()
 {
+    _db->disconnectDB();
     delete _db;
 }
 

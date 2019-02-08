@@ -1,11 +1,11 @@
 #include "manageanimalcontrol.h"
 #include "animal.h"
+#include <QDebug>
 
 
-ManageAnimalControl::ManageAnimalControl() : _view(*this)
+ManageAnimalControl::ManageAnimalControl()
 {
-    _view.setModal(true);
-    _view.exec();
+    _view = new ManageAnimalWindow(*this);
 
 }
 
@@ -17,6 +17,16 @@ ManageAnimalControl::~ManageAnimalControl(){
 
 //}
 
+void ManageAnimalControl:: show(){
+    qDebug()<< "animal creating window opend";
+    _view->show();
+}
+
+
 void ManageAnimalControl:: close(){
-    _view.close();
+    qDebug()<< "animal creating window closed";
+    _view->close();
+}
+void ManageAnimalControl:: updateAnimalDetailsFromDB(){
+    _view->updateTextEditFromDB();
 }

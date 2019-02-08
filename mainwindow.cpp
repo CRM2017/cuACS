@@ -11,7 +11,7 @@ MainWindow::MainWindow(MainControl &control, QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    //delete ui;
+    delete ui;
 }
 
 void MainWindow::on_stuffButton_clicked(){

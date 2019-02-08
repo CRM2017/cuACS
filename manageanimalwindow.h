@@ -17,10 +17,8 @@ class ManageAnimalWindow : public QDialog
 public:
     explicit ManageAnimalWindow(ManageAnimalControl &control ,QWidget *parent = 0);
     ~ManageAnimalWindow();
-    void displayAddedAnimal();
 
 private slots:
-
 
     void on_id_textEdited(const QString &arg1);
 
@@ -28,8 +26,10 @@ private slots:
 
     void on_type_textEdited(const QString &arg1);
 
-
     void on_submitButton_clicked();
+
+public slots:
+    void updateTextEditFromDB();
 
 private:
     ManageAnimalControl &_control;

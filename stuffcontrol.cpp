@@ -1,23 +1,42 @@
 #include "stuffcontrol.h"
-#include "manageanimalcontrol.h"
 
-StuffControl::StuffControl() : _view(*this)
+#include <QDebug>
+
+StuffControl::StuffControl()
 {
-    _view.setModal(true);
-    _view.exec();
+    _view = new StuffWindow(*this);
 
 }
 
 StuffControl::~StuffControl(){
+
 }
 
+void StuffControl::update(){
+    _view->update();
+     qDebug()<< "stuffWindow updated";
+}
+
+void StuffControl::close(){
+    _view->close();
+    qDebug()<< "stuffWindow closed";
+}
 void StuffControl::show(){
-    _view.show();
+    _view->show();
+     qDebug()<< "stuffWindow opened";
 }
 
 void StuffControl::displayAnimalInfoWindow(){
-    ManageAnimalControl ma;
-    _view.close();
+    ManageAnimalControl m;
+    m.show();
+
+}
+
+void StuffControl::displayAnimalViewWindow(){
+    ManageAnimalControl m;
+    m.updateAnimalDetailsFromDB();
+    m.show();
+
 }
 
 

@@ -16,7 +16,8 @@ StuffWindow::StuffWindow(StuffControl &control , QWidget *parent) :
 
 StuffWindow::~StuffWindow()
 {
-    //delete ui;
+    qDebug()<<"StuffWindow deleted";
+    delete ui;
 }
 
 void StuffWindow:: displayAnimalList(){
@@ -40,8 +41,24 @@ void StuffWindow::on_addAnimalButton_clicked(){
 
     _control.displayAnimalInfoWindow();
 
+
 }
 
 
+void StuffWindow::on_updateButton_clicked()
+{
+    displayAnimalList();
+}
 
+void StuffWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
+{
+    qDebug()<<"animalist index clicked: "<< index;
 
+    _control.displayAnimalViewWindow();
+
+}
+
+void StuffWindow::on_viewButton_clicked()
+{
+
+}

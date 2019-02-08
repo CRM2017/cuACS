@@ -14,6 +14,7 @@ MainControl::~MainControl(){}
 void MainControl::displayStuffWindow(){
 
     StuffControl st;
+    st.show();
 
 
 }

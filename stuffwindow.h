@@ -22,6 +22,11 @@ public:
 
 private slots:
     void on_addAnimalButton_clicked();
+    void on_updateButton_clicked();
+
+    void on_AnimalListTable_doubleClicked(const QModelIndex &index);
+
+    void on_viewButton_clicked();
 
 private:
     StuffControl &_control;

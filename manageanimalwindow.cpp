@@ -40,9 +40,6 @@ void ManageAnimalWindow::on_type_textEdited(const QString &arg1)
     _type = arg1;
 }
 
-void ManageAnimalWindow::displayAddedAnimal(){
-
-}
 
 
 void ManageAnimalWindow::on_submitButton_clicked()
@@ -50,7 +47,14 @@ void ManageAnimalWindow::on_submitButton_clicked()
     DatabaseControl dbcontrol;
     Animal *newAnimal = new Animal(_id, _name, _type);
     dbcontrol.insertAnimal(newAnimal);
-    StuffControl sfcontrol;
-    sfcontrol.show();
+}
+
+void ManageAnimalWindow::updateTextEditFromDB(){
+    ui->id->setText("777");
+    ui->name->setText("zixuan");
+    ui->type->setText("Fish");
+    ui->id->setEnabled(false);
+       ui->name->setEnabled(false);
+          ui->type->setEnabled(false);
 
 }

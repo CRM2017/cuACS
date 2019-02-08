@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <memory>
+#include "databasecontrol.h"
 
 class StuffControl;
 
@@ -15,7 +16,7 @@ class StuffWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit StuffWindow(StuffControl &control ,QWidget *parent = 0);
+    explicit StuffWindow(StuffControl &control,QWidget *parent = 0);
     ~StuffWindow();
     void displayAnimalList();
 
@@ -25,6 +26,7 @@ private slots:
 private:
     StuffControl &_control;
     Ui::StuffWindow *ui;
+
 //    std::unique_ptr<Ui::StuffWindow> ui;
 };
 

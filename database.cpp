@@ -5,7 +5,21 @@ Database::Database()
 {
     _db = QSqlDatabase::addDatabase("QSQLITE");
     _db.setDatabaseName("./cuACSdb.sqlite");
+    createAnimalTable();
 
+
+}
+
+Database:: ~Database()
+{
+    if (_db.isOpen())
+        {
+            _db.close();
+             qDebug()<<"Database closed";
+        }
+}
+
+void Database:: createAnimalTable(){
     if (!_db.open())
     {
         qDebug()<<"Fail to open database";
@@ -21,15 +35,7 @@ Database::Database()
     {
         qDebug()<<"Database create error: "<< qry.lastError();
     }
-}
 
-Database:: ~Database()
-{
-    if (_db.isOpen())
-        {
-            _db.close();
-             qDebug()<<"Database closed";
-        }
 }
 
 void Database:: addAnimal(Animal aAnimal){
@@ -62,7 +68,7 @@ vector<int> Database::getIDList(){
      else
      {
          while(qry.next()){
-            qDebug()<<"select id: "<<qry.value(0);
+            qDebug()<<"select id: "<<qry.value(0).toInt();
            ids.push_back(qry.value(0).toInt());
          }
      }
@@ -74,8 +80,4 @@ QString Database:: getNameByID(){}
 QString Database:: getTyoeByID(){}
 
 
-
-QSqlDatabase Database:: getDB(){
-    return _db;
-}
 

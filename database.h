@@ -9,7 +9,7 @@ class Database
 public:
     Database();
     ~Database();
-    QSqlDatabase getDB();
+    void createAnimalTable();
     void addAnimal(Animal aAnimal);
     vector<int> getIDList();
     QString getNameByID();

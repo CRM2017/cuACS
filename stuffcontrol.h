@@ -2,7 +2,8 @@
 #define STUFFCONTROL_H
 
 #include "stuffwindow.h"
-#include "stuffcontrol.h"
+#include "databasecontrol.h"
+
 
 class StuffControl
 {
@@ -13,6 +14,7 @@ public:
 
 private:
     StuffWindow _view;
+
 };
 
 #endif // STUFFCONTROL_H

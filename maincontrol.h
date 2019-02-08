@@ -17,6 +17,7 @@ public:
 
 private:
     std::unique_ptr<MainWindow> _view;
+
 };
 
 #endif // MAINCONTROL_H

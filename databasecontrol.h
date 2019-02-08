@@ -17,12 +17,13 @@ public:
     QString getNameByID();
     QString getTyoeByID();
     vector<Animal> getAnimalList();
-    Database getDB();
+
+    Database *_db;
 
 
 
 private:
-    Database _db;
+
 
 };
 

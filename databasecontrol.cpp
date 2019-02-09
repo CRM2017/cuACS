@@ -24,6 +24,7 @@ void DatabaseControl::initAnimals(){
     insertAnimal(a2);
     insertAnimal(a3);
 
+
 }
 
 vector<int> DatabaseControl::getIDList(){

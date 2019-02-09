@@ -58,8 +58,9 @@ void ManageAnimalWindow::updateTextEditFromDB(int col){
     ui->id->setText( QString::number(id));
     ui->name->setText(name);
     ui->type->setText(type);
-    ui->id->setEnabled(false);
-    ui->name->setEnabled(false);
-    ui->type->setEnabled(false);
+    ui->id->setReadOnly(true);
+    ui->name->setReadOnly(true);
+    ui->type->setReadOnly(true);
+
 
 }

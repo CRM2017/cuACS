@@ -1,7 +1,6 @@
 #include "manageanimalwindow.h"
 #include "manageanimalwindow.h"
 #include "ui_manageanimalwindow.h"
-#include "databasecontrol.h"
 #include "animal.h"
 #include "stuffwindow.h"
 #include "stuffcontrol.h"
@@ -40,7 +39,9 @@ void ManageAnimalWindow::on_type_textEdited(const QString &arg1)
     _type = arg1;
 }
 
-
+void ManageAnimalWindow:: hideSubmitButton(){
+    ui->submitButton->hide();
+}
 
 void ManageAnimalWindow::on_submitButton_clicked()
 {
@@ -49,12 +50,16 @@ void ManageAnimalWindow::on_submitButton_clicked()
     dbcontrol.insertAnimal(newAnimal);
 }
 
-void ManageAnimalWindow::updateTextEditFromDB(){
-    ui->id->setText("777");
-    ui->name->setText("zixuan");
-    ui->type->setText("Fish");
+void ManageAnimalWindow::updateTextEditFromDB(int col){
+    DatabaseControl _dbControl;
+    int id = _dbControl.getIDList().at(col);
+    QString name = _dbControl.getNameList().at(col);
+    QString type= _dbControl.getTypeList().at(col);
+    ui->id->setText( QString::number(id));
+    ui->name->setText(name);
+    ui->type->setText(type);
     ui->id->setEnabled(false);
-       ui->name->setEnabled(false);
-          ui->type->setEnabled(false);
+    ui->name->setEnabled(false);
+    ui->type->setEnabled(false);
 
 }

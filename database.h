@@ -14,12 +14,14 @@ public:
     void addAnimal(Animal *aAnimal);
     void queryID();
     vector <int> getIDList();
-    QString getNameByID();
-    QString getTyoeByID();
+    vector<QString> getNameList();
+    vector<QString> getTypeList();
 
 private:
     QSqlDatabase _db;
     vector <int> _IDList;
+    vector <QString> _nameList;
+    vector <QString> _typeList;
 };
 
 #endif // DATABASE_H

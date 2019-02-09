@@ -8,7 +8,8 @@ class ManageAnimalControl
 public:
     ManageAnimalControl();
     ~ManageAnimalControl();
-    void updateAnimalDetailsFromDB();
+    void updateAnimalDetailsFromDB(int col);
+    void hideSubmitButton();
     void show();
     void close();
 //    void createAnimal(int id, QString name, QString type);

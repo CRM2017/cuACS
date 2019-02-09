@@ -4,6 +4,7 @@
 #include <vector>
 #include "database.h"
 #include "animal.h"
+#include <QString>
 
 using namespace std;
 class DatabaseControl
@@ -14,9 +15,9 @@ public:
     void initAnimals();
     void insertAnimal(Animal *a);
     vector <int> getIDList();
-    QString getNameByID();
-    QString getTyoeByID();
-    vector<Animal> getAnimalList();
+    vector<QString> getNameList();
+    vector<QString> getTypeList();
+
 
     Database *_db;
 

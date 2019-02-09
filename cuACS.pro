@@ -37,9 +37,7 @@ SOURCES += \
     animal.cpp \
     database.cpp \
     databasecontrol.cpp \
-    controllermanager.cpp \
-    animalviewwindow.cpp \
-    animalviewcontrol.cpp
+    controllermanager.cpp
 
 HEADERS += \
     animalprofile.h \
@@ -54,9 +52,7 @@ HEADERS += \
     animal.h \
     database.h \
     databasecontrol.h \
-    controllermanager.h \
-    animalviewwindow.h \
-    animalviewcontrol.h
+    controllermanager.h
 
 
 FORMS += \

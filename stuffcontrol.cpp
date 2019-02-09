@@ -32,9 +32,10 @@ void StuffControl::displayAnimalInfoWindow(){
 
 }
 
-void StuffControl::displayAnimalViewWindow(){
+void StuffControl::displayAnimalViewWindow(int col){
     ManageAnimalControl m;
-    m.updateAnimalDetailsFromDB();
+    m.hideSubmitButton();
+    m.updateAnimalDetailsFromDB(col);
     m.show();
 
 }

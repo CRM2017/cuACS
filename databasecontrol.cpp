@@ -26,8 +26,14 @@ void DatabaseControl::initAnimals(){
 
 }
 
-vector <int> DatabaseControl::getIDList(){
+vector<int> DatabaseControl::getIDList(){
     return _db->getIDList();
+}
+vector<QString> DatabaseControl::getNameList(){
+    return _db->getNameList();
+}
+vector<QString> DatabaseControl::getTypeList(){
+    return _db->getTypeList();
 }
 
 void DatabaseControl::insertAnimal(Animal *a){

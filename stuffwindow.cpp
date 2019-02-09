@@ -10,8 +10,9 @@ StuffWindow::StuffWindow(StuffControl &control , QWidget *parent) :
     ui(new Ui::StuffWindow)
 {
     ui->setupUi(this);
-    displayAnimalList();
 
+
+    displayAnimalList();
 }
 
 StuffWindow::~StuffWindow()
@@ -22,17 +23,23 @@ StuffWindow::~StuffWindow()
 
 void StuffWindow:: displayAnimalList(){
 
-    DatabaseControl _dbcontrol;
 
+
+    DatabaseControl _dbcontrol;
     int _animalsNum = _dbcontrol.getIDList().size();
+     qDebug()<<"idlist size"<<_animalsNum;
+
     ui->AnimalListTable->setRowCount(_animalsNum);
-    QString id;
-    for (unsigned int i=0; i<_dbcontrol.getIDList().size(); i++){
-        qDebug()<<"idlist"<<_dbcontrol.getIDList().at(i);
-        id = QString::number(_dbcontrol.getIDList().at(i));
-        ui->AnimalListTable->setItem(i, 0,new QTableWidgetItem(id));
-        ui->AnimalListTable->setItem(i, 1,new QTableWidgetItem("harry"));
-        ui->AnimalListTable->setItem(i, 2,new QTableWidgetItem("dog"));
+    QString _id, _name, _type;
+     qDebug()<<"idlist"<<_dbcontrol.getIDList().at(1);
+
+    for (unsigned int i=0; i<_animalsNum; i++){
+        _id = QString::number(_dbcontrol.getIDList().at(i));
+        _name = _dbcontrol.getNameList().at(i);
+        _type = _dbcontrol.getTypeList().at(i);
+        ui->AnimalListTable->setItem(i, 0,new QTableWidgetItem(_id));
+        ui->AnimalListTable->setItem(i, 1,new QTableWidgetItem(_name));
+        ui->AnimalListTable->setItem(i, 2,new QTableWidgetItem(_type));
     }
 
 }
@@ -52,9 +59,9 @@ void StuffWindow::on_updateButton_clicked()
 
 void StuffWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 {
-    qDebug()<<"animalist index clicked: "<< index;
-
-    _control.displayAnimalViewWindow();
+    qDebug()<<"animalist index clicked: "<< index.row();
+    _tableCol = index.row();
+    _control.displayAnimalViewWindow(_tableCol);
 
 }
 

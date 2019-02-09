@@ -1,5 +1,7 @@
 #include "database.h"
 #include "QDebug"
+#include <QVariant>
+#include <QString>
 
 Database::Database()
 {
@@ -62,8 +64,10 @@ void Database:: addAnimal(Animal *aAnimal){
 
 void Database::queryID(){
     vector<int> ids;
-     QString selectID = "select ID from animaltable;";
-     QSqlQuery qry;
+    vector<QString> names;
+    vector<QString> types;
+    QString selectID = "select * from animaltable;";
+    QSqlQuery qry;
 
      if (!qry.exec(selectID))
      {
@@ -74,19 +78,30 @@ void Database::queryID(){
          while(qry.next()){
             qDebug()<<"select id: "<<qry.value(0).toInt();
            ids.push_back(qry.value(0).toInt());
+           names.push_back(qry.value(1).toString());
+           types.push_back(qry.value(2).toString());
          }
      }
 
       _IDList = ids;
+      _nameList = names;
+      _typeList = types;
 }
+
 
 vector<int> Database:: getIDList(){
     queryID();
-    qDebug()<<"in databse: getid:"<< _IDList.at(0);
+    qDebug()<<"in databse: getid: "<< _IDList.at(0);
     return _IDList;
 }
-QString Database:: getNameByID(){}
-QString Database:: getTyoeByID(){}
+vector<QString> Database:: getNameList(){
+
+    return _nameList;
+}
+vector<QString> Database:: getTypeList(){
+
+    return _typeList;
+}
 
 
 

@@ -11,7 +11,7 @@ public:
     StuffControl();
     ~StuffControl();
     void displayAnimalInfoWindow();
-    void displayAnimalViewWindow();
+    void displayAnimalViewWindow(int col);
     void show();
     void update();
     void close();

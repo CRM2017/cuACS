@@ -14,15 +14,15 @@ DatabaseControl:: ~DatabaseControl()
 }
 
 void DatabaseControl::initAnimals(){
-    Animal *a1 = new  Animal (1001, "H", "dog");
-     Animal *a2 = new  Animal(1002, "A", "dog");
-    Animal *a3 = new  Animal(1003, "B", "dog");
-     _db->addAnimal(a1);
-     _db->addAnimal(a2);
-     _db->addAnimal(a3);
-    insertAnimal(a1);
-    insertAnimal(a2);
-    insertAnimal(a3);
+        Animal *a1 = new  Animal (1001, "Luna", "Dog");
+        Animal *a2 = new  Animal (1002, "Lancy", "Cat");
+        Animal *a3 = new  Animal (1003, "Rich", "Dog");
+        _db->addAnimal(a1);
+        _db->addAnimal(a2);
+        _db->addAnimal(a3);
+        insertAnimal(a1);
+        insertAnimal(a2);
+        insertAnimal(a3);
 
 
 }

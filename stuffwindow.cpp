@@ -65,7 +65,4 @@ void StuffWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 
 }
 
-void StuffWindow::on_viewButton_clicked()
-{
 
-}

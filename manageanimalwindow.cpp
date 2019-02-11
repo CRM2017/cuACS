@@ -48,6 +48,7 @@ void ManageAnimalWindow::on_submitButton_clicked()
     DatabaseControl dbcontrol;
     Animal *newAnimal = new Animal(_id, _name, _type);
     dbcontrol.insertAnimal(newAnimal);
+    _control.close();
 }
 
 void ManageAnimalWindow::updateTextEditFromDB(int col){

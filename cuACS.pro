@@ -25,7 +25,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-    animalprofile.cpp \
     client.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -40,7 +39,6 @@ SOURCES += \
     controllermanager.cpp
 
 HEADERS += \
-    animalprofile.h \
     mainwindow.h \
     client.h \
     maincontrol.h \

@@ -10,6 +10,7 @@ TEAM NAME:
 	H2O Lesson
 
 TEAM MEMBERS:
+	
 	Ming Lei 100981171
 
 	Taihe Chen 101047827
@@ -42,20 +43,25 @@ When you run this applcation successfully, the main window should apprear and di
 Clicked the "Stuff" button to view animal list.  
 
 On stuff window:
+
 You can see an animal table with three basic attributes: ID, Name and Type on the table.
 
 View an animal details:
+
 Double clicked one of three attribute on the table, the animal details window will apprears.
 Notice: In the animal view mode, the ID, Name and Type is not editable.
 
 Create an animal:
+
 On stuff window, clicked the "Add" button, the animal creation window will appears, after filling the "ID", "Name" and "Type",
 Clicked the "Submit" button then the new animal will be added in database.
 
 Update the Animal list:
+
 After you adding a new animal and submit, clicked the "Update" button on the stuff window, the added animal will appear on the animal list table.
 
 View data in database:
+
 Open the "cuACSdb.sqlite" file with "SQLite DB Broswer" to check the database.
 
 

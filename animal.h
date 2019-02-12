@@ -11,8 +11,7 @@ public:
     int getId() const;
     QString getName() const;
     QString getType() const;
-    void setName(QString Name);
-    void setType(QString Type);
+
 
 private:
     int _id;

@@ -26,13 +26,13 @@ void StuffControl::show(){
      qDebug()<< "stuffWindow opened";
 }
 
-void StuffControl::displayAnimalInfoWindow(){
+void StuffControl::displayAddAnimalWindow(){
     ManageAnimalControl m;
     m.show();
 
 }
 
-void StuffControl::displayAnimalViewWindow(int col){
+void StuffControl::displayViewAnimalWindow(int col){
     ManageAnimalControl m;
     m.hideSubmitButton();
     m.updateAnimalDetailsFromDB(col);

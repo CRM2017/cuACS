@@ -23,11 +23,5 @@ QString Animal::getType()const{
     return _type;
 }
 
-void Animal::setName(QString Name){
-    _name = Name;
-}
 
-void Animal::setType(QString Type){
-    _type = Type;
-}
 

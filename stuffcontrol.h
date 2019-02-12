@@ -10,8 +10,8 @@ class StuffControl
 public:
     StuffControl();
     ~StuffControl();
-    void displayAnimalInfoWindow();
-    void displayAnimalViewWindow(int col);
+    void displayAddAnimalWindow();
+    void displayViewAnimalWindow(int col);
     void show();
     void update();
     void close();

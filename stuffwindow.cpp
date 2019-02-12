@@ -26,7 +26,7 @@ void StuffWindow:: displayAnimalList(){
 
 
     DatabaseControl _dbcontrol;
-    int _animalsNum = _dbcontrol.getIDList().size();
+    unsigned int _animalsNum = _dbcontrol.getIDList().size();
      qDebug()<<"idlist size"<<_animalsNum;
 
     ui->AnimalListTable->setRowCount(_animalsNum);
@@ -46,7 +46,7 @@ void StuffWindow:: displayAnimalList(){
 
 void StuffWindow::on_addAnimalButton_clicked(){
 
-    _control.displayAnimalInfoWindow();
+    _control.displayAddAnimalWindow();
 
 
 }
@@ -61,7 +61,7 @@ void StuffWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 {
     qDebug()<<"animalist index clicked: "<< index.row();
     _tableCol = index.row();
-    _control.displayAnimalViewWindow(_tableCol);
+    _control.displayViewAnimalWindow(_tableCol);
 
 }
 

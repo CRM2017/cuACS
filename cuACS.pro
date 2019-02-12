@@ -9,7 +9,6 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = cuACS
-CONFIG   += console
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -35,8 +34,7 @@ SOURCES += \
     manageanimalcontrol.cpp \
     animal.cpp \
     database.cpp \
-    databasecontrol.cpp \
-    controllermanager.cpp
+    databasecontrol.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -49,8 +47,7 @@ HEADERS += \
     manageanimalcontrol.h \
     animal.h \
     database.h \
-    databasecontrol.h \
-    controllermanager.h
+    databasecontrol.h
 
 
 FORMS += \

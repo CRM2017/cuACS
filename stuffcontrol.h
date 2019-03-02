@@ -2,25 +2,17 @@
 #define STUFFCONTROL_H
 
 #include "stuffwindow.h"
-#include "databasecontrol.h"
-#include "manageanimalcontrol.h"
+#include "stuffcontrol.h"
 
 class StuffControl
 {
 public:
     StuffControl();
     ~StuffControl();
-    void displayAddAnimalWindow();
-    void displayViewAnimalWindow(int col);
-    void show();
-    void update();
-    void close();
+    void displayAnimalInfoWindow();
 
 private:
-    StuffWindow *_view;
-    ManageAnimalControl _manageAnimalcontrol;
-
-
+    StuffWindow _view;
 };
 
 #endif // STUFFCONTROL_H

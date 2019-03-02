@@ -19,7 +19,7 @@
      <x>10</x>
      <y>20</y>
      <width>331</width>
-     <height>331</height>
+     <height>337</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -53,75 +53,132 @@
     <item row="2" column="1">
      <widget class="QLineEdit" name="type"/>
     </item>
-    <item row="3" column="0">
+    <item row="4" column="0">
      <widget class="QLabel" name="label_3">
       <property name="text">
        <string>Age</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="4" column="1">
      <widget class="QLineEdit" name="lineEdit_3"/>
     </item>
-    <item row="4" column="0">
+    <item row="5" column="0">
      <widget class="QLabel" name="label_4">
       <property name="text">
        <string>Gender</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
-     <widget class="QComboBox" name="comboBox_4"/>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="comboBox_4">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+     </widget>
     </item>
-    <item row="5" column="0">
+    <item row="6" column="0">
      <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>Color</string>
+       <string>PrimaryColor</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="1">
+    <item row="6" column="1">
      <widget class="QLineEdit" name="lineEdit_5"/>
     </item>
-    <item row="6" column="0">
+    <item row="7" column="0">
      <widget class="QLabel" name="label_6">
       <property name="text">
        <string>Weight</string>
       </property>
      </widget>
     </item>
-    <item row="6" column="1">
+    <item row="7" column="1">
      <widget class="QLineEdit" name="lineEdit_6"/>
     </item>
-    <item row="7" column="0">
+    <item row="8" column="0">
      <widget class="QLabel" name="label_7">
       <property name="text">
        <string>Height</string>
       </property>
      </widget>
     </item>
-    <item row="7" column="1">
+    <item row="8" column="1">
      <widget class="QLineEdit" name="lineEdit_7"/>
     </item>
-    <item row="8" column="0">
+    <item row="9" column="0">
      <widget class="QLabel" name="label_8">
       <property name="text">
-       <string>Operation</string>
+       <string>spayed</string>
       </property>
      </widget>
     </item>
-    <item row="8" column="1">
+    <item row="9" column="1">
      <widget class="QComboBox" name="comboBox_3"/>
     </item>
-    <item row="9" column="0">
+    <item row="10" column="0">
      <widget class="QLabel" name="label_9">
       <property name="text">
        <string>Vaccine</string>
       </property>
      </widget>
     </item>
-    <item row="9" column="1">
-     <widget class="QComboBox" name="comboBox_2"/>
+    <item row="10" column="1">
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1 time</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 times</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3 times</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Up to date</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>No need</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>breed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
    </layout>
   </widget>
@@ -158,56 +215,90 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QComboBox" name="comboBox"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>Intake date</string>
-      </property>
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Week</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_4"/>
-    </item>
-    <item row="2" column="0">
+    <item row="1" column="0">
      <widget class="QLabel" name="label_12">
       <property name="text">
        <string>Trained</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_5"/>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBox_5">
+      <item>
+       <property name="text">
+        <string>Never</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Excellent</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>well</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>never</string>
+       </property>
+      </item>
+     </widget>
     </item>
-    <item row="3" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_13">
       <property name="text">
        <string>Personality</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="2" column="1">
      <widget class="QLineEdit" name="lineEdit_9"/>
     </item>
-    <item row="4" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="label_14">
       <property name="text">
-       <string>Number</string>
+       <string>Feeding Difficulty</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Food Preference</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_10"/>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_15">
-      <property name="text">
-       <string>Favorite Food</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
      <widget class="QLineEdit" name="lineEdit_11"/>
     </item>
     <item row="6" column="0">
@@ -217,68 +308,181 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_12"/>
-    </item>
     <item row="7" column="0">
      <widget class="QLabel" name="label_17">
       <property name="text">
-       <string>Reason</string>
+       <string>Activity Level</string>
       </property>
      </widget>
     </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_13"/>
-    </item>
-    <item row="8" column="0">
+    <item row="5" column="0">
      <widget class="QLabel" name="label_18">
       <property name="text">
-       <string>Hobby</string>
+       <string>appetite level</string>
       </property>
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="QLineEdit" name="lineEdit_14"/>
+     <widget class="QLineEdit" name="lineEdit_15"/>
     </item>
-    <item row="9" column="0">
+    <item row="10" column="1">
+     <widget class="QLineEdit" name="lineEdit_17"/>
+    </item>
+    <item row="11" column="1">
+     <widget class="QLineEdit" name="lineEdit_8"/>
+    </item>
+    <item row="8" column="0">
      <widget class="QLabel" name="label_19">
       <property name="text">
        <string>Speciality</string>
       </property>
      </widget>
     </item>
-    <item row="9" column="1">
-     <widget class="QLineEdit" name="lineEdit_15"/>
-    </item>
-    <item row="10" column="0">
+    <item row="9" column="0">
      <widget class="QLabel" name="label_20">
       <property name="text">
        <string>Learning Speed</string>
       </property>
      </widget>
     </item>
-    <item row="10" column="1">
-     <widget class="QLineEdit" name="lineEdit_16"/>
-    </item>
-    <item row="11" column="0">
+    <item row="10" column="0">
      <widget class="QLabel" name="label_21">
       <property name="text">
        <string>Environment of Living</string>
       </property>
      </widget>
     </item>
-    <item row="11" column="1">
-     <widget class="QLineEdit" name="lineEdit_17"/>
-    </item>
-    <item row="12" column="0">
+    <item row="11" column="0">
      <widget class="QLabel" name="label_22">
       <property name="text">
        <string>Adoption Price</string>
       </property>
      </widget>
     </item>
-    <item row="12" column="1">
-     <widget class="QLineEdit" name="lineEdit_8"/>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="comboBox_6">
+      <item>
+       <property name="text">
+        <string>unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>difficult</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>meddle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>easy</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="comboBox_7">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Abandoned</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Born in here</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wandered</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QComboBox" name="comboBox_8">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zero</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QComboBox" name="comboBox_9">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Slow</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="comboBox_10">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -307,8 +511,8 @@
   <widget class="QPushButton" name="submitButton">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>570</y>
+     <x>980</x>
+     <y>590</y>
      <width>83</width>
      <height>25</height>
     </rect>

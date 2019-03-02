@@ -1,9 +1,9 @@
 #include "manageanimalwindow.h"
-#include "manageanimalwindow.h"
+//#include "manageanimalwindow.h"
 #include "ui_manageanimalwindow.h"
 #include "animal.h"
-#include "stuffwindow.h"
-#include "stuffcontrol.h"
+#include "staffwindow.h"
+#include "staffcontrol.h"
 #include "manageanimalcontrol.h"
 
 

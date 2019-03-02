@@ -14,10 +14,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_stuffButton_clicked(){
-    _control.displayStuffWindow();
+void MainWindow::on_StaffButton_clicked(){
+    _control.displayStaffWindow();
 }
 
 void MainWindow::on_clientButton_clicked(){
+    _control.displayClientWindow();
 
 }

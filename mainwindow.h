@@ -19,7 +19,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_stuffButton_clicked();
+    void on_StaffButton_clicked();
     void on_clientButton_clicked();
 
 private:

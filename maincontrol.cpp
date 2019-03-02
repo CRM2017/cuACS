@@ -1,6 +1,7 @@
 #include "maincontrol.h"
 #include "mainwindow.h"
-#include "stuffcontrol.h"
+#include "staffcontrol.h"
+#include "clientcontrol.h"
 
 
 MainControl::MainControl()
@@ -11,9 +12,9 @@ MainControl::MainControl()
 
 MainControl::~MainControl(){}
 
-void MainControl::displayStuffWindow(){
+void MainControl::displayStaffWindow(){
 
-    StuffControl st;
+    StaffControl st;
     st.show();
 
 
@@ -22,6 +23,8 @@ void MainControl::displayStuffWindow(){
 
 
 void MainControl::displayClientWindow(){
-    //D1 do nothing
+    ClientControl cc;
+    cc.show();
+
 }
 

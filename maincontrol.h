@@ -2,8 +2,8 @@
 #define MAINCONTROL_H
 
 #include "mainwindow.h"
-#include "stuffwindow.h"
-#include "stuffcontrol.h"
+#include "staffwindow.h"
+#include "staffcontrol.h"
 #include <memory>
 class MainWindow;
 
@@ -12,7 +12,7 @@ class MainControl
 public:
     MainControl();
     ~MainControl();
-    void displayStuffWindow();
+    void displayStaffWindow();
     void displayClientWindow();
 
 private:

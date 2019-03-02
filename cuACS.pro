@@ -28,31 +28,41 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     maincontrol.cpp \
-    stuffwindow.cpp \
-    stuffcontrol.cpp \
+    staffwindow.cpp \
+    staffcontrol.cpp \
     manageanimalwindow.cpp \
     manageanimalcontrol.cpp \
     animal.cpp \
     database.cpp \
-    databasecontrol.cpp
+    databasecontrol.cpp \
+    manageclientwindow.cpp \
+    manageclientcontrol.cpp \
+    clientwindow.cpp \
+    clientcontrol.cpp
 
 HEADERS += \
     mainwindow.h \
     client.h \
     maincontrol.h \
-    stuffwindow.h \
-    stuffcontrol.h \
+    staffwindow.h \
+    staffcontrol.h \
     storgePtrCollection.h \
     manageanimalwindow.h \
     manageanimalcontrol.h \
     animal.h \
     database.h \
-    databasecontrol.h
+    databasecontrol.h \
+    manageclientwindow.h \
+    manageclientcontrol.h \
+    clientwindow.h \
+    clientcontrol.h
 
 
 FORMS += \
         mainwindow.ui \
-    stuffwindow.ui \
+    Staffwindow.ui \
     manageanimalwindow.ui \
-    animalviewwindow.ui
+    animalviewwindow.ui \
+    manageclientwindow.ui \
+    clientwindow.ui
 

@@ -18,7 +18,7 @@ ManageAnimalControl::~ManageAnimalControl(){
 //}
 
 void ManageAnimalControl:: show(){
-    qDebug()<< "animal creating window opend";
+    qDebug()<< "animal creating window opened";
     _view->show();
 }
 

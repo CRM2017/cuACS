@@ -33,7 +33,7 @@ void Database:: createAnimalTable(){
     QString createAnimalTable = "CREATE TABLE animaltable ("
                     "ID INTEGER PRIMARY KEY,"
                     "Name VARCHAR(10),"
-                    "Type VARCHAR(15));";
+                    "Species VARCHAR(15));";
 
     QSqlQuery qry;
     qry.prepare(createAnimalTable);
@@ -49,17 +49,18 @@ void Database:: addAnimal(Animal *aAnimal){
     QString insertAnimal = "INSERT INTO animaltable ("
                            "ID,"
                            "Name,"
-                           "Type)"
-                           "VALUES (:ID,:Name,:Type);";
+                           "Species)"
+                           "VALUES (:ID,:Name,:Species);";
     QSqlQuery qry;
     qry.prepare(insertAnimal);
     qry.addBindValue(aAnimal->getId());
     qry.addBindValue(aAnimal->getName());
     qry.addBindValue(aAnimal->getType());
     if (!qry.exec())
-    {
+     {
         qDebug()<<"Adding Error"<< qry.lastError();
     }
+
 }
 
 void Database::queryID(){

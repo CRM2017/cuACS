@@ -59,10 +59,9 @@ HEADERS += \
 
 
 FORMS += \
-        mainwindow.ui \
-    Staffwindow.ui \
+    mainwindow.ui \
+    staffwindow.ui \
     manageanimalwindow.ui \
-    animalviewwindow.ui \
     manageclientwindow.ui \
     clientwindow.ui
 

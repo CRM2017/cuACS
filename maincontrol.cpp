@@ -21,7 +21,6 @@ void MainControl::displayStaffWindow(){
 }
 
 
-
 void MainControl::displayClientWindow(){
     ClientControl cc;
     cc.show();

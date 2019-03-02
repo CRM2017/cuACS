@@ -56,10 +56,7 @@ void Database:: addAnimal(Animal *aAnimal){
     qry.addBindValue(aAnimal->getId());
     qry.addBindValue(aAnimal->getName());
     qry.addBindValue(aAnimal->getType());
-    if (!qry.exec())
-    {
-        qDebug()<<"Adding Error"<< qry.lastError();
-    }
+
 }
 
 void Database::queryID(){

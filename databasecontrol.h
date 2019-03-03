@@ -17,6 +17,8 @@ public:
     vector <int> getIDList();
     vector<QString> getNameList();
     vector<QString> getTypeList();
+    vector<QString> getAgeList();
+    vector <vector<QString>> getAnimalData();
 
 
     Database *_db;

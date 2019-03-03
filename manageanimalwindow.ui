@@ -61,7 +61,7 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="age"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_4">
@@ -71,7 +71,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QComboBox" name="comboBox_4">
+     <widget class="QComboBox" name="gender">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -92,12 +92,12 @@
     <item row="6" column="0">
      <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>PrimaryColor</string>
+       <string>Primary Color</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_5"/>
+     <widget class="QLineEdit" name="color"/>
     </item>
     <item row="7" column="0">
      <widget class="QLabel" name="label_6">
@@ -107,7 +107,7 @@
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_6"/>
+     <widget class="QLineEdit" name="weight"/>
     </item>
     <item row="8" column="0">
      <widget class="QLabel" name="label_7">
@@ -117,7 +117,7 @@
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="QLineEdit" name="lineEdit_7"/>
+     <widget class="QLineEdit" name="height"/>
     </item>
     <item row="9" column="0">
      <widget class="QLabel" name="label_8">
@@ -127,7 +127,7 @@
      </widget>
     </item>
     <item row="9" column="1">
-     <widget class="QComboBox" name="comboBox_3">
+     <widget class="QComboBox" name="spayed">
       <item>
        <property name="text">
         <string>No</string>
@@ -148,7 +148,7 @@
      </widget>
     </item>
     <item row="10" column="1">
-     <widget class="QComboBox" name="comboBox_2">
+     <widget class="QComboBox" name="vaccine">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -189,7 +189,7 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="breed"/>
     </item>
    </layout>
   </widget>
@@ -204,7 +204,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QGraphicsView" name="graphicsView"/>
+     <widget class="QGraphicsView" name="imageView"/>
     </item>
    </layout>
   </widget>
@@ -221,12 +221,12 @@
     <item row="0" column="0">
      <widget class="QLabel" name="label_10">
       <property name="text">
-       <string>Aggressiveness</string>
+       <string>Aggressivity</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="aggressivity">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -257,7 +257,7 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QComboBox" name="comboBox_5">
+     <widget class="QComboBox" name="trained">
       <item>
        <property name="text">
         <string>Never</string>
@@ -311,7 +311,7 @@
     <item row="7" column="0">
      <widget class="QLabel" name="label_17">
       <property name="text">
-       <string>Activity Level</string>
+       <string>Exercise Amount Need</string>
       </property>
      </widget>
     </item>
@@ -323,7 +323,7 @@
      </widget>
     </item>
     <item row="11" column="1">
-     <widget class="QLineEdit" name="lineEdit_8"/>
+     <widget class="QLineEdit" name="fee"/>
     </item>
     <item row="8" column="0">
      <widget class="QLabel" name="label_19">
@@ -354,7 +354,7 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QComboBox" name="comboBox_6">
+     <widget class="QComboBox" name="feeding">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -378,7 +378,7 @@
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QComboBox" name="comboBox_7">
+     <widget class="QComboBox" name="source">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -402,7 +402,7 @@
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QComboBox" name="comboBox_8">
+     <widget class="QComboBox" name="exercise">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -431,7 +431,7 @@
      </widget>
     </item>
     <item row="9" column="1">
-     <widget class="QComboBox" name="comboBox_9">
+     <widget class="QComboBox" name="learning">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -455,7 +455,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QComboBox" name="comboBox_10">
+     <widget class="QComboBox" name="appetite">
       <item>
        <property name="text">
         <string>Unknown</string>
@@ -479,7 +479,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_11">
+     <widget class="QComboBox" name="personality">
       <item>
        <property name="text">
         <string>Other</string>
@@ -513,7 +513,12 @@
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="QComboBox" name="comboBox_12">
+     <widget class="QComboBox" name="skills">
+      <item>
+       <property name="text">
+        <string>Other</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>Shake Hands</string>
@@ -532,7 +537,7 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QComboBox" name="comboBox_14">
+     <widget class="QComboBox" name="food">
       <item>
        <property name="text">
         <string>Other</string>
@@ -556,7 +561,7 @@
      </widget>
     </item>
     <item row="10" column="1">
-     <widget class="QLineEdit" name="lineEdit_9"/>
+     <widget class="QLineEdit" name="space"/>
     </item>
    </layout>
   </widget>
@@ -578,21 +583,21 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QTextEdit" name="comments"/>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="submitButton">
+  <widget class="QDialogButtonBox" name="submitButton">
    <property name="geometry">
     <rect>
-     <x>980</x>
-     <y>590</y>
-     <width>83</width>
+     <x>930</x>
+     <y>550</y>
+     <width>166</width>
      <height>25</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Submit</string>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
  </widget>

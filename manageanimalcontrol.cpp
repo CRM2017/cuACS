@@ -24,8 +24,9 @@ void ManageAnimalControl:: show(){
 
 
 void ManageAnimalControl:: close(){
-    qDebug()<< "animal creating window closed";
+     qDebug()<< "animal creating window closed";
     _view->close();
+
 }
 void ManageAnimalControl:: updateAnimalDetailsFromDB(int col){
     _view->updateTextEditFromDB(col);

@@ -16,6 +16,8 @@ public:
 
 private:
     ManageAnimalWindow *_view;
+
+
 };
 
 #endif // MANAGEANIMALCONTROL_H

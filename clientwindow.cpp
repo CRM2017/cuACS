@@ -27,20 +27,27 @@ void ClientWindow::on_recommandButton_clicked()
 void ClientWindow:: displayAnimalList(){ //copy&paste from StaffWindow;
     DatabaseControl _dbcontrol;
     unsigned int _animalsNum = _dbcontrol.getIDList().size();
-     qDebug()<<"idlist size"<<_animalsNum;
+    qDebug()<<"idlist size"<<_animalsNum;
 
     ui->AnimalListTable->setRowCount(_animalsNum);
-    QString _id, _name, _type;
-     qDebug()<<"idlist"<<_dbcontrol.getIDList().at(1);
+    QString _id, _name, _type, _breed,_age;
+     qDebug()<<"id List"<<_dbcontrol.getIDList().at(1);
 
     for (unsigned int i=0; i<_animalsNum; i++){
         _id = QString::number(_dbcontrol.getIDList().at(i));
-        _name = _dbcontrol.getNameList().at(i);
-        _type = _dbcontrol.getTypeList().at(i);
+         vector < vector<QString> > animalAttributes = _dbcontrol.getAnimalData();
+        _name = animalAttributes[0].at(i);
+        _type = animalAttributes[1].at(i);
+        _breed = animalAttributes[2].at(i);
+        _age = animalAttributes[3].at(i);
         ui->AnimalListTable->setItem(i, 0,new QTableWidgetItem(_id));
         ui->AnimalListTable->setItem(i, 1,new QTableWidgetItem(_name));
         ui->AnimalListTable->setItem(i, 2,new QTableWidgetItem(_type));
+        ui->AnimalListTable->setItem(i, 3,new QTableWidgetItem(_breed));
+        ui->AnimalListTable->setItem(i, 4,new QTableWidgetItem(_age));
+
     }
+    _dbcontrol._db->disconnectDB();
 }
 
 void ClientWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)

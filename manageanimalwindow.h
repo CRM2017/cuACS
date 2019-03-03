@@ -35,7 +35,7 @@ private slots:
 
     void on_gender_currentIndexChanged(const QString &arg1);
 
-    void on_color_textEdited(const QString &arg1);
+    void on_color_currentIndexChanged(const QString &arg1);
     
     void on_weight_textEdited(const QString &arg1);
     
@@ -74,6 +74,7 @@ private slots:
     void on_submitButton_accepted();
 
     void on_submitButton_rejected();
+
 
 public slots:
     void updateTextEditFromDB(int col);

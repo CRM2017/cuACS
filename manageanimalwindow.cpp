@@ -53,9 +53,10 @@ void ManageAnimalWindow::on_gender_currentIndexChanged(const QString &arg1)
     _gender = arg1;
 }
 
-void ManageAnimalWindow::on_color_textEdited(const QString &arg1)
+
+void ManageAnimalWindow::on_color_currentIndexChanged(const QString &arg1)
 {
-    _color = arg1;
+     _color = arg1;
 }
 
 void ManageAnimalWindow::on_weight_textEdited(const QString &arg1)
@@ -148,19 +149,69 @@ void ManageAnimalWindow:: hideSubmitButton(){
 void ManageAnimalWindow::updateTextEditFromDB(int col){
     DatabaseControl _dbControl;
     int id = _dbControl.getIDList().at(col);
-//    QString name = _dbControl.getNameList().at(col);
-//    QString type= _dbControl.getTypeList().at(col);
+    QString names, types, breed, age,gender, color, weight, height, spayed, vaccine,
+            aggressivity, trained, personality, feeding, food, appetite, source, exercise, skills,
+            learning, space,fee;
+    vector <vector<QString>> data;
+// prototype: [ names[], types[], breed[], age[] ....]
+
+    data = _dbControl.getAnimalData();
+    names = data[0][col];
+    types = data[1].at(col);
+    breed = data[2].at(col);
+     age = data[3].at(col);
+    gender = data[4].at(col);
+    color = data[5].at(col);
+    weight = data[6].at(col);
+    height = data[7].at(col);
+    spayed = data[8].at(col);
+    vaccine= data[9].at(col);
+    aggressivity = data[10].at(col);
+    trained = data[11].at(col);
+    personality = data[12].at(col);
+    feeding = data[13].at(col);
+    food = data[14].at(col);
+    appetite = data[15].at(col);
+    source = data[16].at(col);
+    exercise = data[17].at(col);
+    skills = data[18].at(col);
+    learning = data[19].at(col);
+    space=  data[20].at(col);
+    fee= data[21].at(col);
 
     ui->id->setText( QString::number(id));
-    ui->name->setText("??");
-    ui->type->setText("??");
-    ui->breed->setText("bread");
-    ui->age->setText("-1");
-    ui->gender->setCurrentIndex(1);
+    ui->name->setText(names);
+    ui->type->setText(types);
+    ui->breed->setText(breed);
+    ui->age->setText(age);
+    ui->gender->setCurrentText(gender);
+    ui->color->setCurrentText(color);
+    ui->weight->setText(weight);
+    ui->height->setText(height);
+    ui->spayed->setCurrentText(spayed);
+    ui->vaccine->setCurrentText(vaccine);
+    ui->aggressivity->setCurrentText(aggressivity);
+    ui->trained->setCurrentText(trained);
+    ui->personality->setCurrentText(personality);
+    ui->feeding->setCurrentText(feeding);
+    ui->food->setCurrentText(food);
+    ui->appetite->setCurrentText(appetite);
+    ui->source->setCurrentText(source);
+    ui->exercise->setCurrentText(exercise);
+    ui->skills->setCurrentText(skills);
+    ui->learning->setCurrentText(learning);
+    ui->space->setText(space);
+    ui->fee->setText(fee);
 
     ui->id->setReadOnly(true);
     ui->name->setReadOnly(true);
     ui->type->setReadOnly(true);
+    ui->breed->setReadOnly(true);
+    ui->age->setReadOnly(true);
+    ui->weight->setReadOnly(true);
+    ui->height->setReadOnly(true);
+    ui->space->setReadOnly(true);
+    ui->fee->setReadOnly(true);
 
 
 }
@@ -192,3 +243,5 @@ void ManageAnimalWindow::on_submitButton_rejected()
 {
     _control.close();
 }
+
+

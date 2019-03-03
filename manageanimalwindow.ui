@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
+     <y>50</y>
      <width>331</width>
      <height>337</height>
     </rect>
@@ -95,9 +95,6 @@
        <string>Primary Color</string>
       </property>
      </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="color"/>
     </item>
     <item row="7" column="0">
      <widget class="QLabel" name="label_6">
@@ -191,6 +188,45 @@
     <item row="3" column="1">
      <widget class="QLineEdit" name="breed"/>
     </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="color">
+      <item>
+       <property name="text">
+        <string>Other</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grey</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Brown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </item>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -211,10 +247,10 @@
   <widget class="QWidget" name="formLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>359</x>
-     <y>19</y>
+     <x>360</x>
+     <y>50</y>
      <width>371</width>
-     <height>551</height>
+     <height>561</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_2">
@@ -569,7 +605,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>360</y>
+     <y>390</y>
      <width>331</width>
      <height>221</height>
     </rect>

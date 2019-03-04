@@ -15,11 +15,11 @@ ManageClientControl::~ManageClientControl(){}
     qDebug()<<"client creating window opened";
     _view->show();
 }
-
-ManageClientControl::close(){
+*/
+void ManageClientControl::close(){
     qDebug()<<"client creating window closed";
-    _view->close();
+    _view.close();
 
-}*/
+}
 
 //void ManageClientControl::hideSubmitButton(){}

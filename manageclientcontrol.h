@@ -11,7 +11,7 @@ public:
     ~ManageClientControl();
     //void hideSubmitButton();
     //void show();
-    //void close();
+    void close();
 
 
 private:

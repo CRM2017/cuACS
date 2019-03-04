@@ -32,8 +32,14 @@ vector<QString> DatabaseControl::getAgeList(){
 vector <vector<QString>> DatabaseControl::getAnimalData(){
     return _db->getAnimalData();
 }
+vector <vector<QString>> DatabaseControl::getClientInfo(){
+    return _db->getClientInfo();
+}
 
 void DatabaseControl::insertAnimal(Animal *a){
     _db->addAnimal(a);
 }
 
+void DatabaseControl::insertClient(Client*c){
+    _db->addClient(c);
+}

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>656</width>
-    <height>478</height>
+    <width>735</width>
+    <height>493</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>-10</x>
-     <y>0</y>
-     <width>651</width>
+     <x>10</x>
+     <y>20</y>
+     <width>711</width>
      <height>471</height>
     </rect>
    </property>
@@ -94,7 +94,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>551</width>
+       <width>611</width>
        <height>401</height>
       </rect>
      </property>
@@ -110,15 +110,30 @@
      </column>
      <column>
       <property name="text">
-       <string>species</string>
+       <string>Species</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Breed</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Gender</string>
       </property>
      </column>
     </widget>
     <widget class="QPushButton" name="recommandButton">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>10</y>
+       <x>620</x>
+       <y>0</y>
        <width>83</width>
        <height>25</height>
       </rect>

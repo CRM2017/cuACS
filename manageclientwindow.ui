@@ -31,7 +31,7 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="ID"/>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_2">
@@ -41,13 +41,13 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="name"/>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="email"/>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit_4"/>
+     <widget class="QLineEdit" name="phone"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_3">
@@ -64,7 +64,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_5"/>
+     <widget class="QLineEdit" name="address"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_5">
@@ -81,25 +81,41 @@
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_6"/>
+     <widget class="QLineEdit" name="age"/>
     </item>
     <item row="7" column="0">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="genderLable">
       <property name="text">
        <string>Gender</string>
       </property>
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_7"/>
+     <widget class="QComboBox" name="gender">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+     </widget>
     </item>
    </layout>
   </widget>
   <widget class="QPushButton" name="submitButton">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>500</y>
+     <x>320</x>
+     <y>460</y>
      <width>83</width>
      <height>25</height>
     </rect>

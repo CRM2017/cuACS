@@ -34,54 +34,11 @@ void Database:: openDatabase(){
     else{
         qDebug()<<"database opened";
     }
-//    QString createAnimalTable = "CREATE TABLE animaltable ("
-//                    "ID INTEGER PRIMARY KEY,"
-//                    "Name VARCHAR(10),"
-//                    "Breed VARCHAR(15),"
-//                    "Age REAL,"
-//                    "Gender,"
-//                    "primary Color,"
-//                    "Weight REAL,"
-//                    "Height REAL,"
-//                    "Spayed,"
-//                    "Vaccine,"
-//                    "Species VARCHAR(15));";
 
-//    QSqlQuery qry;
-//    qry.prepare(createAnimalTable);
-//    if (!qry.exec())
-//    {
-//        qDebug()<<"Database create error: "<< qry.lastError();
-//    }
 
 }
 
 void Database:: addAnimal(Animal *aAnimal){
-/*    QStringList attributes = {"ID,"
-                              "Name,"
-                              "Species,"
-                              "Breed,"
-                              "Age,"
-                              "gender,"
-                              "Primary_Color,"
-                              "Weight,"
-                              "Height,"
-                              "Spayed,"
-                              "Vaccine,"
-                              "Aggressivity,"
-                              "Trained,"
-                              "Personality,"
-                              "Feeding_Difficulty,"
-                              "Food_Preference,"
-                              "Appetite_Level,"
-                              "Adoption_Source,"
-                              "Exercise_Amount,"
-                              "Special_Skills,"
-                              "Learning_Speed,"
-                              "Space Need,"
-                              "Adoption_fee"};
-
-    QString line = "INSERT INTO animaltable (" + attributes.join("") + ")" ; */
 
     QString insertAnimal = "INSERT INTO animaltable ("
                               "ID,"
@@ -140,10 +97,6 @@ qry.prepare("INSERT INTO animaltable (ID,Name,Species,Breed,Age,Gender,Primary_C
 
 
 
-//    for (int i=0; i<attributes.size(); i++){
-//        qDebug()<<"Adding bindValue:"<<attributes.at(i);
-//        qry.addBindValue(attributes.at(i));
-//    }
 
     if (!qry.exec())
      {
@@ -173,7 +126,6 @@ void Database::queryID(){
      else
      {
          while(qry.next()){
-//            qDebug()<<"select id: "<<qry.value(0).toInt();
            ids.push_back(qry.value(0).toInt());
            for (int unsigned i = 0; i < data.size(); i++){
                data[i].push_back(qry.value(i+1).toString());
@@ -183,11 +135,52 @@ void Database::queryID(){
 
       _IDList = ids;
       _animalData = data;
-//      _nameList = names;
-//      _typeList = types;
-//      _ageList = age;
+
 }
 
+void Database:: addClient(Client *aClient){
+    QStringList info = aClient->getClientInfo();
+    QString insertClient = "INSERT INTO clienttable (ID,Name, Phone,Email,Address,Age,Gender)"
+                           "VALUES (:ID,:Name,:Phone, :Email,:Address,:Age,:Gender)";
+    qDebug()<<"info size"<< info;
+    QSqlQuery qry;
+    qry.prepare(insertClient);
+    qry.bindValue(":ID",info.at(0));
+    qry.bindValue(":Name",info.at(1));
+    qry.bindValue(":Phone",info.at(2));
+    qry.bindValue(":Email",info.at(3));
+    qry.bindValue(":Address",info.at(4));
+    qry.bindValue(":Ager",info.at(5));
+    qry.bindValue(":Gender",info.at(6));
+    if (!qry.exec())
+     {
+        qDebug()<<"Client Adding Error"<< qry.lastError();
+    }
+
+}
+
+void Database::queryClientTable(){
+    vector<QString> id, name, phone, email, address,age, gender;
+    vector <vector<QString>> data;
+    data = {id, name, phone, email, address,age, gender};
+
+    QString selectTable = "select * from clienttable;";
+    QSqlQuery qry;
+
+     if (!qry.exec( selectTable))
+     {
+         qDebug()<<"database:: Client Table Selection Error"<< qry.lastError();
+     }
+     else
+     {
+         while(qry.next()){
+           for (int unsigned i = 0; i < data.size(); i++){
+               data[i].push_back(qry.value(i).toString());
+           }
+         }
+     }
+      _clientInfo = data;
+}
 
 vector<int> Database:: getIDList(){
     queryID();
@@ -212,3 +205,7 @@ vector < vector<QString> > Database::getAnimalData(){
     return _animalData;
 }
 
+vector < vector<QString> > Database::getClientInfo(){
+    queryClientTable();
+    return _clientInfo;
+}

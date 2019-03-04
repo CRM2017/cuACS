@@ -19,6 +19,7 @@ public:
     explicit StaffWindow(StaffControl &control,QWidget *parent = 0);
     ~StaffWindow();
     void displayAnimalList();
+    void displayClientList();
 
 private slots:
     void on_addAnimalButton_clicked();
@@ -26,6 +27,8 @@ private slots:
     void on_AnimalListTable_doubleClicked(const QModelIndex &index);
 
     void on_addClientButton_clicked();
+
+    void on_clientUpdateButton_clicked();
 
 private:
     StaffControl &_control;

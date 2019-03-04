@@ -17,17 +17,17 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
+     <y>0</y>
      <width>711</width>
      <height>471</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>Personal Profile</string>
+     <string>Find the Client</string>
     </attribute>
     <widget class="QWidget" name="gridLayoutWidget">
      <property name="geometry">
@@ -39,15 +39,28 @@
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>user name</string>
-        </property>
-       </widget>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_2"/>
       </item>
       <item row="0" column="1">
        <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Phone Number</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Full Name</string>
+        </property>
+       </widget>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
@@ -56,32 +69,32 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_2"/>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>phone number</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEdit_3"/>
-      </item>
      </layout>
     </widget>
     <widget class="QPushButton" name="saveButton">
      <property name="geometry">
       <rect>
-       <x>540</x>
-       <y>410</y>
-       <width>101</width>
-       <height>25</height>
+       <x>10</x>
+       <y>110</y>
+       <width>201</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>View details</string>
+      <string>Display Client Profile</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>10</y>
+       <width>261</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Animal Match System Feature</string>
      </property>
     </widget>
    </widget>

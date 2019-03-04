@@ -33,7 +33,7 @@ void StaffControl::displayAddAnimalWindow(){
 }
 void StaffControl::displayAddClientWindow(){
     ManageClientControl m;
-    //m.show();
+    m.show();
 }
 
 
@@ -45,4 +45,11 @@ void StaffControl::displayViewAnimalWindow(int col){
 
 }
 
+void StaffControl::displayViewClientWindow(int col){
+    ManageClientControl m;
+    m.hideSubmitButton();
+    m.updateClientInfoFromDB(col);
+    m.show();
+
+}
 

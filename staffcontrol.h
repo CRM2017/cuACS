@@ -14,6 +14,7 @@ public:
     void displayAddAnimalWindow();
     void displayAddClientWindow();
     void displayViewAnimalWindow(int col);
+    void displayViewClientWindow(int col);
     void show();
     void update();
     void close();
@@ -21,7 +22,6 @@ public:
 private:
     StaffWindow *_view;
     ManageAnimalControl _manageAnimalcontrol;
-    //ManageClientControl _manageClientcontrol;
 
 
 };

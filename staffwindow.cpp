@@ -68,16 +68,16 @@ void StaffWindow:: displayClientList(){
         _phone = clientInfo[2][i];
         _email = clientInfo[3][i];
         _address = clientInfo[4][i];
-        qDebug()<<"client list display"<<_id;
-        qDebug()<<"client list display"<<_name;
-        qDebug()<<"client list display"<<_phone;
-        qDebug()<<"client list display"<<_email;
+
 
         ui->ClienListTable->setItem(i,0, new QTableWidgetItem(_id));
         ui->ClienListTable->setItem(i,1, new QTableWidgetItem(_name));
         ui->ClienListTable->setItem(i,2, new QTableWidgetItem(_phone));
         ui->ClienListTable->setItem(i,3, new QTableWidgetItem(_email));
         ui->ClienListTable->setItem(i,4, new QTableWidgetItem(_address));
+        ui->ClienListTable->setColumnWidth(0,50);
+        ui->ClienListTable->setColumnWidth(3,180);
+        ui->ClienListTable->setColumnWidth(4,240);
 
 
     }
@@ -105,7 +105,12 @@ void StaffWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 
 }
 
-
+void StaffWindow::on_ClienListTable_doubleClicked(const QModelIndex &index)
+{
+    qDebug()<<"StaffWindow:: client list doblue clicked index: "<< index.row();
+    _tableCol = index.row();
+    _control.displayViewClientWindow(_tableCol);
+}
 
 
 void StaffWindow::on_addClientButton_clicked()
@@ -113,7 +118,10 @@ void StaffWindow::on_addClientButton_clicked()
     _control.displayAddClientWindow();
 }
 
-void StaffWindow::on_clientUpdateButton_clicked()
+void StaffWindow::on_updateclientButton_clicked()
 {
+    qDebug()<<"StuffWindow:: updata client lists button licked";
     displayClientList();
 }
+
+

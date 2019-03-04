@@ -2,24 +2,30 @@
 #include "client.h"
 #include "QDebug"
 
-ManageClientControl::ManageClientControl() : _view(*this)
+ManageClientControl::ManageClientControl()
 {
-    //_view = new ManageClientWindow(*this);
-    //_view->exec();
-    _view.exec();
+    _view = new ManageClientWindow(*this);
+
 }
 
 ManageClientControl::~ManageClientControl(){}
 
-/*ManageClientControl::show(){
-    qDebug()<<"client creating window opened";
+void ManageClientControl::show(){
+    qDebug()<<"client manage window opened";
     _view->show();
 }
-*/
+
 void ManageClientControl::close(){
     qDebug()<<"client creating window closed";
-    _view.close();
+    _view->close();
 
 }
+void ManageClientControl::hideSubmitButton(){
+    _view->hideSubmitButton();
+}
 
-//void ManageClientControl::hideSubmitButton(){}
+void ManageClientControl:: updateClientInfoFromDB(int col){
+    _view->updateClientListFromDB(col);
+}
+
+

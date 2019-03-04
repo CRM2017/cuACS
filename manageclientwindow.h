@@ -18,7 +18,7 @@ class ManageClientWindow : public QDialog
 public:
     explicit ManageClientWindow(ManageClientControl &control ,QWidget *parent = 0);
     ~ManageClientWindow();
-    //void hideSubmitButton();
+    void hideSubmitButton();
 
 private slots:
 
@@ -38,6 +38,8 @@ private slots:
 
     void on_gender_currentIndexChanged(const QString &arg1);
 
+public slots:
+    void updateClientListFromDB(int col);
 
 private:
     ManageClientControl &_control;

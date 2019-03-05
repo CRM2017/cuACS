@@ -67,7 +67,3 @@ void ClientWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 }
 
 
-void ClientWindow::on_saveButton_clicked()
-{
-
-}

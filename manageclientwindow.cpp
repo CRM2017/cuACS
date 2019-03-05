@@ -82,6 +82,7 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->phone->setText(phone);
     ui->email->setText(email);
     ui->age->setText(age);
+    ui->address->setText(address);
     ui->gender->setCurrentText(gender);
 
     ui->ID->setReadOnly(true);
@@ -90,5 +91,5 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->email->setReadOnly(true);
     ui->address->setReadOnly(true);
     ui->age->setReadOnly(true);
-
+    ui->gender->setEnabled(false);
 }

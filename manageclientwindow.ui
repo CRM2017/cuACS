@@ -94,7 +94,7 @@
      <widget class="QComboBox" name="gender">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a gender</string>
        </property>
       </item>
       <item>

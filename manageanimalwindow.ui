@@ -74,7 +74,7 @@
      <widget class="QComboBox" name="gender">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a gender</string>
        </property>
       </item>
       <item>
@@ -125,6 +125,11 @@
     </item>
     <item row="9" column="1">
      <widget class="QComboBox" name="spayed">
+      <item>
+       <property name="text">
+        <string>Unknown</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>No</string>
@@ -265,7 +270,7 @@
      <widget class="QComboBox" name="aggressivity">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a level</string>
        </property>
       </item>
       <item>
@@ -296,7 +301,7 @@
      <widget class="QComboBox" name="trained">
       <item>
        <property name="text">
-        <string>Never</string>
+        <string>select a level</string>
        </property>
       </item>
       <item>
@@ -312,6 +317,11 @@
       <item>
        <property name="text">
         <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Untrained</string>
        </property>
       </item>
      </widget>
@@ -393,7 +403,7 @@
      <widget class="QComboBox" name="feeding">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a level</string>
        </property>
       </item>
       <item>
@@ -417,7 +427,7 @@
      <widget class="QComboBox" name="source">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a adoption source</string>
        </property>
       </item>
       <item>
@@ -441,7 +451,7 @@
      <widget class="QComboBox" name="exercise">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select a level</string>
        </property>
       </item>
       <item>
@@ -494,7 +504,7 @@
      <widget class="QComboBox" name="appetite">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>select the level</string>
        </property>
       </item>
       <item>
@@ -597,7 +607,14 @@
      </widget>
     </item>
     <item row="10" column="1">
-     <widget class="QLineEdit" name="space"/>
+     <widget class="QLineEdit" name="space">
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

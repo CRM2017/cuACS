@@ -25,9 +25,6 @@ private slots:
     void on_AnimalListTable_doubleClicked(const QModelIndex &index);
 
 
-
-    void on_saveButton_clicked();
-
 private:
     ClientControl &_control;
     Ui::ClientWindow *ui;

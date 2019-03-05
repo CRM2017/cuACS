@@ -27,3 +27,4 @@ void ClientControl::displayViewAnimalWindow(int col){
     m.updateAnimalDetailsFromDB(col);
     m.show();
 }
+

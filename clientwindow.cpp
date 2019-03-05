@@ -12,6 +12,13 @@ ClientWindow::ClientWindow(ClientControl &control ,QWidget *parent) :
 {
     ui->setupUi(this);
     displayAnimalList();
+    ui->name->setReadOnly(true);
+    ui->phone->setReadOnly(true);
+    ui->email->setReadOnly(true);
+    ui->address->setReadOnly(true);
+    ui->age->setReadOnly(true);
+    ui->gender->setReadOnly(true);
+
 }
 
 ClientWindow::~ClientWindow()
@@ -67,3 +74,54 @@ void ClientWindow::on_AnimalListTable_doubleClicked(const QModelIndex &index)
 }
 
 
+
+void ClientWindow::on_id_textEdited(const QString &arg1)
+{
+    _id = arg1;
+}
+
+void ClientWindow::on_confirmButton_clicked()
+{
+    displayClienInfo();
+}
+
+void ClientWindow:: displayClienInfo(){
+    DatabaseControl _dbControl;
+    QString  name, phone, email, address, age, gender;
+    vector <vector<QString>> data;
+
+    data = _dbControl.getClientInfo();
+    int index = -1;
+    for (int i=0; i< data[0].size(); i++){
+        if (data[0][i] == _id){
+            index = i;
+        }
+    }
+
+    if (index!= -1){
+         ui->promptMessage->setText("Client found!");
+        name = data[1][index];
+        phone = data[2][index];
+        email = data[3][index];
+        address = data[4][index];
+        age = data[5][index];
+        gender = data[6][index];
+        ui->name->setText(name);
+        ui->phone->setText(phone);
+        ui->email->setText(email);
+        ui->address->setText(address);
+        ui->age->setText(age);
+        ui->gender->setText(gender);
+
+    }
+    else{
+        ui->promptMessage->setText("Client ID dosen't exist, please try again!");
+        ui->name->setText("");
+        ui->phone->setText("");
+        ui->email->setText("");
+        ui->address->setText("");
+        ui->age->setText("");
+        ui->gender->setText("");
+    }
+
+}

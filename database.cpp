@@ -150,7 +150,7 @@ void Database:: addClient(Client *aClient){
     qry.bindValue(":Phone",info.at(2));
     qry.bindValue(":Email",info.at(3));
     qry.bindValue(":Address",info.at(4));
-    qry.bindValue(":Ager",info.at(5));
+    qry.bindValue(":Age",info.at(5));
     qry.bindValue(":Gender",info.at(6));
     if (!qry.exec())
      {

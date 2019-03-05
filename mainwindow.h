@@ -1,3 +1,4 @@
+// This is main window UI include staff button and client button which are used to lauch staff window and client window
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

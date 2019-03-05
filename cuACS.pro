@@ -46,7 +46,6 @@ HEADERS += \
     maincontrol.h \
     staffwindow.h \
     staffcontrol.h \
-    storgePtrCollection.h \
     manageanimalwindow.h \
     manageanimalcontrol.h \
     animal.h \

@@ -1,3 +1,5 @@
+//This database class can create a connection with database and including database statement
+
 #ifndef DATABASE_H
 #define DATABASE_H
 

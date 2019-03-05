@@ -1,3 +1,5 @@
+// This staff control can display staff window or close it
+
 #ifndef StaffCONTROL_H
 #define StaffCONTROL_H
 

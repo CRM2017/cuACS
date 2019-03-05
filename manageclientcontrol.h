@@ -1,3 +1,5 @@
+// This client control can display client window or close it
+
 #ifndef MANAGECLIENTCONTROL_H
 #define MANAGECLIENTCONTROL_H
 

@@ -1,3 +1,5 @@
+// This client control can control client window display or close
+
 #ifndef CLIENTCONTROL_H
 #define CLIENTCONTROL_H
 

@@ -1,3 +1,5 @@
+//This is animal class with all animal attributes
+
 #ifndef ANIMAL_H
 #define ANIMAL_H
 #include <QString>

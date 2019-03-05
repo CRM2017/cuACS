@@ -1,3 +1,5 @@
+// This control can be used to control animal management window display or close
+
 #ifndef MANAGEANIMALCONTROL_H
 #define MANAGEANIMALCONTROL_H
 

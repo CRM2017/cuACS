@@ -1,3 +1,5 @@
+// This is staff window UI that used to display animal list and client list
+
 #ifndef StaffWINDOW_H
 #define StaffWINDOW_H
 

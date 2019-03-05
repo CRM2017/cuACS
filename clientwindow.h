@@ -1,3 +1,4 @@
+// This is cliend window UI that can display client detail and list animals
 #ifndef CLIENTWINDOW_H
 #define CLIENTWINDOW_H
 

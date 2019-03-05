@@ -1,3 +1,4 @@
+// This is animal management ui that can be used as the view aniam window and add animal window
 #ifndef MANAGEANIMALWINDOW_H
 #define MANAGEANIMALWINDOW_H
 

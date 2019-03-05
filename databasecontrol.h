@@ -1,3 +1,5 @@
+//database control class that can be used to add animal or client to database as well as get data from datbase
+
 #ifndef DATABASECONTROL_H
 #define DATABASECONTROL_H
 

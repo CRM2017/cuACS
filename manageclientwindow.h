@@ -1,3 +1,4 @@
+// This is client manage window UI that used to add new client or view a client
 #ifndef MANAGECLIENTWINDOW_H
 #define MANAGECLIENTWINDOW_H
 

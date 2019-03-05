@@ -1,3 +1,5 @@
+// used to control main window
+
 #ifndef MAINCONTROL_H
 #define MAINCONTROL_H
 

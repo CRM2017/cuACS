@@ -1,3 +1,5 @@
+//This is client class with all client basic infomation
+
 #ifndef CLIENT_H
 #define CLIENT_H
 

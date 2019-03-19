@@ -5,6 +5,7 @@
 #include <QDialog>
 #include <memory>
 #include "databasecontrol.h"
+#include "databasecontrolfactory.h"
 #include <vector>
 
 class ManageAnimalControl;
@@ -77,6 +78,8 @@ private slots:
     void on_submitButton_rejected();
 
 
+    void on_uploadButton_clicked();
+
 public slots:
     void updateTextEditFromDB(int col);
 
@@ -86,7 +89,7 @@ private:
     Ui:: ManageAnimalWindow *ui;
     int _id;
     QString _name, _type, _age, _breed, _gender, _color, _weight, _height, _spayed, _vaccine, _aggressivity, _trained,
-    _personality, _feeding, _food, _appetite, _source, _exercise, _skills, _learning, _space, _fee;
+    _personality, _feeding, _food, _appetite, _source, _exercise, _skills, _learning, _space, _fee, _relativePhotoPath;
     vector <QString> _animalData;
 //    std::unique_ptr<Ui::ManageAnimalWindow> ui;
 };

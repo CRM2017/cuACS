@@ -1,4 +1,5 @@
 #include "clientcontrol.h"
+#include "manageanimalcontrolfactory.h"
 
 #include <QDebug>
 
@@ -22,7 +23,7 @@ void ClientControl::show(){
 }
 
 void ClientControl::displayViewAnimalWindow(int col){
-    ManageAnimalControl m;
+    ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
     m.hideSubmitButton();
     m.updateAnimalDetailsFromDB(col);
     m.show();

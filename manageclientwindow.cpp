@@ -20,7 +20,7 @@ ManageClientWindow::~ManageClientWindow()
 
 void ManageClientWindow::on_submitButton_clicked()
 {
-    DatabaseControl dbcontrol;
+    DatabaseControl dbcontrol = DataBaseControlFactory::getDatabaseControl();
     Client *newClient = new Client(_id, _name, _phone, _email, _address, _age, _gender);
     dbcontrol.insertClient(newClient);
     _control.close();
@@ -66,7 +66,7 @@ void ManageClientWindow::on_gender_currentIndexChanged(const QString &arg1)
 }
 
 void ManageClientWindow::updateClientListFromDB(int col){
-    DatabaseControl _dbControl;
+    DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
     QString id, name, phone, email, address, age, gender;
     vector <vector<QString>> data;
     data = _dbControl.getClientInfo();

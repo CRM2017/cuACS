@@ -6,6 +6,8 @@
 #include "staffcontrol.h"
 #include "manageanimalcontrol.h"
 #include <QDebug>
+#include <QPixmap>
+#include <QFileDialog>
 
 
 ManageAnimalWindow::ManageAnimalWindow(ManageAnimalControl &control ,QWidget *parent) :
@@ -140,6 +142,18 @@ void ManageAnimalWindow::on_fee_textEdited(const QString &arg1)
     _fee = arg1;
 }
 
+void ManageAnimalWindow::on_uploadButton_clicked()
+{
+    _relativePhotoPath = QFileDialog::getOpenFileName(
+                this,
+                tr("Open File"),
+                "home",
+                "Photo File (*.jpeg)"
+                );
+    QPixmap pix(_relativePhotoPath);
+    ui->PhotoLabel->setPixmap(pix.scaled(299,329,Qt::KeepAspectRatio));
+}
+
 void ManageAnimalWindow:: hideSubmitButton(){
     ui->submitButton->hide();
 }
@@ -147,11 +161,11 @@ void ManageAnimalWindow:: hideSubmitButton(){
 
 
 void ManageAnimalWindow::updateTextEditFromDB(int col){
-    DatabaseControl _dbControl;
+    DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
     int id = _dbControl.getIDList().at(col);
     QString names, types, breed, age,gender, color, weight, height, spayed, vaccine,
             aggressivity, trained, personality, feeding, food, appetite, source, exercise, skills,
-            learning, space,fee;
+            learning, space,fee, relativePhotoPath;
     vector <vector<QString>> data;
 // prototype: [ names[], types[], breed[], age[] ....]
 
@@ -178,7 +192,11 @@ void ManageAnimalWindow::updateTextEditFromDB(int col){
     learning = data[19].at(col);
     space=  data[20].at(col);
     fee= data[21].at(col);
+    relativePhotoPath = data[22].at(col);
 
+    //qDebug()<<relativePhotoPath;
+    QPixmap pix(relativePhotoPath);
+    ui->PhotoLabel->setPixmap(pix.scaled(299,329,Qt::KeepAspectRatio));
     ui->id->setText( QString::number(id));
     ui->name->setText(names);
     ui->type->setText(types);
@@ -232,9 +250,9 @@ void ManageAnimalWindow::updateTextEditFromDB(int col){
 
 void ManageAnimalWindow::on_submitButton_accepted()
 {
-    DatabaseControl dbcontrol;
+    DatabaseControl dbcontrol = DataBaseControlFactory::getDatabaseControl();
     Animal *newAnimal = new Animal(_id, _name, _type, _breed, _age, _gender, _color, _weight, _height, _spayed, _vaccine, _aggressivity, _trained,
-                                   _personality, _feeding, _food, _appetite, _source, _exercise, _skills, _learning, _space, _fee);
+                                   _personality, _feeding, _food, _appetite, _source, _exercise, _skills, _learning, _space, _fee, _relativePhotoPath);
     dbcontrol.insertAnimal(newAnimal);
     _control.close();
 }
@@ -243,5 +261,7 @@ void ManageAnimalWindow::on_submitButton_rejected()
 {
     _control.close();
 }
+
+
 
 

@@ -7,6 +7,7 @@
 #include "clientwindow.h"
 #include "databasecontrol.h"
 #include "manageanimalcontrol.h"
+#include "manageanimalcontrolfactory.h"
 
 class ClientControl
 {

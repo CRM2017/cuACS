@@ -63,11 +63,12 @@ void Database:: addAnimal(Animal *aAnimal){
                            "Special_Skills,"
                            "Learning_Speed,"
                            "Space_Need,"
-                           "Adoption_fee)"
-                           "VALUES (:ID,:Name,:Species, :Breed,:Age,:Gender,:Primary_Color,:Weight,:Height,:Spayed,:Vaccine,:Aggressivity,:Trained,:Personality,:Feeding_Difficulty,:Food_Preference,:Appetite_Level,:Adoption_Source,:Exercise_Amount,:Special_Skills,:Learning_Speed,:Space_Need,:Adoption_fee)";
+                           "Adoption_fee,"
+                            "relative_Photo_Path)"
+                           "VALUES (:ID,:Name,:Species, :Breed,:Age,:Gender,:Primary_Color,:Weight,:Height,:Spayed,:Vaccine,:Aggressivity,:Trained,:Personality,:Feeding_Difficulty,:Food_Preference,:Appetite_Level,:Adoption_Source,:Exercise_Amount,:Special_Skills,:Learning_Speed,:Space_Need,:Adoption_fee,:relative_Photo_Path)";
     QSqlQuery qry;
-qry.prepare("INSERT INTO animaltable (ID,Name,Species,Breed,Age,Gender,Primary_Color,Weight,Height,Spayed,Vaccine,Aggressivity,Trained,Personality,Feeding_Difficulty,Food_Preference,Appetite_Level,Adoption_Source,Exercise_Amount,Special_Skills,Learning_Speed,Space_Need,Adoption_fee)"
-            "VALUES (:ID,:Name,:Species, :Breed,:Age,:Gender,:Primary_Color,:Weight,:Height,:Spayed,:Vaccine,:Aggressivity,:Trained,:Personality,:Feeding_Difficulty,:Food_Preference,:Appetite_Level,:Adoption_Source,:Exercise_Amount,:Special_Skills,:Learning_Speed,:Space_Need,:Adoption_fee);");
+qry.prepare("INSERT INTO animaltable (ID,Name,Species,Breed,Age,Gender,Primary_Color,Weight,Height,Spayed,Vaccine,Aggressivity,Trained,Personality,Feeding_Difficulty,Food_Preference,Appetite_Level,Adoption_Source,Exercise_Amount,Special_Skills,Learning_Speed,Space_Need,Adoption_fee,relative_Photo_Path)"
+            "VALUES (:ID,:Name,:Species, :Breed,:Age,:Gender,:Primary_Color,:Weight,:Height,:Spayed,:Vaccine,:Aggressivity,:Trained,:Personality,:Feeding_Difficulty,:Food_Preference,:Appetite_Level,:Adoption_Source,:Exercise_Amount,:Special_Skills,:Learning_Speed,:Space_Need,:Adoption_fee,:relative_Photo_Path);");
 
 
     QStringList attributes = aAnimal->getAttributeList();
@@ -94,6 +95,7 @@ qry.prepare("INSERT INTO animaltable (ID,Name,Species,Breed,Age,Gender,Primary_C
     qry.bindValue(":Learning_Speed",attributes.at(19));
     qry.bindValue(":Space_Need",attributes.at(20));
     qry.bindValue(":Adoption_fee",attributes.at(21));
+    qry.bindValue(":relative_Photo_Path",attributes.at(22));
 
 
 
@@ -110,11 +112,11 @@ void Database::queryID(){
     vector<int> ids;
     vector<QString> names, types, breed, age,gender, color, weight, height, spayed, vaccine,
             aggressivity, trained, personality, feed, food, appetite, source, exercise, skills,
-            learning, space,fee;
+            learning, space,fee, relativePhotoPath;
     vector <vector<QString>> data;
     data = {names, types, breed, age,gender, color, weight, height, spayed, vaccine,
             aggressivity, trained, personality, feed, food, appetite, source, exercise, skills,
-            learning, space,fee};
+            learning, space,fee, relativePhotoPath};
 
     QString selectID = "select * from animaltable;";
     QSqlQuery qry;

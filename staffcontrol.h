@@ -7,6 +7,7 @@
 #include "databasecontrol.h"
 #include "manageanimalcontrol.h"
 #include "manageclientcontrol.h"
+#include "manageanimalcontrolfactory.h"
 
 class StaffControl
 {

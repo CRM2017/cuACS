@@ -37,7 +37,7 @@ void ClientWindow::on_recommandButton_clicked()
 
 void ClientWindow:: displayAnimalList(){ //copy&paste from StaffWindow;
 
-    DatabaseControl _dbcontrol;
+    DatabaseControl _dbcontrol = DataBaseControlFactory::getDatabaseControl();
     unsigned int _animalsNum = _dbcontrol.getIDList().size();
     qDebug()<<"idlist size"<<_animalsNum;
 
@@ -86,7 +86,7 @@ void ClientWindow::on_confirmButton_clicked()
 }
 
 void ClientWindow:: displayClienInfo(){
-    DatabaseControl _dbControl;
+    DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
     QString  name, phone, email, address, age, gender;
     vector <vector<QString>> data;
 

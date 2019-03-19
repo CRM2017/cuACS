@@ -1,4 +1,5 @@
 #include "staffcontrol.h"
+#include "manageanimalcontrolfactory.h"
 
 
 #include <QDebug>
@@ -38,7 +39,7 @@ void StaffControl::displayAddClientWindow(){
 
 
 void StaffControl::displayViewAnimalWindow(int col){
-    ManageAnimalControl m;
+    ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
     m.hideSubmitButton();
     m.updateAnimalDetailsFromDB(col);
     m.show();

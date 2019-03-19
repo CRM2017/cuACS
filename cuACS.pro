@@ -40,7 +40,9 @@ SOURCES += \
     clientwindow.cpp \
     clientcontrol.cpp \
     databasecontrolfactory.cpp \
-    manageanimalcontrolfactory.cpp
+    manageanimalcontrolfactory.cpp \
+    subject.cpp \
+    observer.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -58,7 +60,9 @@ HEADERS += \
     clientwindow.h \
     clientcontrol.h \
     databasecontrolfactory.h \
-    manageanimalcontrolfactory.h
+    manageanimalcontrolfactory.h \
+    subject.h \
+    observer.h
 
 
 FORMS += \

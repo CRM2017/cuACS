@@ -80,6 +80,10 @@ private slots:
 
     void on_uploadButton_clicked();
 
+    void on_editButton_clicked();
+
+    void on_saveButton_clicked();
+
 public slots:
     void updateTextEditFromDB(int col);
 

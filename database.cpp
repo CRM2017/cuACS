@@ -10,7 +10,6 @@ Database::Database()
     _db.setDatabaseName("./cuACSdb.sqlite");
     openDatabase();
 
-
 }
 
 Database:: ~Database()
@@ -108,6 +107,9 @@ qry.prepare("INSERT INTO animaltable (ID,Name,Species,Breed,Age,Gender,Primary_C
 
 }
 
+
+
+
 void Database::queryID(){
     vector<int> ids;
     vector<QString> names, types, breed, age,gender, color, weight, height, spayed, vaccine,
@@ -160,6 +162,8 @@ void Database:: addClient(Client *aClient){
     }
 
 }
+
+void Database:: update(){}
 
 void Database::queryClientTable(){
     vector<QString> id, name, phone, email, address,age, gender;

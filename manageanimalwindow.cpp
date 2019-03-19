@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QPixmap>
 #include <QFileDialog>
+#include <QtSql>
 
 
 ManageAnimalWindow::ManageAnimalWindow(ManageAnimalControl &control ,QWidget *parent) :
@@ -265,3 +266,25 @@ void ManageAnimalWindow::on_submitButton_rejected()
 
 
 
+
+void ManageAnimalWindow::on_editButton_clicked()
+{
+    ui->id->setReadOnly(false);
+    ui->name->setReadOnly(false);
+    ui->type->setReadOnly(false);
+    ui->breed->setReadOnly(false);
+    ui->age->setReadOnly(false);
+    ui->weight->setReadOnly(false);
+    ui->height->setReadOnly(false);
+    ui->space->setReadOnly(false);
+    ui->fee->setReadOnly(false);
+}
+
+void ManageAnimalWindow::on_saveButton_clicked()
+{
+    QSqlDatabase _db = QSqlDatabase::addDatabase("QSQLITE");
+    _db.setDatabaseName("./cuACSdb.sqlite");
+    _db.open();
+    QSqlQuery qry;
+    qry.exec("UPDATE animaltable SET NAME='Ming' WHERE ID=1237  ");
+}

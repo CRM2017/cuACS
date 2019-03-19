@@ -7,7 +7,8 @@
 #include "animal.h"
 #include "client.h"
 #include <vector>
-class Database
+#include "observer.h"
+class Database : public Observer
 {
 public:
     Database();
@@ -16,8 +17,11 @@ public:
     void openDatabase();
     void addAnimal(Animal *aAnimal);
     void addClient(Client *aClient);
+    void updateAnimalDB(Animal *aAnimal);
     void queryID();
     void queryClientTable();
+    void update();
+
     vector <int> getIDList();
     vector<QString> getNameList();
     vector<QString> getTypeList();

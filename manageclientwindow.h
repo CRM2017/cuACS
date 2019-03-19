@@ -6,6 +6,7 @@
 #include <memory>
 #include "databasecontrol.h"
 #include "databasecontrolfactory.h"
+#include "subject.h"
 
 class ManageClientControl;
 
@@ -13,7 +14,7 @@ namespace Ui {
 class ManageClientWindow;
 }
 
-class ManageClientWindow : public QDialog
+class ManageClientWindow : public QDialog , public Subject
 {
     Q_OBJECT
 

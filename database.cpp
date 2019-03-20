@@ -190,7 +190,6 @@ void Database::queryClientTable(){
 
 vector<int> Database:: getIDList(){
     queryID();
-    qDebug()<<"in databse: getid: "<< _IDList.at(0);
     return _IDList;
 }
 vector<QString> Database:: getNameList(){

@@ -286,5 +286,64 @@ void ManageAnimalWindow::on_saveButton_clicked()
     _db.setDatabaseName("./cuACSdb.sqlite");
     _db.open();
     QSqlQuery qry;
-    qry.exec("UPDATE animaltable SET NAME='Ming' WHERE ID=1237  ");
+
+    QString update_sql = "UPDATE animaltable SET "
+                         "NAME= :name,"
+                         "SPECIES= :type,"
+                         "BREED= :breed,"
+                         "AGE= :age,"
+                         "GENDER= :gender,"
+                         "PRIMARY_COLOR= :color,"
+                         "WEIGHT= :weight,"
+                         "HEIGHT= :height,"
+                         "SPAYED= :spayed,"
+                         "VACCINE= :vaccine,"
+                         "AGGRESSIVITY= :aggressivity,"
+                         "TRAINED= :trained,"
+                         "PERSONALITY= :personality,"
+                         "FEEDING_DIFFICULTY= :feeding,"
+                         "FOOD_PREFERENCE= :food,"
+                         "APPETITE_LEVEL= :appetite,"
+                         "ADOPTION_SOURCE= :source,"
+                         "EXERCISE_AMOUNT= :exercise,"
+                         "SPECIAL_SKILLS= :skills,"
+                         "LEARNING_SPEED= :learning,"
+                         "SPACE_NEED= :space,"
+                         "ADOPTION_FEE= :fee"
+                         " WHERE id = :id;";
+    qry.prepare( update_sql);
+    qry.bindValue(":name", _name);
+    qry.bindValue(":type", _type);
+    qry.bindValue(":breed", _breed);
+    qry.bindValue(":age", _age);
+    qry.bindValue(":gender", _gender);
+    qry.bindValue(":color", _color);
+    qry.bindValue(":weight", _weight);
+    qry.bindValue(":height", _height);
+    qry.bindValue(":spayed", _spayed);
+    qry.bindValue(":vaccine", _vaccine);
+    qry.bindValue(":aggressivity", _aggressivity);
+    qry.bindValue(":trained", _trained);
+    qry.bindValue(":personality", _personality);
+    qry.bindValue(":feeding", _feeding);
+    qry.bindValue(":food", _food);
+    qry.bindValue(":appetite", _appetite);
+    qry.bindValue(":source", _source);
+    qry.bindValue(":exercise", _exercise);
+    qry.bindValue(":skills", _skills);
+    qry.bindValue(":learning", _learning);
+    qry.bindValue(":space", _space);
+    qry.bindValue(":fee", _fee);
+    qry.bindValue(":id", ui->id->text().toInt());
+
+    if (!qry.exec())
+    {
+        qDebug() << "ManageAnimalWindow:: Databse update " << qry.lastError();
+    }
+    else{
+         qDebug()<<_name;
+         qDebug()<<_type;
+
+    }
+
 }

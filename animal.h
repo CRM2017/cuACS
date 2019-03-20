@@ -5,9 +5,9 @@
 #include <QString>
 #include <QStringList>
 #include <vector>
-
+#include "subject.h"
 using namespace std;
-class Animal
+class Animal : public Subject
 {
 public:
     Animal(const int id, const QString &name, const QString &type, const QString &breed, const QString &age, const QString &gender, const QString &color,

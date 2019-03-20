@@ -22,6 +22,8 @@ public:
     explicit ManageAnimalWindow(ManageAnimalControl &control ,QWidget *parent = 0);
     ~ManageAnimalWindow();
     void hideSubmitButton();
+    void hideEditButton();
+    void hideSaveButton();
 
 private slots:
 

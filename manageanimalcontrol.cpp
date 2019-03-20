@@ -35,3 +35,9 @@ void ManageAnimalControl:: updateAnimalDetailsFromDB(int col){
 void ManageAnimalControl:: hideSubmitButton(){
     _view->hideSubmitButton();
 }
+void ManageAnimalControl:: hideEditButton(){
+    _view->hideEditButton();
+}
+void ManageAnimalControl:: hideSaveButton(){
+    _view->hideSaveButton();
+}

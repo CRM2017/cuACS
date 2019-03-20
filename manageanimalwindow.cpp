@@ -18,6 +18,8 @@ ManageAnimalWindow::ManageAnimalWindow(ManageAnimalControl &control ,QWidget *pa
 {
     ui->setupUi(this);
 
+
+
 }
 
 ManageAnimalWindow::~ManageAnimalWindow()
@@ -159,7 +161,13 @@ void ManageAnimalWindow:: hideSubmitButton(){
     ui->submitButton->hide();
 }
 
+void ManageAnimalWindow:: hideEditButton(){
+    ui->editButton->hide();
+}
 
+void ManageAnimalWindow:: hideSaveButton(){
+    ui->saveButton->hide();
+}
 
 void ManageAnimalWindow::updateTextEditFromDB(int col){
     DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
@@ -269,6 +277,8 @@ void ManageAnimalWindow::on_submitButton_rejected()
 
 void ManageAnimalWindow::on_editButton_clicked()
 {
+    ui->saveButton->show();
+    ui->editButton->hide();
     ui->id->setReadOnly(false);
     ui->name->setReadOnly(false);
     ui->type->setReadOnly(false);
@@ -278,6 +288,29 @@ void ManageAnimalWindow::on_editButton_clicked()
     ui->height->setReadOnly(false);
     ui->space->setReadOnly(false);
     ui->fee->setReadOnly(false);
+
+    _name = ui->name->text();
+    _type = ui->type->text();
+    _age = ui->age->text();
+    _breed = ui->breed->text();
+    _gender = ui->gender->currentText();
+    _color= ui->color->currentText();
+    _weight = ui->weight->text();
+    _height = ui->height->text();
+    _spayed = ui->spayed->currentText();
+    _vaccine = ui->vaccine->currentText();
+    _aggressivity = ui->aggressivity->currentText();
+    _trained = ui->trained->currentText();
+    _personality = ui->personality->currentText();
+    _feeding = ui->feeding->currentText();
+    _food = ui->food->currentText();
+    _appetite = ui->appetite->currentText();
+    _source = ui->source->currentText();
+    _exercise = ui->exercise->currentText();
+    _skills = ui->skills->currentText();
+    _learning = ui->learning->currentText();
+    _space = ui->space->text();
+    _fee = ui->fee->text();
 }
 
 void ManageAnimalWindow::on_saveButton_clicked()
@@ -343,7 +376,6 @@ void ManageAnimalWindow::on_saveButton_clicked()
     else{
          qDebug()<<_name;
          qDebug()<<_type;
-
     }
 
 }

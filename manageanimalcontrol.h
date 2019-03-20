@@ -12,6 +12,8 @@ public:
     ~ManageAnimalControl();
     void updateAnimalDetailsFromDB(int col);
     void hideSubmitButton();
+    void hideEditButton();
+    void hideSaveButton();
     void show();
     void close();
 //    void createAnimal(int id, QString name, QString type);

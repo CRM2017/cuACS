@@ -31,6 +31,8 @@ void StaffControl::show(){
 void StaffControl::displayAddAnimalWindow(){
     ManageAnimalControl m;
     m.show();
+    m.hideEditButton();
+    m.hideSaveButton();
 }
 void StaffControl::displayAddClientWindow(){
     ManageClientControl m;
@@ -41,6 +43,7 @@ void StaffControl::displayAddClientWindow(){
 void StaffControl::displayViewAnimalWindow(int col){
     ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
     m.hideSubmitButton();
+    m.hideSaveButton();
     m.updateAnimalDetailsFromDB(col);
     m.show();
 

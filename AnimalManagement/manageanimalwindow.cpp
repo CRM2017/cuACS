@@ -1,10 +1,9 @@
-#include "manageanimalwindow.h"
-//#include "manageanimalwindow.h"
+#include "AnimalManagement/manageanimalwindow.h"
 #include "ui_manageanimalwindow.h"
-#include "animal.h"
-#include "staffwindow.h"
-#include "staffcontrol.h"
-#include "manageanimalcontrol.h"
+#include "Storage/animal.h"
+#include "StaffInterface/staffwindow.h"
+#include "StaffInterface/staffcontrol.h"
+#include "AnimalManagement/manageanimalcontrol.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QFileDialog>
@@ -24,7 +23,8 @@ ManageAnimalWindow::ManageAnimalWindow(ManageAnimalControl &control ,QWidget *pa
 
 ManageAnimalWindow::~ManageAnimalWindow()
 {
-    delete ui;
+    qDebug() <<"~ManageAnimalWindow() called";
+//    delete ui;
 }
 
 void ManageAnimalWindow::on_id_textEdited(const QString &arg1)
@@ -377,5 +377,4 @@ void ManageAnimalWindow::on_saveButton_clicked()
          qDebug()<<_name;
          qDebug()<<_type;
     }
-
 }

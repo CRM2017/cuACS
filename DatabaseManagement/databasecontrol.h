@@ -4,9 +4,9 @@
 #define DATABASECONTROL_H
 
 #include <vector>
-#include "database.h"
-#include "animal.h"
-#include "client.h"
+#include "DatabaseManagement/database.h"
+#include "Storage/animal.h"
+#include "Storage/client.h"
 #include <QString>
 
 using namespace std;

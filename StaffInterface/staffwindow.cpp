@@ -1,9 +1,9 @@
-#include "staffwindow.h"
+#include "StaffInterface/staffwindow.h"
 #include "ui_staffwindow.h"
-#include "staffcontrol.h"
+#include "StaffInterface/staffcontrol.h"
 #include <QDebug>
 #include <string>
-#include "database.h"
+#include "DatabaseManagement/database.h"
 StaffWindow::StaffWindow(StaffControl &control , QWidget *parent) :
     _control(control),
     QDialog(parent),

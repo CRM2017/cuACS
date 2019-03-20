@@ -3,8 +3,8 @@
 #ifndef MANAGECLIENTCONTROL_H
 #define MANAGECLIENTCONTROL_H
 
-#include "manageclientcontrol.h"
-#include "manageclientwindow.h"
+#include "ClientManagement/manageclientcontrol.h"
+#include "ClientManagement/manageclientwindow.h"
 
 class ManageClientControl
 {
@@ -19,7 +19,7 @@ public:
 
 private:
     ManageClientWindow *_view;
-//    ManageClientWindow _view;
+
 };
 
 #endif // MANAGECLIENTCONTROL_H

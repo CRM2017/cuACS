@@ -1,5 +1,5 @@
-#include "manageanimalcontrolfactory.h"
-#include "manageanimalcontrol.h"
+#include "AnimalManagement/manageanimalcontrolfactory.h"
+#include "AnimalManagement/manageanimalcontrol.h"
 
 ManageAnimalControlFactory::ManageAnimalControlFactory(){}
 

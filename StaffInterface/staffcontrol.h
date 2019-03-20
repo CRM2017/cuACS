@@ -3,11 +3,11 @@
 #ifndef StaffCONTROL_H
 #define StaffCONTROL_H
 
-#include "staffwindow.h"
-#include "databasecontrol.h"
-#include "manageanimalcontrol.h"
-#include "manageclientcontrol.h"
-#include "manageanimalcontrolfactory.h"
+#include "StaffInterface/staffwindow.h"
+#include "DatabaseManagement/databasecontrol.h"
+#include "AnimalManagement/manageanimalcontrol.h"
+#include "ClientManagement/manageclientcontrol.h"
+#include "AnimalManagement/manageanimalcontrolfactory.h"
 
 class StaffControl
 {
@@ -24,7 +24,7 @@ public:
 
 private:
     StaffWindow *_view;
-    ManageAnimalControl _manageAnimalcontrol;
+//    ManageAnimalControl _manageAnimalcontrol;
 
 
 };

@@ -4,8 +4,8 @@
 
 #include <QDialog>
 #include <memory>
-#include "databasecontrol.h"
-#include "databasecontrolfactory.h"
+#include "DatabaseManagement/databasecontrol.h"
+#include "DatabaseManagement/databasecontrolfactory.h"
 
 class ClientControl;
 

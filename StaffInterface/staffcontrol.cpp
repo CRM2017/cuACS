@@ -1,5 +1,5 @@
-#include "staffcontrol.h"
-#include "manageanimalcontrolfactory.h"
+#include "StaffInterface/staffcontrol.h"
+#include "AnimalManagement/manageanimalcontrolfactory.h"
 
 
 #include <QDebug>

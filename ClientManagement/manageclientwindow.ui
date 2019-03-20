@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManageClientWindow</class>
+ <widget class="QDialog" name="ManageClientWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>897</width>
+    <height>566</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>281</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="ID"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Full Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="name"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Phone Number</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="phone"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="email">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="address"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="age"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="genderLable">
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QComboBox" name="gender">
+      <item>
+       <property name="text">
+        <string>select a gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="submitButton">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>520</y>
+     <width>83</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>submit</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>289</x>
+     <y>9</y>
+     <width>591</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="1">
+     <widget class="QComboBox" name="PrimaryColorComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grey</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Brown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_21">
+      <property name="text">
+       <string>Food Preference</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Species</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QComboBox" name="SpayedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>No</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QComboBox" name="VaccineComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Up to Date</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Never</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="AgeComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Less Than a Year</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1 - 3 Years</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt; 3 Years</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>Feeding Difficulty</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Spayed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QComboBox" name="AggressivityComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weak</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="BreedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mixed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pit Bull</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Labrador</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chihuahua</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Calico</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium Hair</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Long Hair</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tabby</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QComboBox" name="FeedingDifficultyComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Difficult</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Easy</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Aggressivity</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QComboBox" name="TrainedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Excellent</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Good</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Untrained</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>Trained</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="HeightComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Less Than 20 cm</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20 cm - 1 m</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt; 1 m</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="SpeciesComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dog</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Murid</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tirtile</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bird</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QComboBox" name="AppetiteLevelComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QComboBox" name="FoodPreferenceComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vage</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grain</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Vaccine</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="QComboBox" name="PersonalityComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Noisy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Quite</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lazy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vivacious</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Height</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Breed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Primary Color</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>Personality</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="GenderComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="WeightComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Less Than 500 g</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>500 g - 2 KG</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt; 2 KG</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Weight</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label_24">
+      <property name="text">
+       <string>Learn Speed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QComboBox" name="LearnSpeedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label_22">
+      <property name="text">
+       <string>Special Skills</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QComboBox" name="SpecialSkillsComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shake Hand</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stand up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grab Staff</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Others</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_23">
+      <property name="text">
+       <string>Exercise Need</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_25">
+      <property name="text">
+       <string>Adoption Source</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QComboBox" name="AdoptionSourceComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stary</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Outcast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Born in Here</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QComboBox" name="ExerciseNeedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zero</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="label_26">
+      <property name="text">
+       <string>Space Need</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QComboBox" name="SpaceNeedComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0 - 60 m square</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>60 - 150 m square</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt; 150 square</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QComboBox" name="AdoptionPriceComBox">
+      <item>
+       <property name="text">
+        <string>No Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0 - 100</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100 - 300</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>300 - 500</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt; 500</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label_27">
+      <property name="text">
+       <string>Adoption Price</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="text">
+       <string>Appetite Level</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

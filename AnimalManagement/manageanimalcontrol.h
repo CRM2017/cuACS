@@ -3,7 +3,8 @@
 #ifndef MANAGEANIMALCONTROL_H
 #define MANAGEANIMALCONTROL_H
 
-#include "manageanimalwindow.h"
+#include "AnimalManagement/manageanimalwindow.h"
+
 
 class ManageAnimalControl
 {
@@ -16,7 +17,7 @@ public:
     void hideSaveButton();
     void show();
     void close();
-//    void createAnimal(int id, QString name, QString type);
+
 
 private:
     ManageAnimalWindow *_view;

@@ -4,8 +4,8 @@
 
 #include <QDialog>
 #include <memory>
-#include "databasecontrol.h"
-#include "databasecontrolfactory.h"
+#include "DatabaseManagement/databasecontrol.h"
+#include "DatabaseManagement/databasecontrolfactory.h"
 #include <vector>
 
 class ManageAnimalControl;
@@ -97,7 +97,7 @@ private:
     QString _name, _type, _age, _breed, _gender, _color, _weight, _height, _spayed, _vaccine, _aggressivity, _trained,
     _personality, _feeding, _food, _appetite, _source, _exercise, _skills, _learning, _space, _fee, _relativePhotoPath;
     vector <QString> _animalData;
-//    std::unique_ptr<Ui::ManageAnimalWindow> ui;
+
 };
 
 #endif // MANAGEANIMALWINDOW_H

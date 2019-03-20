@@ -1,7 +1,7 @@
 #ifndef MANAGEANIMALCONTROLFACTORY_H
 #define MANAGEANIMALCONTROLFACTORY_H
 
-#include "manageanimalcontrol.h"
+#include "AnimalManagement/manageanimalcontrol.h"
 
 class ManageAnimalControlFactory
 {

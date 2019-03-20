@@ -3,11 +3,10 @@
 #ifndef CLIENTCONTROL_H
 #define CLIENTCONTROL_H
 
-//#include "clientcontrol.h"
-#include "clientwindow.h"
-#include "databasecontrol.h"
-#include "manageanimalcontrol.h"
-#include "manageanimalcontrolfactory.h"
+#include "ClientInterface/clientwindow.h"
+#include "DatabaseManagement/databasecontrol.h"
+#include "AnimalManagement/manageanimalcontrol.h"
+#include "AnimalManagement/manageanimalcontrolfactory.h"
 
 class ClientControl
 {

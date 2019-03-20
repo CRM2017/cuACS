@@ -1,7 +1,7 @@
 #include "maincontrol.h"
 #include "mainwindow.h"
-#include "staffcontrol.h"
-#include "clientcontrol.h"
+#include "StaffInterface/staffcontrol.h"
+#include "ClientInterface/clientcontrol.h"
 
 
 MainControl::MainControl()

@@ -5,7 +5,7 @@
 
 #include <QDialog>
 #include <memory>
-#include "databasecontrol.h"
+#include "DatabaseManagement/databasecontrol.h"
 
 class StaffControl;
 

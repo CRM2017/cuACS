@@ -1,5 +1,5 @@
-#include "clientcontrol.h"
-#include "manageanimalcontrolfactory.h"
+#include "ClientInterface/clientcontrol.h"
+#include "AnimalManagement/manageanimalcontrolfactory.h"
 
 #include <QDebug>
 

@@ -1,9 +1,9 @@
-#include "manageclientwindow.h"
+#include "ClientManagement/manageclientwindow.h"
 #include "ui_manageclientwindow.h"
-#include "client.h"
-#include "staffwindow.h"
-#include "staffcontrol.h"
-#include "manageclientcontrol.h"
+#include "Storage/client.h"
+#include "StaffInterface/staffwindow.h"
+#include "StaffInterface/staffcontrol.h"
+#include "ClientManagement/manageclientcontrol.h"
 
 ManageClientWindow::ManageClientWindow(ManageClientControl &control ,QWidget *parent) :
     _control(control),

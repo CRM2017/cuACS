@@ -1,5 +1,5 @@
 #include "databasecontrol.h"
-#include "animal.h"
+#include "Storage/animal.h"
 
 DatabaseControl::DatabaseControl() :_db (new Database())
 {

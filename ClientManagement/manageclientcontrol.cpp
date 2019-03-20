@@ -1,5 +1,5 @@
-#include "manageclientcontrol.h"
-#include "client.h"
+#include "ClientManagement/manageclientcontrol.h"
+#include "Storage/client.h"
 #include "QDebug"
 
 ManageClientControl::ManageClientControl()

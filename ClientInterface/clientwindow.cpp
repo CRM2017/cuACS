@@ -1,9 +1,9 @@
-#include "clientwindow.h"
+#include "ClientInterface/clientwindow.h"
 #include "ui_clientwindow.h"
-#include "clientcontrol.h"
+#include "ClientInterface/clientcontrol.h"
 #include <QDebug>
 #include <string>
-#include "database.h"
+#include "DatabaseManagement/database.h"
 
 ClientWindow::ClientWindow(ClientControl &control ,QWidget *parent) :
     _control(control),

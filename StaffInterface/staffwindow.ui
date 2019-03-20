@@ -128,11 +128,25 @@
           <x>-1</x>
           <y>0</y>
           <width>771</width>
-          <height>591</height>
+          <height>551</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_4">
-         <item row="0" column="0" rowspan="5">
+         <item row="2" column="2">
+          <widget class="QPushButton" name="addClientButton">
+           <property name="text">
+            <string>Add Client</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="updateclientButton">
+           <property name="text">
+            <string>Update</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="4">
           <widget class="QTableWidget" name="ClienListTable">
            <column>
             <property name="text">
@@ -161,21 +175,20 @@
            </column>
           </widget>
          </item>
-         <item row="2" column="2">
-          <widget class="QPushButton" name="addClientButton">
-           <property name="text">
-            <string>Add Client</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="updateclientButton">
-           <property name="text">
-            <string>Update</string>
-           </property>
-          </widget>
-         </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>560</y>
+          <width>381</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Hint: Double Clicked Table Content to View Client Details</string>
+        </property>
        </widget>
       </widget>
      </widget>

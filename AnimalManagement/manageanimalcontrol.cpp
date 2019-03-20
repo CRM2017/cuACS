@@ -1,5 +1,5 @@
-#include "manageanimalcontrol.h"
-#include "animal.h"
+#include "AnimalManagement/manageanimalcontrol.h"
+#include "Storage/animal.h"
 #include <QDebug>
 
 
@@ -12,10 +12,7 @@ ManageAnimalControl::ManageAnimalControl()
 ManageAnimalControl::~ManageAnimalControl(){
 }
 
-//void ManageAnimalControl::createAnimal(int id, const QString &name, QString &type){
-//    Animal animal(id, name, type);
 
-//}
 
 void ManageAnimalControl:: show(){
     qDebug()<< "animal creating window opened";

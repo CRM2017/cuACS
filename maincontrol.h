@@ -4,8 +4,8 @@
 #define MAINCONTROL_H
 
 #include "mainwindow.h"
-#include "staffwindow.h"
-#include "staffcontrol.h"
+#include "StaffInterface/staffwindow.h"
+#include "StaffInterface/staffcontrol.h"
 #include <memory>
 class MainWindow;
 

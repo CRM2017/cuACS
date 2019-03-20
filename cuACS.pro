@@ -24,51 +24,51 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-    client.cpp \
+    Storage/client.cpp \
     main.cpp \
     mainwindow.cpp \
     maincontrol.cpp \
-    staffwindow.cpp \
-    staffcontrol.cpp \
-    manageanimalwindow.cpp \
-    manageanimalcontrol.cpp \
-    animal.cpp \
-    database.cpp \
-    databasecontrol.cpp \
-    manageclientwindow.cpp \
-    manageclientcontrol.cpp \
-    clientwindow.cpp \
-    clientcontrol.cpp \
-    databasecontrolfactory.cpp \
-    manageanimalcontrolfactory.cpp \
+    StaffInterface/staffwindow.cpp \
+    StaffInterface/staffcontrol.cpp \
+    AnimalManagement/manageanimalwindow.cpp \
+    AnimalManagement/manageanimalcontrol.cpp \
+    Storage/animal.cpp \
+    DatabaseManagement/database.cpp \
+    DatabaseManagement/databasecontrol.cpp \
+    ClientManagement/manageclientwindow.cpp \
+    ClientManagement/manageclientcontrol.cpp \
+    ClientInterface/clientwindow.cpp \
+    ClientInterface/clientcontrol.cpp \
+    DatabaseManagement/databasecontrolfactory.cpp \
+    AnimalManagement/manageanimalcontrolfactory.cpp \
     subject.cpp \
     observer.cpp
 
 HEADERS += \
     mainwindow.h \
-    client.h \
+    Storage/client.h \
     maincontrol.h \
-    staffwindow.h \
-    staffcontrol.h \
-    manageanimalwindow.h \
-    manageanimalcontrol.h \
-    animal.h \
-    database.h \
-    databasecontrol.h \
-    manageclientwindow.h \
-    manageclientcontrol.h \
-    clientwindow.h \
-    clientcontrol.h \
-    databasecontrolfactory.h \
-    manageanimalcontrolfactory.h \
+    StaffInterface/staffwindow.h \
+    StaffInterface/staffcontrol.h \
+    AnimalManagement/manageanimalwindow.h \
+    AnimalManagement/manageanimalcontrol.h \
+    Storage/animal.h \
+    DatabaseManagement/database.h \
+    DatabaseManagement/databasecontrol.h \
+    ClientManagement/manageclientwindow.h \
+    ClientManagement/manageclientcontrol.h \
+    ClientInterface/clientwindow.h \
+    ClientInterface/clientcontrol.h \
+    DatabaseManagement/databasecontrolfactory.h \
+    AnimalManagement/manageanimalcontrolfactory.h \
     subject.h \
     observer.h
 
 
 FORMS += \
     mainwindow.ui \
-    staffwindow.ui \
-    manageanimalwindow.ui \
-    manageclientwindow.ui \
-    clientwindow.ui
+    StaffInterface/staffwindow.ui \
+    AnimalManagement/manageanimalwindow.ui \
+    ClientManagement/manageclientwindow.ui \
+    ClientInterface/clientwindow.ui
 

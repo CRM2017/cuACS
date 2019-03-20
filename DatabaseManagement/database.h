@@ -4,8 +4,8 @@
 #define DATABASE_H
 
 #include <QtSql>
-#include "animal.h"
-#include "client.h"
+#include "Storage/animal.h"
+#include "Storage/client.h"
 #include <vector>
 #include "observer.h"
 class Database : public Observer

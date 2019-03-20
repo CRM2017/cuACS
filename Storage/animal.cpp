@@ -1,5 +1,5 @@
 #include "animal.h"
-#include "databasecontrol.h"
+#include "DatabaseManagement/databasecontrol.h"
 
 
 Animal::Animal(const int id, const QString& name, const QString &type, const QString &breed, const QString &age, const QString &gender,

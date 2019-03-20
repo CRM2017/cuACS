@@ -26,6 +26,8 @@ void ClientControl::displayViewAnimalWindow(int col){
     ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
     m.hideSubmitButton();
     m.updateAnimalDetailsFromDB(col);
+    m.hideEditButton();
+    m.hideSaveButton();
     m.show();
 }
 

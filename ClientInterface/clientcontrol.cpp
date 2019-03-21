@@ -28,6 +28,7 @@ void ClientControl::displayViewAnimalWindow(int col){
     m.updateAnimalDetailsFromDB(col);
     m.hideEditButton();
     m.hideSaveButton();
+    m.hideUploadPhotoButton();
     m.show();
 }
 

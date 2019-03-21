@@ -38,3 +38,6 @@ void ManageAnimalControl:: hideEditButton(){
 void ManageAnimalControl:: hideSaveButton(){
     _view->hideSaveButton();
 }
+void ManageAnimalControl::hideUploadPhotoButton(){
+    _view->hideUploadPhotoButton();
+}

@@ -1,5 +1,5 @@
 
-						COMP 3004 project Delivery 2
+						COMP 3004 project Delivery 3
 
 PROJECT NAME: 
 	Carleton University Animal Care System
@@ -34,15 +34,25 @@ PROJECT RUNNING STEPS:  --->use command line
 4. Launch project using command: 
 	./cuACS
 
-Altenatvie launch method ---> use QtCreator
-1. Open QtCreator: File -> Open Project -> cuACS -> cuACS.pro -> open
-2. On menu bar, Build -> Rebuild Project "cuACS", then clicked Build
-3. Copy "cuACSdb.sqlite" to "build-cuACS-Desktop-Debug" file
-4. On qtCreator menu bar, click run project 
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-FEATURES:
+NEW FEATURES in D3:
+
+Client feature:
+1. Edit client's own details profile and matching preferences
+	Main window -> Click "Client" button -> Enter a valid client ID -> Click "Confirm" button ->
+	Click "Preference" button -> Client view window -> Click "Edit" button -> modify any data ->
+	Click "Save" button -> Enter the Client ID to see the new change 
+
+Staff feature:
+2. Edit any animals profile
+	Main window -> Click "Staff" button -> select "Animal List" tag -> Double Click the animal column
+	-> animal view window -> Click "Edit" button -> modify any data -> Click "Save" button -> 
+	Click "update" button to see the new change
+
+-----------------------------------------------------------------------------------------------------------------------------------
+D2 FEATURES 	
 1. View all animals (staff/client)
 
 	Main window -> Click "Staff" button -> select "Animal List" tag

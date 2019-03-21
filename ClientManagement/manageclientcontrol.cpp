@@ -23,6 +23,12 @@ void ManageClientControl::close(){
 void ManageClientControl::hideSubmitButton(){
     _view->hideSubmitButton();
 }
+void ManageClientControl::hideEditButton(){
+    _view->hideEditButton();
+}
+void ManageClientControl::hideSaveButton(){
+    _view->hideSaveButton();
+}
 
 void ManageClientControl:: updateClientInfoFromDB(int col){
     _view->updateClientListFromDB(col);

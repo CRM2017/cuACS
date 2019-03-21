@@ -125,3 +125,29 @@ void ClientWindow:: displayClienInfo(){
     }
 
 }
+
+void ClientWindow::on_PreferenceButton_clicked()
+{
+    DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
+    //QString  name, phone, email, address, age, gender;
+    vector <vector<QString>> data;
+
+    data = _dbControl.getClientInfo();
+    int index = -1;
+    for (int i=0; i< data[0].size(); i++){
+        if (data[0][i] == _id){
+            index = i;
+        }
+    }
+    if(index != -1){
+        ManageClientControl m;
+        m.hideSubmitButton();
+        m.hideSaveButton();
+        m.updateClientInfoFromDB(index);
+        m.show();
+    }
+    else{
+        ui->promptMessage->setText("Client ID dosen't exist, please try again!");
+    }
+
+}

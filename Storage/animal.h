@@ -12,7 +12,7 @@ class Animal : public Subject
 public:
     Animal(const int id, const QString &name, const QString &type, const QString &breed, const QString &age, const QString &gender, const QString &color,
            const QString &weight, const QString &height, const QString & spayed, const QString &vaccine, const QString & aggressivity, const QString &trained,
-           const QString &personality, const QString & eeding, const QString &food, const QString & ppetite, const QString &source,
+           const QString &personality, const QString & feeding, const QString &food, const QString & appetite, const QString &source,
            const QString &exercise, const QString &skills, const QString &learning, const QString &space, const QString &fee, const QString &relativePhotoPath);
 
 //    Animal(const int id, const QString &name, const QString &type, const QString &age);

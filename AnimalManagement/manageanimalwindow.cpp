@@ -168,6 +168,9 @@ void ManageAnimalWindow:: hideEditButton(){
 void ManageAnimalWindow:: hideSaveButton(){
     ui->saveButton->hide();
 }
+void ManageAnimalWindow::hideUploadPhotoButton(){
+    ui->uploadButton->hide();
+}
 
 void ManageAnimalWindow::updateTextEditFromDB(int col){
     DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
@@ -240,6 +243,22 @@ void ManageAnimalWindow::updateTextEditFromDB(int col){
     ui->space->setReadOnly(true);
     ui->fee->setReadOnly(true);
 
+    ui->gender->setEnabled(false);
+    ui->color->setEnabled(false);
+    ui->spayed->setEnabled(false);
+    ui->vaccine->setEnabled(false);
+    ui->aggressivity->setEnabled(false);
+    ui->trained->setEnabled(false);
+    ui->personality->setEnabled(false);
+    ui->feeding->setEnabled(false);
+    ui->food->setEnabled(false);
+    ui->appetite->setEnabled(false);
+    ui->source->setEnabled(false);
+    ui->exercise->setEnabled(false);
+    ui->skills->setEnabled(false);
+    ui->learning->setEnabled(false);
+
+
 
 }
 
@@ -278,6 +297,7 @@ void ManageAnimalWindow::on_submitButton_rejected()
 void ManageAnimalWindow::on_editButton_clicked()
 {
     ui->saveButton->show();
+    ui->uploadButton->show();
     ui->editButton->hide();
     ui->id->setReadOnly(false);
     ui->name->setReadOnly(false);
@@ -288,6 +308,23 @@ void ManageAnimalWindow::on_editButton_clicked()
     ui->height->setReadOnly(false);
     ui->space->setReadOnly(false);
     ui->fee->setReadOnly(false);
+
+
+    ui->gender->setEnabled(true);
+    ui->color->setEnabled(true);
+    ui->spayed->setEnabled(true);
+    ui->vaccine->setEnabled(true);
+    ui->aggressivity->setEnabled(true);
+    ui->trained->setEnabled(true);
+    ui->personality->setEnabled(true);
+    ui->feeding->setEnabled(true);
+    ui->food->setEnabled(true);
+    ui->appetite->setEnabled(true);
+    ui->source->setEnabled(true);
+    ui->exercise->setEnabled(true);
+    ui->skills->setEnabled(true);
+    ui->learning->setEnabled(true);
+
 
     _name = ui->name->text();
     _type = ui->type->text();
@@ -342,7 +379,8 @@ void ManageAnimalWindow::on_saveButton_clicked()
                          "SPECIAL_SKILLS= :skills,"
                          "LEARNING_SPEED= :learning,"
                          "SPACE_NEED= :space,"
-                         "ADOPTION_FEE= :fee"
+                         "ADOPTION_FEE= :fee,"
+                         "relative_Photo_Path= :photoPath"
                          " WHERE id = :id;";
     qry.prepare( update_sql);
     qry.bindValue(":name", _name);
@@ -367,6 +405,7 @@ void ManageAnimalWindow::on_saveButton_clicked()
     qry.bindValue(":learning", _learning);
     qry.bindValue(":space", _space);
     qry.bindValue(":fee", _fee);
+    qry.bindValue(":photoPath", _relativePhotoPath);
     qry.bindValue(":id", ui->id->text().toInt());
 
     if (!qry.exec())
@@ -377,4 +416,5 @@ void ManageAnimalWindow::on_saveButton_clicked()
          qDebug()<<_name;
          qDebug()<<_type;
     }
+    this->close();
 }

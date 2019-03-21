@@ -15,6 +15,7 @@ public:
     void hideSubmitButton();
     void hideEditButton();
     void hideSaveButton();
+    void hideUploadPhotoButton();
     void show();
     void close();
 

@@ -21,10 +21,14 @@ public:
     explicit ManageClientWindow(ManageClientControl &control ,QWidget *parent = 0);
     ~ManageClientWindow();
     void hideSubmitButton();
+    void hideEditButton();
+    void hideSaveButton();
 
 private slots:
 
     void on_submitButton_clicked();
+    void on_editButton_clicked();
+    void on_saveButton_clicked();
 
     void on_ID_textEdited(const QString &arg1);
 
@@ -40,13 +44,58 @@ private slots:
 
     void on_gender_currentIndexChanged(const QString &arg1);
 
+    void on_SpeciesComBox_currentIndexChanged(const QString &arg1);
+
+    void on_BreedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_AgeComBox_currentIndexChanged(const QString &arg1);
+
+    void on_GenderComBox_currentIndexChanged(const QString &arg1);
+
+    void on_PrimaryColorComBox_currentIndexChanged(const QString &arg1);
+
+    void on_WeightComBox_currentIndexChanged(const QString &arg1);
+
+    void on_HeightComBox_currentIndexChanged(const QString &arg1);
+
+    void on_SpayedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_VaccineComBox_currentIndexChanged(const QString &arg1);
+
+    void on_AggressivityComBox_currentIndexChanged(const QString &arg1);
+
+    void on_TrainedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_PersonalityComBox_currentIndexChanged(const QString &arg1);
+
+    void on_FeedingDifficultyComBox_currentIndexChanged(const QString &arg1);
+
+    void on_FoodPreferenceComBox_currentIndexChanged(const QString &arg1);
+
+    void on_AppetiteLevelComBox_currentIndexChanged(const QString &arg1);
+
+    void on_AdoptionSourceComBox_currentIndexChanged(const QString &arg1);
+
+    void on_ExerciseNeedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_SpecialSkillsComBox_currentIndexChanged(const QString &arg1);
+
+    void on_LearnSpeedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_SpaceNeedComBox_currentIndexChanged(const QString &arg1);
+
+    void on_AdoptionPriceComBox_currentIndexChanged(const QString &arg1);
+
+
+
 public slots:
     void updateClientListFromDB(int col);
 
 private:
     ManageClientControl &_control;
     Ui::ManageClientWindow *ui;
-    QString _id, _name, _phone, _email, _address, _age, _gender;
+    QString _id,_name, _phone, _email,_address ,_age, _gender, _Animaltype, _Animalbreed, _Animalage, _Animalgender , _Animalcolor, _Animalweight, _Animalheight, _Animalspayed, _Animalvaccine, _Animalaggressivity, _Animaltrained,
+    _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee;
 };
 
 #endif // MANAGECLIENTWINDOW_H

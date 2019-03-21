@@ -9,7 +9,10 @@ class Client
 {
 public:
     Client(const QString &id, const QString &name, const QString &phone, const QString &email,
-           const QString &address,  const QString &age, const QString &gender);
+           const QString &address,  const QString &age, const QString &gender, const QString &Animaltype, const QString &Animalbreed, const QString &Animalage, const QString &Animalgender, const QString &Animalcolor,
+           const QString &Animalweight, const QString &Animalheight, const QString & Animalspayed, const QString &Animalvaccine, const QString & Animalaggressivity, const QString &Animaltrained,
+           const QString &Animalpersonality, const QString & Animalfeeding, const QString &Animalfood, const QString &Animalappetite, const QString &Animalsource,
+           const QString &Animalexercise, const QString &Animalskills, const QString &Animallearning, const QString &Animalspace, const QString &Animalfee);
     ~Client();
     QString getId() const;
     QString getName() const;
@@ -21,7 +24,8 @@ public:
     QStringList getClientInfo();
 
 private:
-    QString _id, _name, _phone,_email, _address, _age, _gender;
+    QString _id, _name, _phone,_email, _address, _age, _gender, _Animaltype, _Animalbreed, _Animalage, _Animalgender , _Animalcolor, _Animalweight, _Animalheight, _Animalspayed, _Animalvaccine, _Animalaggressivity, _Animaltrained,
+    _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee;
     QStringList _clientInfo;
 
 };

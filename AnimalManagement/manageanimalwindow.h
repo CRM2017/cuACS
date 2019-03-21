@@ -24,6 +24,7 @@ public:
     void hideSubmitButton();
     void hideEditButton();
     void hideSaveButton();
+    void hideUploadPhotoButton();
 
 private slots:
 

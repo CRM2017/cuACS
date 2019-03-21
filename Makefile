@@ -50,21 +50,25 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../cuACS/client.cpp \
+SOURCES       = ../cuACS/Storage/client.cpp \
 		../cuACS/main.cpp \
 		../cuACS/mainwindow.cpp \
 		../cuACS/maincontrol.cpp \
-		../cuACS/staffwindow.cpp \
-		../cuACS/staffcontrol.cpp \
-		../cuACS/manageanimalwindow.cpp \
-		../cuACS/manageanimalcontrol.cpp \
-		../cuACS/animal.cpp \
-		../cuACS/database.cpp \
-		../cuACS/databasecontrol.cpp \
-		../cuACS/manageclientwindow.cpp \
-		../cuACS/manageclientcontrol.cpp \
-		../cuACS/clientwindow.cpp \
-		../cuACS/clientcontrol.cpp moc_mainwindow.cpp \
+		../cuACS/StaffInterface/staffwindow.cpp \
+		../cuACS/StaffInterface/staffcontrol.cpp \
+		../cuACS/AnimalManagement/manageanimalwindow.cpp \
+		../cuACS/AnimalManagement/manageanimalcontrol.cpp \
+		../cuACS/Storage/animal.cpp \
+		../cuACS/DatabaseManagement/database.cpp \
+		../cuACS/DatabaseManagement/databasecontrol.cpp \
+		../cuACS/ClientManagement/manageclientwindow.cpp \
+		../cuACS/ClientManagement/manageclientcontrol.cpp \
+		../cuACS/ClientInterface/clientwindow.cpp \
+		../cuACS/ClientInterface/clientcontrol.cpp \
+		../cuACS/DatabaseManagement/databasecontrolfactory.cpp \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.cpp \
+		../cuACS/subject.cpp \
+		../cuACS/observer.cpp moc_mainwindow.cpp \
 		moc_staffwindow.cpp \
 		moc_manageanimalwindow.cpp \
 		moc_manageclientwindow.cpp \
@@ -84,6 +88,10 @@ OBJECTS       = client.o \
 		manageclientcontrol.o \
 		clientwindow.o \
 		clientcontrol.o \
+		databasecontrolfactory.o \
+		manageanimalcontrolfactory.o \
+		subject.o \
+		observer.o \
 		moc_mainwindow.o \
 		moc_staffwindow.o \
 		moc_manageanimalwindow.o \
@@ -159,6 +167,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		../cuACS/.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -179,33 +188,41 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		../cuACS/cuACS.pro ../cuACS/mainwindow.h \
-		../cuACS/client.h \
+		../cuACS/Storage/client.h \
 		../cuACS/maincontrol.h \
-		../cuACS/staffwindow.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/animal.h \
-		../cuACS/database.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/manageclientwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/clientwindow.h \
-		../cuACS/clientcontrol.h ../cuACS/client.cpp \
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientInterface/clientwindow.h \
+		../cuACS/ClientInterface/clientcontrol.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h ../cuACS/Storage/client.cpp \
 		../cuACS/main.cpp \
 		../cuACS/mainwindow.cpp \
 		../cuACS/maincontrol.cpp \
-		../cuACS/staffwindow.cpp \
-		../cuACS/staffcontrol.cpp \
-		../cuACS/manageanimalwindow.cpp \
-		../cuACS/manageanimalcontrol.cpp \
-		../cuACS/animal.cpp \
-		../cuACS/database.cpp \
-		../cuACS/databasecontrol.cpp \
-		../cuACS/manageclientwindow.cpp \
-		../cuACS/manageclientcontrol.cpp \
-		../cuACS/clientwindow.cpp \
-		../cuACS/clientcontrol.cpp
+		../cuACS/StaffInterface/staffwindow.cpp \
+		../cuACS/StaffInterface/staffcontrol.cpp \
+		../cuACS/AnimalManagement/manageanimalwindow.cpp \
+		../cuACS/AnimalManagement/manageanimalcontrol.cpp \
+		../cuACS/Storage/animal.cpp \
+		../cuACS/DatabaseManagement/database.cpp \
+		../cuACS/DatabaseManagement/databasecontrol.cpp \
+		../cuACS/ClientManagement/manageclientwindow.cpp \
+		../cuACS/ClientManagement/manageclientcontrol.cpp \
+		../cuACS/ClientInterface/clientwindow.cpp \
+		../cuACS/ClientInterface/clientcontrol.cpp \
+		../cuACS/DatabaseManagement/databasecontrolfactory.cpp \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.cpp \
+		../cuACS/subject.cpp \
+		../cuACS/observer.cpp
 QMAKE_TARGET  = cuACS
 DESTDIR       = 
 TARGET        = cuACS
@@ -287,6 +304,7 @@ Makefile: ../cuACS/cuACS.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qma
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -382,6 +400,7 @@ Makefile: ../cuACS/cuACS.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qma
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
@@ -421,9 +440,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../cuACS/mainwindow.h ../cuACS/client.h ../cuACS/maincontrol.h ../cuACS/staffwindow.h ../cuACS/staffcontrol.h ../cuACS/manageanimalwindow.h ../cuACS/manageanimalcontrol.h ../cuACS/animal.h ../cuACS/database.h ../cuACS/databasecontrol.h ../cuACS/manageclientwindow.h ../cuACS/manageclientcontrol.h ../cuACS/clientwindow.h ../cuACS/clientcontrol.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../cuACS/client.cpp ../cuACS/main.cpp ../cuACS/mainwindow.cpp ../cuACS/maincontrol.cpp ../cuACS/staffwindow.cpp ../cuACS/staffcontrol.cpp ../cuACS/manageanimalwindow.cpp ../cuACS/manageanimalcontrol.cpp ../cuACS/animal.cpp ../cuACS/database.cpp ../cuACS/databasecontrol.cpp ../cuACS/manageclientwindow.cpp ../cuACS/manageclientcontrol.cpp ../cuACS/clientwindow.cpp ../cuACS/clientcontrol.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../cuACS/mainwindow.ui ../cuACS/staffwindow.ui ../cuACS/manageanimalwindow.ui ../cuACS/manageclientwindow.ui ../cuACS/clientwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../cuACS/mainwindow.h ../cuACS/Storage/client.h ../cuACS/maincontrol.h ../cuACS/StaffInterface/staffwindow.h ../cuACS/StaffInterface/staffcontrol.h ../cuACS/AnimalManagement/manageanimalwindow.h ../cuACS/AnimalManagement/manageanimalcontrol.h ../cuACS/Storage/animal.h ../cuACS/DatabaseManagement/database.h ../cuACS/DatabaseManagement/databasecontrol.h ../cuACS/ClientManagement/manageclientwindow.h ../cuACS/ClientManagement/manageclientcontrol.h ../cuACS/ClientInterface/clientwindow.h ../cuACS/ClientInterface/clientcontrol.h ../cuACS/DatabaseManagement/databasecontrolfactory.h ../cuACS/AnimalManagement/manageanimalcontrolfactory.h ../cuACS/subject.h ../cuACS/observer.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../cuACS/Storage/client.cpp ../cuACS/main.cpp ../cuACS/mainwindow.cpp ../cuACS/maincontrol.cpp ../cuACS/StaffInterface/staffwindow.cpp ../cuACS/StaffInterface/staffcontrol.cpp ../cuACS/AnimalManagement/manageanimalwindow.cpp ../cuACS/AnimalManagement/manageanimalcontrol.cpp ../cuACS/Storage/animal.cpp ../cuACS/DatabaseManagement/database.cpp ../cuACS/DatabaseManagement/databasecontrol.cpp ../cuACS/ClientManagement/manageclientwindow.cpp ../cuACS/ClientManagement/manageclientcontrol.cpp ../cuACS/ClientInterface/clientwindow.cpp ../cuACS/ClientInterface/clientcontrol.cpp ../cuACS/DatabaseManagement/databasecontrolfactory.cpp ../cuACS/AnimalManagement/manageanimalcontrolfactory.cpp ../cuACS/subject.cpp ../cuACS/observer.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../cuACS/mainwindow.ui ../cuACS/StaffInterface/staffwindow.ui ../cuACS/AnimalManagement/manageanimalwindow.ui ../cuACS/ClientManagement/manageclientwindow.ui ../cuACS/ClientInterface/clientwindow.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -460,56 +479,73 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) moc_mainwindow.cpp moc_staffwindow.cpp moc_manageanimalwindow.cpp moc_manageclientwindow.cpp moc_clientwindow.cpp
 moc_mainwindow.cpp: ../cuACS/maincontrol.h \
 		../cuACS/mainwindow.h \
-		../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h \
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h \
 		../cuACS/mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/mainwindow.h -o moc_mainwindow.cpp
 
-moc_staffwindow.cpp: ../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/staffwindow.h \
+moc_staffwindow.cpp: ../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/StaffInterface/staffwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/staffwindow.h -o moc_staffwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/StaffInterface/staffwindow.h -o moc_staffwindow.cpp
 
-moc_manageanimalwindow.cpp: ../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/manageanimalwindow.h \
+moc_manageanimalwindow.cpp: ../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/manageanimalwindow.h -o moc_manageanimalwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/AnimalManagement/manageanimalwindow.h -o moc_manageanimalwindow.cpp
 
-moc_manageclientwindow.cpp: ../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/manageclientwindow.h \
+moc_manageclientwindow.cpp: ../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/manageclientwindow.h -o moc_manageclientwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/ClientManagement/manageclientwindow.h -o moc_manageclientwindow.cpp
 
-moc_clientwindow.cpp: ../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/clientwindow.h \
+moc_clientwindow.cpp: ../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientInterface/clientwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/clientwindow.h -o moc_clientwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/student/Desktop/cuACS -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../cuACS/ClientInterface/clientwindow.h -o moc_clientwindow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -520,21 +556,21 @@ ui_mainwindow.h: ../cuACS/mainwindow.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../cuACS/mainwindow.ui -o ui_mainwindow.h
 
-ui_staffwindow.h: ../cuACS/staffwindow.ui \
+ui_staffwindow.h: ../cuACS/StaffInterface/staffwindow.ui \
 		/usr/lib/qt5/bin/uic
-	/usr/lib/qt5/bin/uic ../cuACS/staffwindow.ui -o ui_staffwindow.h
+	/usr/lib/qt5/bin/uic ../cuACS/StaffInterface/staffwindow.ui -o ui_staffwindow.h
 
-ui_manageanimalwindow.h: ../cuACS/manageanimalwindow.ui \
+ui_manageanimalwindow.h: ../cuACS/AnimalManagement/manageanimalwindow.ui \
 		/usr/lib/qt5/bin/uic
-	/usr/lib/qt5/bin/uic ../cuACS/manageanimalwindow.ui -o ui_manageanimalwindow.h
+	/usr/lib/qt5/bin/uic ../cuACS/AnimalManagement/manageanimalwindow.ui -o ui_manageanimalwindow.h
 
-ui_manageclientwindow.h: ../cuACS/manageclientwindow.ui \
+ui_manageclientwindow.h: ../cuACS/ClientManagement/manageclientwindow.ui \
 		/usr/lib/qt5/bin/uic
-	/usr/lib/qt5/bin/uic ../cuACS/manageclientwindow.ui -o ui_manageclientwindow.h
+	/usr/lib/qt5/bin/uic ../cuACS/ClientManagement/manageclientwindow.ui -o ui_manageclientwindow.h
 
-ui_clientwindow.h: ../cuACS/clientwindow.ui \
+ui_clientwindow.h: ../cuACS/ClientInterface/clientwindow.ui \
 		/usr/lib/qt5/bin/uic
-	/usr/lib/qt5/bin/uic ../cuACS/clientwindow.ui -o ui_clientwindow.h
+	/usr/lib/qt5/bin/uic ../cuACS/ClientInterface/clientwindow.ui -o ui_clientwindow.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -546,158 +582,238 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-client.o: ../cuACS/client.cpp ../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o client.o ../cuACS/client.cpp
+client.o: ../cuACS/Storage/client.cpp ../cuACS/Storage/client.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o client.o ../cuACS/Storage/client.cpp
 
 main.o: ../cuACS/main.cpp ../cuACS/mainwindow.h \
 		../cuACS/maincontrol.h \
-		../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../cuACS/main.cpp
 
 mainwindow.o: ../cuACS/mainwindow.cpp ../cuACS/mainwindow.h \
 		../cuACS/maincontrol.h \
-		../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h \
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../cuACS/mainwindow.cpp
 
 maincontrol.o: ../cuACS/maincontrol.cpp ../cuACS/maincontrol.h \
 		../cuACS/mainwindow.h \
-		../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h \
-		../cuACS/clientcontrol.h \
-		../cuACS/clientwindow.h
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h \
+		../cuACS/ClientInterface/clientcontrol.h \
+		../cuACS/ClientInterface/clientwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o maincontrol.o ../cuACS/maincontrol.cpp
 
-staffwindow.o: ../cuACS/staffwindow.cpp ../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
+staffwindow.o: ../cuACS/StaffInterface/staffwindow.cpp ../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
 		ui_staffwindow.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o staffwindow.o ../cuACS/staffwindow.cpp
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o staffwindow.o ../cuACS/StaffInterface/staffwindow.cpp
 
-staffcontrol.o: ../cuACS/staffcontrol.cpp ../cuACS/staffcontrol.h \
-		../cuACS/staffwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o staffcontrol.o ../cuACS/staffcontrol.cpp
+staffcontrol.o: ../cuACS/StaffInterface/staffcontrol.cpp ../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o staffcontrol.o ../cuACS/StaffInterface/staffcontrol.cpp
 
-manageanimalwindow.o: ../cuACS/manageanimalwindow.cpp ../cuACS/manageanimalwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
+manageanimalwindow.o: ../cuACS/AnimalManagement/manageanimalwindow.cpp ../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
 		ui_manageanimalwindow.h \
-		../cuACS/staffwindow.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageanimalwindow.o ../cuACS/manageanimalwindow.cpp
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageanimalwindow.o ../cuACS/AnimalManagement/manageanimalwindow.cpp
 
-manageanimalcontrol.o: ../cuACS/manageanimalcontrol.cpp ../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageanimalcontrol.o ../cuACS/manageanimalcontrol.cpp
+manageanimalcontrol.o: ../cuACS/AnimalManagement/manageanimalcontrol.cpp ../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageanimalcontrol.o ../cuACS/AnimalManagement/manageanimalcontrol.cpp
 
-animal.o: ../cuACS/animal.cpp ../cuACS/animal.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o animal.o ../cuACS/animal.cpp
+animal.o: ../cuACS/Storage/animal.cpp ../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/client.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o animal.o ../cuACS/Storage/animal.cpp
 
-database.o: ../cuACS/database.cpp ../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o database.o ../cuACS/database.cpp
+database.o: ../cuACS/DatabaseManagement/database.cpp ../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o database.o ../cuACS/DatabaseManagement/database.cpp
 
-databasecontrol.o: ../cuACS/databasecontrol.cpp ../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o databasecontrol.o ../cuACS/databasecontrol.cpp
+databasecontrol.o: ../cuACS/DatabaseManagement/databasecontrol.cpp ../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o databasecontrol.o ../cuACS/DatabaseManagement/databasecontrol.cpp
 
-manageclientwindow.o: ../cuACS/manageclientwindow.cpp ../cuACS/manageclientwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
+manageclientwindow.o: ../cuACS/ClientManagement/manageclientwindow.cpp ../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
 		ui_manageclientwindow.h \
-		../cuACS/staffwindow.h \
-		../cuACS/staffcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h \
-		../cuACS/manageclientcontrol.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageclientwindow.o ../cuACS/manageclientwindow.cpp
+		../cuACS/StaffInterface/staffwindow.h \
+		../cuACS/StaffInterface/staffcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageclientwindow.o ../cuACS/ClientManagement/manageclientwindow.cpp
 
-manageclientcontrol.o: ../cuACS/manageclientcontrol.cpp ../cuACS/manageclientcontrol.h \
-		../cuACS/manageclientwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageclientcontrol.o ../cuACS/manageclientcontrol.cpp
+manageclientcontrol.o: ../cuACS/ClientManagement/manageclientcontrol.cpp ../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageclientcontrol.o ../cuACS/ClientManagement/manageclientcontrol.cpp
 
-clientwindow.o: ../cuACS/clientwindow.cpp ../cuACS/clientwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
+clientwindow.o: ../cuACS/ClientInterface/clientwindow.cpp ../cuACS/ClientInterface/clientwindow.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
 		ui_clientwindow.h \
-		../cuACS/clientcontrol.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientwindow.o ../cuACS/clientwindow.cpp
+		../cuACS/ClientInterface/clientcontrol.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientwindow.o ../cuACS/ClientInterface/clientwindow.cpp
 
-clientcontrol.o: ../cuACS/clientcontrol.cpp ../cuACS/clientcontrol.h \
-		../cuACS/clientwindow.h \
-		../cuACS/databasecontrol.h \
-		../cuACS/database.h \
-		../cuACS/animal.h \
-		../cuACS/client.h \
-		../cuACS/manageanimalcontrol.h \
-		../cuACS/manageanimalwindow.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientcontrol.o ../cuACS/clientcontrol.cpp
+clientcontrol.o: ../cuACS/ClientInterface/clientcontrol.cpp ../cuACS/ClientInterface/clientcontrol.h \
+		../cuACS/ClientInterface/clientwindow.h \
+		../cuACS/ClientManagement/manageclientcontrol.h \
+		../cuACS/ClientManagement/manageclientwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/AnimalManagement/manageanimalcontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientcontrol.o ../cuACS/ClientInterface/clientcontrol.cpp
+
+databasecontrolfactory.o: ../cuACS/DatabaseManagement/databasecontrolfactory.cpp ../cuACS/DatabaseManagement/databasecontrolfactory.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o databasecontrolfactory.o ../cuACS/DatabaseManagement/databasecontrolfactory.cpp
+
+manageanimalcontrolfactory.o: ../cuACS/AnimalManagement/manageanimalcontrolfactory.cpp ../cuACS/AnimalManagement/manageanimalcontrolfactory.h \
+		../cuACS/AnimalManagement/manageanimalcontrol.h \
+		../cuACS/AnimalManagement/manageanimalwindow.h \
+		../cuACS/DatabaseManagement/databasecontrol.h \
+		../cuACS/DatabaseManagement/database.h \
+		../cuACS/Storage/animal.h \
+		../cuACS/subject.h \
+		../cuACS/observer.h \
+		../cuACS/Storage/client.h \
+		../cuACS/DatabaseManagement/databasecontrolfactory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageanimalcontrolfactory.o ../cuACS/AnimalManagement/manageanimalcontrolfactory.cpp
+
+subject.o: ../cuACS/subject.cpp ../cuACS/subject.h \
+		../cuACS/observer.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subject.o ../cuACS/subject.cpp
+
+observer.o: ../cuACS/observer.cpp ../cuACS/observer.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o observer.o ../cuACS/observer.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

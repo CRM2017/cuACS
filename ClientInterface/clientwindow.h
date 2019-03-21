@@ -4,6 +4,7 @@
 
 #include <QDialog>
 #include <memory>
+#include "ClientManagement/manageclientcontrol.h"
 #include "DatabaseManagement/databasecontrol.h"
 #include "DatabaseManagement/databasecontrolfactory.h"
 
@@ -32,6 +33,8 @@ private slots:
     void on_id_textEdited(const QString &arg1);
 
     void on_confirmButton_clicked();
+
+    void on_PreferenceButton_clicked();
 
 private:
     ClientControl &_control;

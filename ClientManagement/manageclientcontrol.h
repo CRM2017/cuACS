@@ -13,6 +13,8 @@ public:
     ~ManageClientControl();
     void updateClientInfoFromDB(int col);
     void hideSubmitButton();
+    void hideEditButton();
+    void hideSaveButton();
     void show();
     void close();
 

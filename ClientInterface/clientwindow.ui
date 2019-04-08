@@ -18,8 +18,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>711</width>
-     <height>471</height>
+     <width>741</width>
+     <height>491</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -200,19 +200,6 @@
        <string>Gender</string>
       </property>
      </column>
-    </widget>
-    <widget class="QPushButton" name="recommandButton">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>0</y>
-       <width>83</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>ACM</string>
-     </property>
     </widget>
     <widget class="QLabel" name="label_11">
      <property name="geometry">

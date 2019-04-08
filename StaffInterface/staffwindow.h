@@ -33,6 +33,8 @@ private slots:
 
 
 
+    void on_runACMButton_clicked();
+
 private:
     StaffControl &_control;
     Ui::StaffWindow *ui;

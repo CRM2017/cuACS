@@ -22,7 +22,7 @@ void ManageClientWindow::on_submitButton_clicked()
 {
     DatabaseControl dbcontrol = DataBaseControlFactory::getDatabaseControl();
     Client *newClient = new Client(_id,_name, _phone, _email,_address ,_age, _gender, _Animaltype, _Animalbreed, _Animalage, _Animalgender , _Animalcolor, _Animalweight, _Animalheight, _Animalspayed, _Animalvaccine, _Animalaggressivity, _Animaltrained,
-                                   _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee);
+                                   _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee, _PriorAttribute1, _PriorAttribute2, _PriorAttribute3, _PriorAttribute4, _PriorAttribute5);
     qDebug()<< _Animaltype;
     dbcontrol.insertClient(newClient);
     this->close();
@@ -182,13 +182,37 @@ void ManageClientWindow::on_AdoptionPriceComBox_currentIndexChanged(const QStrin
     _Animalfee = arg1;
 }
 
+void ManageClientWindow::on_PriAttComBox1_currentIndexChanged(const QString &arg1)
+{
+    _PriorAttribute1 = arg1;
+}
+
+void ManageClientWindow::on_PriAttComBox2_currentIndexChanged(const QString &arg1)
+{
+    _PriorAttribute2 = arg1;
+}
+
+void ManageClientWindow::on_PriAttComBox3_currentIndexChanged(const QString &arg1)
+{
+    _PriorAttribute3 = arg1;
+}
+
+void ManageClientWindow::on_PriAttComBox4_currentIndexChanged(const QString &arg1)
+{
+    _PriorAttribute4 = arg1;
+}
+
+void ManageClientWindow::on_PriAttComBox5_currentIndexChanged(const QString &arg1)
+{
+    _PriorAttribute5 = arg1;
+}
 
 
 void ManageClientWindow::updateClientListFromDB(int col){
     DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
     QString id, name, phone, email, address, age, gender, Animaltypes, Animalbreed, Animalage,Animalgender, Animalcolor, Animalweight, Animalheight, Animalspayed, Animalvaccine,
             Animalaggressivity, Animaltrained, Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills,
-            Animallearning, Animalspace,Animalfee;
+            Animallearning, Animalspace,Animalfee, PriorAttribute1, PriorAttribute2, PriorAttribute3, PriorAttribute4, PriorAttribute5;
     vector <vector<QString>> data;
     data = _dbControl.getClientInfo();
     id = data[0][col];
@@ -219,6 +243,11 @@ void ManageClientWindow::updateClientListFromDB(int col){
     Animallearning = data[25][col];
     Animalspace = data[26][col];
     Animalfee = data[27][col];
+    PriorAttribute1 = data[28][col];
+    PriorAttribute2 = data[29][col];
+    PriorAttribute3 = data[30][col];
+    PriorAttribute4 = data[31][col];
+    PriorAttribute5 = data[32][col];
 
     ui->ID->setText(id);
     ui->name->setText(name);
@@ -250,6 +279,11 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->LearnSpeedComBox->setCurrentText(Animallearning);
     ui->SpaceNeedComBox->setCurrentText(Animalspace);
     ui->AdoptionPriceComBox->setCurrentText(Animalfee);
+    ui->PriAttComBox1->setCurrentText(PriorAttribute1);
+    ui->PriAttComBox2->setCurrentText(PriorAttribute2);
+    ui->PriAttComBox3->setCurrentText(PriorAttribute3);
+    ui->PriAttComBox4->setCurrentText(PriorAttribute4);
+    ui->PriAttComBox5->setCurrentText(PriorAttribute5);
 
 
     ui->ID->setReadOnly(true);
@@ -281,6 +315,11 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->LearnSpeedComBox->setEnabled(false);
     ui->SpaceNeedComBox->setEnabled(false);
     ui->AdoptionPriceComBox->setEnabled(false);
+    ui->PriAttComBox1->setEnabled(false);
+    ui->PriAttComBox2->setEnabled(false);
+    ui->PriAttComBox3->setEnabled(false);
+    ui->PriAttComBox4->setEnabled(false);
+    ui->PriAttComBox5->setEnabled(false);
 
 }
 
@@ -319,6 +358,11 @@ void ManageClientWindow::on_editButton_clicked()
     ui->LearnSpeedComBox->setEnabled(true);
     ui->SpaceNeedComBox->setEnabled(true);
     ui->AdoptionPriceComBox->setEnabled(true);
+    ui->PriAttComBox1->setEnabled(true);
+    ui->PriAttComBox2->setEnabled(true);
+    ui->PriAttComBox3->setEnabled(true);
+    ui->PriAttComBox4->setEnabled(true);
+    ui->PriAttComBox5->setEnabled(true);
 
 
     _id = ui->ID->text();
@@ -350,6 +394,11 @@ void ManageClientWindow::on_editButton_clicked()
     _Animallearning = ui->LearnSpeedComBox->currentText();
     _Animalspace = ui->SpaceNeedComBox->currentText();
     _Animalfee = ui->AdoptionPriceComBox->currentText();
+    _PriorAttribute1 = ui->PriAttComBox1->currentText();
+    _PriorAttribute2 = ui->PriAttComBox2->currentText();
+    _PriorAttribute3 = ui->PriAttComBox3->currentText();
+    _PriorAttribute4 = ui->PriAttComBox4->currentText();
+    _PriorAttribute5 = ui->PriAttComBox5->currentText();
 
 
 
@@ -386,10 +435,15 @@ void ManageClientWindow::on_saveButton_clicked()
                          "ANIMAL_APPETITELEVEL= :ani_appetite,"
                          "Animal_AdoptionSource= :ani_source,"
                          "ANIMAL_EXERCISENEED= :ani_exercise,"
-                         "ANIMAL_SPECIALSKILL= :ani_skill,"
+                         "ANIMAL_SPECIALSKILL= :ani_skills,"
                          "Animal_LearnSpeed= :ani_learning,"
                          "ANIMAL_SPACENEED= :ani_space,"
-                         "ANIMAL_ADOPTIONFEE= :ani_fee"
+                         "ANIMAL_ADOPTIONFEE= :ani_fee,"
+                         "PRIOR_ATTRIBUTE1 = :pri_att1,"
+                         "PRIOR_ATTRIBUTE2 = :pri_att2,"
+                         "PRIOR_ATTRIBUTE3 = :pri_att3,"
+                         "PRIOR_ATTRIBUTE4 = :pri_att4,"
+                         "PRIOR_ATTRIBUTE5 = :pri_att5"
                          " WHERE ID = :id;";
 
     qry.prepare( update_sql);
@@ -421,6 +475,11 @@ void ManageClientWindow::on_saveButton_clicked()
     qry.bindValue(":ani_learning", _Animallearning);
     qry.bindValue(":ani_space", _Animalspace);
     qry.bindValue(":ani_fee", _Animalfee);
+    qry.bindValue(":pri_att1", _PriorAttribute1);
+    qry.bindValue(":pri_att2", _PriorAttribute2);
+    qry.bindValue(":pri_att3", _PriorAttribute3);
+    qry.bindValue(":pri_att4", _PriorAttribute4);
+    qry.bindValue(":pri_att5", _PriorAttribute5);
 
 
 
@@ -456,5 +515,7 @@ void ManageClientWindow::on_saveButton_clicked()
 
 
 }*/
+
+
 
 

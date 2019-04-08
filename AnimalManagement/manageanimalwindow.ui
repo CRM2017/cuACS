@@ -56,7 +56,7 @@
     <item row="4" column="0">
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Age</string>
+       <string>Age (Month)</string>
       </property>
      </widget>
     </item>
@@ -99,7 +99,7 @@
     <item row="7" column="0">
      <widget class="QLabel" name="label_6">
       <property name="text">
-       <string>Weight</string>
+       <string>Weight (kg)</string>
       </property>
      </widget>
     </item>
@@ -109,7 +109,7 @@
     <item row="8" column="0">
      <widget class="QLabel" name="label_7">
       <property name="text">
-       <string>Height</string>
+       <string>Height (cm)</string>
       </property>
      </widget>
     </item>
@@ -274,22 +274,22 @@
      <widget class="QComboBox" name="aggressivity">
       <item>
        <property name="text">
-        <string>select a level</string>
+        <string>0.select a level</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Week</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>1.Week</string>
        </property>
       </item>
      </widget>
@@ -305,27 +305,22 @@
      <widget class="QComboBox" name="trained">
       <item>
        <property name="text">
-        <string>select a level</string>
+        <string>0.select a level</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Excellent</string>
+        <string>3.Excellent</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Well</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Untrained</string>
+        <string>1.Untrained</string>
        </property>
       </item>
      </widget>
@@ -382,22 +377,22 @@
      <widget class="QComboBox" name="feeding">
       <item>
        <property name="text">
-        <string>select a level</string>
+        <string>0.select a level</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Difficult</string>
+        <string>3.Difficult</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Easy</string>
+        <string>1.Easy</string>
        </property>
       </item>
      </widget>
@@ -444,22 +439,22 @@
      <widget class="QComboBox" name="appetite">
       <item>
        <property name="text">
-        <string>select the level</string>
+        <string>0.select the level</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Low</string>
+        <string>1.Low</string>
        </property>
       </item>
      </widget>
@@ -506,27 +501,22 @@
      <widget class="QComboBox" name="exercise">
       <item>
        <property name="text">
-        <string>select a level</string>
+        <string>0.select a level</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Low</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Zero</string>
+        <string>1.Low</string>
        </property>
       </item>
      </widget>
@@ -573,22 +563,22 @@
      <widget class="QComboBox" name="learning">
       <item>
        <property name="text">
-        <string>Unknown</string>
+        <string>0.Unknown</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Fast</string>
+        <string>3.Fast</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Slow</string>
+        <string>1.Slow</string>
        </property>
       </item>
      </widget>
@@ -596,7 +586,7 @@
     <item row="10" column="0">
      <widget class="QLabel" name="label_21">
       <property name="text">
-       <string>Space Need</string>
+       <string>Space Need (m sq)</string>
       </property>
      </widget>
     </item>
@@ -613,7 +603,7 @@
     <item row="11" column="0">
      <widget class="QLabel" name="label_22">
       <property name="text">
-       <string>Adoption Price</string>
+       <string>Adoption Price ($)</string>
       </property>
      </widget>
     </item>

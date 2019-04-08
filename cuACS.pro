@@ -42,7 +42,8 @@ SOURCES += \
     DatabaseManagement/databasecontrolfactory.cpp \
     AnimalManagement/manageanimalcontrolfactory.cpp \
     subject.cpp \
-    observer.cpp
+    observer.cpp \
+    AlgorithmManagement/algorithm.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -62,7 +63,8 @@ HEADERS += \
     DatabaseManagement/databasecontrolfactory.h \
     AnimalManagement/manageanimalcontrolfactory.h \
     subject.h \
-    observer.h
+    observer.h \
+    AlgorithmManagement/algorithm.h
 
 
 FORMS += \

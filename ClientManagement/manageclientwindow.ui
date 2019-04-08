@@ -276,22 +276,22 @@
      <widget class="QComboBox" name="AggressivityComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Weak</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>1.Weak</string>
        </property>
       </item>
      </widget>
@@ -354,22 +354,22 @@
      <widget class="QComboBox" name="FeedingDifficultyComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Difficult</string>
+        <string>3.Difficult</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Easy</string>
+        <string>1.Easy</string>
        </property>
       </item>
      </widget>
@@ -385,27 +385,22 @@
      <widget class="QComboBox" name="TrainedComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Excellent</string>
+        <string>3.Excellent</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Good</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Untrained</string>
+        <string>1.Untrained</string>
        </property>
       </item>
      </widget>
@@ -491,22 +486,22 @@
      <widget class="QComboBox" name="AppetiteLevelComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Low</string>
+        <string>1.Low</string>
        </property>
       </item>
      </widget>
@@ -682,22 +677,22 @@
      <widget class="QComboBox" name="LearnSpeedComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Fast</string>
+        <string>3.Fast</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Low</string>
+        <string>1.Low</string>
        </property>
       </item>
      </widget>
@@ -780,27 +775,22 @@
      <widget class="QComboBox" name="ExerciseNeedComBox">
       <item>
        <property name="text">
-        <string>No Preference</string>
+        <string>0.No Preference</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>High</string>
+        <string>3.High</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Medium</string>
+        <string>2.Medium</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Low</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Zero</string>
+        <string>1.Low</string>
        </property>
       </item>
      </widget>
@@ -877,6 +867,561 @@
       <property name="text">
        <string>Appetite Level</string>
       </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QLabel" name="label_28">
+      <property name="text">
+       <string>Prior Attribute 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QLabel" name="label_29">
+      <property name="text">
+       <string>Prior Attribute 2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QLabel" name="label_30">
+      <property name="text">
+       <string>Prior Attribute 3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QLabel" name="label_31">
+      <property name="text">
+       <string>Prior Attribute 4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QLabel" name="label_32">
+      <property name="text">
+       <string>Prior Attribute 5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QComboBox" name="PriAttComBox1">
+      <item>
+       <property name="text">
+        <string>Breed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Primary Color</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Height</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spayed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vaccine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aggressivity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trained</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feeding Difficulty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Food Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Appetite Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Source</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Special Skills</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Learn Speed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Price</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QComboBox" name="PriAttComBox2">
+      <item>
+       <property name="text">
+        <string>Breed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Primary Color</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Height</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spayed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vaccine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aggressivity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trained</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feeding Difficulty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Food Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Appetite Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Source</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Special Skills</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Learn Speed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Price</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QComboBox" name="PriAttComBox3">
+      <item>
+       <property name="text">
+        <string>Breed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Primary Color</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Height</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spayed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vaccine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aggressivity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trained</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feeding Difficulty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Food Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Appetite Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Source</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Special Skills</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Learn Speed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Price</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="QComboBox" name="PriAttComBox4">
+      <item>
+       <property name="text">
+        <string>Breed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Primary Color</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Height</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spayed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vaccine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aggressivity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trained</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feeding Difficulty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Food Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Appetite Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Source</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Special Skills</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Learn Speed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Price</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="10" column="3">
+     <widget class="QComboBox" name="PriAttComBox5">
+      <item>
+       <property name="text">
+        <string>Breed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Age</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Primary Color</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Height</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spayed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vaccine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aggressivity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trained</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feeding Difficulty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Food Preference</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Appetite Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Source</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Special Skills</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Learn Speed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Need</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Adoption Price</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

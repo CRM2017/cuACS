@@ -144,8 +144,8 @@ void Database::queryID(){
 
 void Database:: addClient(Client *aClient){
     QStringList info = aClient->getClientInfo();
-    QString insertClient = "INSERT INTO clienttable (ID, Name, Phone, Email, Address, Age, Gender, Animal_Species, Animal_Breed, Animal_Age, Animal_Gender, Animal_PrimaryColor, Animal_Weight, Animal_Height, Animal_Spayed, Animal_Vaccine, Animal_Aggressivity, Animal_Trained, Animal_Personality, Animal_FeedingDifficulty, Animal_FoodPreference, Animal_AppetiteLevel, Animal_AdoptionSource, Animal_ExerciseNeed, Animal_SpecialSkill, Animal_LearnSpeed, Animal_SpaceNeed, Animal_AdoptionFee )"
-                           "VALUES (:ID,:Name,:Phone, :Email,:Address,:Age,:Gender, :Animal_Species, :Animal_Breed, :Animal_Age, :Animal_Gender, :Animal_PrimaryColor, :Animal_Weight, :Animal_Height, :Animal_Spayed, :Animal_Vaccine, :Animal_Aggressivity, :Animal_Trained, :Animal_Personality, :Animal_FeedingDifficulty, :Animal_FoodPreference, :Animal_AppetiteLevel, :Animal_AdoptionSource, :Animal_ExerciseNeed, :Animal_SpecialSkill, :Animal_LearnSpeed, :Animal_SpaceNeed, :Animal_AdoptionFee)";
+    QString insertClient = "INSERT INTO clienttable (ID, Name, Phone, Email, Address, Age, Gender, Animal_Species, Animal_Breed, Animal_Age, Animal_Gender, Animal_PrimaryColor, Animal_Weight, Animal_Height, Animal_Spayed, Animal_Vaccine, Animal_Aggressivity, Animal_Trained, Animal_Personality, Animal_FeedingDifficulty, Animal_FoodPreference, Animal_AppetiteLevel, Animal_AdoptionSource, Animal_ExerciseNeed, Animal_SpecialSkill, Animal_LearnSpeed, Animal_SpaceNeed, Animal_AdoptionFee, Prior_Attribute1, Prior_Attribute2, Prior_Attribute3, Prior_Attribute4, Prior_Attribute5 )"
+                           "VALUES (:ID,:Name,:Phone, :Email,:Address,:Age,:Gender, :Animal_Species, :Animal_Breed, :Animal_Age, :Animal_Gender, :Animal_PrimaryColor, :Animal_Weight, :Animal_Height, :Animal_Spayed, :Animal_Vaccine, :Animal_Aggressivity, :Animal_Trained, :Animal_Personality, :Animal_FeedingDifficulty, :Animal_FoodPreference, :Animal_AppetiteLevel, :Animal_AdoptionSource, :Animal_ExerciseNeed, :Animal_SpecialSkill, :Animal_LearnSpeed, :Animal_SpaceNeed, :Animal_AdoptionFee, :Prior_Attribute1, :Prior_Attribute2, :Prior_Attribute3, :Prior_Attribute4, :Prior_Attribute5)";
     qDebug()<<"info size"<< info;
     QSqlQuery qry;
     qry.prepare(insertClient);
@@ -177,6 +177,11 @@ void Database:: addClient(Client *aClient){
     qry.bindValue(":Animal_LearnSpeed",info.at(25));
     qry.bindValue(":Animal_SpaceNeed",info.at(26));
     qry.bindValue(":Animal_AdoptionFee",info.at(27));
+    qry.bindValue(":Prior_Attribute1", info.at(28));
+    qry.bindValue(":Prior_Attribute2", info.at(29));
+    qry.bindValue(":Prior_Attribute3", info.at(30));
+    qry.bindValue(":Prior_Attribute4", info.at(31));
+    qry.bindValue(":Prior_Attribute5", info.at(32));
 
 
 
@@ -192,10 +197,10 @@ void Database:: addClient(Client *aClient){
 void Database::queryClientTable(){
 
     vector<QString> id, name, phone, email, address,age, gender, Animaltype, Animalbreed, Animalage, Animalgender , Animalcolor, Animalweight, Animalheight, Animalspayed, Animalvaccine, Animalaggressivity, Animaltrained,
-            Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills, Animallearning, Animalspace, Animalfee;
+            Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills, Animallearning, Animalspace, Animalfee, PriorAttribute1, PriorAttribute2, PriorAttribute3, PriorAttribute4, PriorAttribute5;
     vector <vector<QString>> data;
     data = {id, name, phone, email, address,age, gender, Animaltype, Animalbreed, Animalage, Animalgender , Animalcolor, Animalweight, Animalheight, Animalspayed, Animalvaccine, Animalaggressivity, Animaltrained,
-            Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills, Animallearning, Animalspace, Animalfee};
+            Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills, Animallearning, Animalspace, Animalfee, PriorAttribute1, PriorAttribute2, PriorAttribute3, PriorAttribute4, PriorAttribute5};
 
     QString selectTable = "select * from clienttable;";
     QSqlQuery qry;

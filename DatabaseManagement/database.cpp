@@ -240,10 +240,12 @@ vector<QString> Database:: getTypeList(){
 
 vector<QString> Database:: getAgeList(){
 
+
     return _ageList;
 }
 
 vector < vector<QString> > Database::getAnimalData(){
+    queryID();
     return _animalData;
 }
 

@@ -16,7 +16,6 @@ class ManageClientWindow;
 class ManageClientWindow : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit ManageClientWindow(ManageClientControl &control ,QWidget *parent = 0);
     ~ManageClientWindow();

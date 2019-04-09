@@ -8,7 +8,6 @@
 #include "Storage/animal.h"
 #include "Storage/client.h"
 #include <QString>
-
 using namespace std;
 class DatabaseControl
 {

@@ -1,6 +1,7 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
 
+#include <memory>
 #include "DatabaseManagement/databasecontrolfactory.h"
 #include "DatabaseManagement/databasecontrol.h"
 #include <vector>
@@ -48,19 +49,22 @@
     ---------------------------------------------------------------
 */
 
-
+//using namespace std;
 class Algorithm
 {
 public:
     Algorithm();
+    ~Algorithm();
     double calcBasicMatch (QString animalVal, QString preferVal);
     double calcLevelMatch (QString animalVal, QString preferVal);
     double calcRangeMatch (QString animalVal, QString preferVal);
-    double calcFinalGrade (QString animalVal, QString preferVal);
+    double calcTypeMatch (QString animalVal, QString preferVal);
+    double calcFinalGrade ();
 
 private:
-    vector < vector<QString> > _animalData;
-    vector < vector<QString> > _clientInfo;
+
+//    vector < vector<QString> > _animalData;
+//    vector < vector<QString> > _clientInfo;
 
 
 };

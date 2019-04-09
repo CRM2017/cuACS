@@ -8,7 +8,6 @@
 #include "AnimalManagement/manageanimalcontrol.h"
 #include "ClientManagement/manageclientcontrol.h"
 #include "AnimalManagement/manageanimalcontrolfactory.h"
-
 class StaffControl
 {
 public:
@@ -21,6 +20,7 @@ public:
     void show();
     void update();
     void close();
+    void executeACM();
 
 private:
     StaffWindow *_view;

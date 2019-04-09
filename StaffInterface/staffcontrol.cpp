@@ -1,8 +1,10 @@
 #include "StaffInterface/staffcontrol.h"
 #include "AnimalManagement/manageanimalcontrolfactory.h"
-
-
 #include <QDebug>
+#include "AlgorithmManagement/algorithm.h"
+#include <vector>
+
+//using namespace std;
 
 StaffControl::StaffControl()
 {
@@ -60,5 +62,14 @@ void StaffControl::displayViewClientWindow(int col){
     m.updateClientInfoFromDB(col);
     m.show();
 
+}
+
+void StaffControl::executeACM(){
+//    DatabaseControl dbcontrol = DataBaseControlFactory::getDatabaseControl();
+//    vector < vector<QString> _animalData = dbcontrol.getAnimalData();
+//    vector < vector<QString> _clientInfo = dbcontrol.getClientInfo();
+//    qDebug()<<"calcFinalGrade: "<<  _animalData.size();
+//    Algorithm acm = new Algorithm(_animalData,_clientInfo);
+//    acm.calcFinalGrade();
 }
 

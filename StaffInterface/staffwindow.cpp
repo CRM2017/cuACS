@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <string>
 #include "DatabaseManagement/database.h"
+#include "AlgorithmManagement/algorithm.h"
+
 StaffWindow::StaffWindow(StaffControl &control , QWidget *parent) :
     _control(control),
     QDialog(parent),
@@ -128,5 +130,9 @@ void StaffWindow::on_updateclientButton_clicked()
 
 void StaffWindow::on_runACMButton_clicked()
 {
-
+    Algorithm acm;
+//    DatabaseControl c;
+//    qDebug()<<"????"<<c.getAnimalData().size();
+    acm.calcFinalGrade();
+//   _control.executeACM();
 }

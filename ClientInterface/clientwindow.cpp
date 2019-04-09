@@ -39,11 +39,9 @@ void ClientWindow:: displayAnimalList(){ //copy&paste from StaffWindow;
 
     DatabaseControl _dbcontrol = DataBaseControlFactory::getDatabaseControl();
     unsigned int _animalsNum = _dbcontrol.getIDList().size();
-    qDebug()<<"idlist size"<<_animalsNum;
 
     ui->AnimalListTable->setRowCount(_animalsNum);
     QString _id, _name, _type, _breed,_age, _gender;
-     qDebug()<<"id List"<<_dbcontrol.getIDList().at(1);
 
     for (unsigned int i=0; i<_animalsNum; i++){
         _id = QString::number(_dbcontrol.getIDList().at(i));

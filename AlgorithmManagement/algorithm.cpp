@@ -321,8 +321,46 @@ void Algorithm::calcFeeRangeMatch(){
 
     }
 }
+void Algorithm::adjustGradeByPriorityAttributes(){
+    for(int i=0; i< CLIENT_SIZE; i++){
+        QString prefer_prior1 = CLIENT_DATA[28][i];
+        QString prefer_prior2 = CLIENT_DATA[29][i];
+        QString prefer_prior3 = CLIENT_DATA[30][i];
+        QString prefer_prior4 = CLIENT_DATA[31][i];
+        QString prefer_prior5 = CLIENT_DATA[32][i];
+    }
 
-void Algorithm::adjustGradeByPriorityAttributes(){}
+}
+void Algorithm::adjustGradeByWorkHours(){
+    for(int i=0; i< CLIENT_SIZE; i++){
+         for(int j=0; j< ANIMAL_SIZE; j++){
+             float work_hour = CLIENT_DATA[33][i].toFloat();
+
+             if (work_hour > 20){
+                 MATCHING_GRADE[i][j] += 1.7;
+
+             }
+             else if (work_hour >30 ){
+
+                MATCHING_GRADE[i][j] += 1.6;
+
+             }
+             else if (work_hour >40 ){
+                MATCHING_GRADE[i][j] += 1.48;
+
+             }
+             else if (work_hour >50 ){
+                MATCHING_GRADE[i][j] += 1.3;
+             }
+             else if (work_hour >60 ){
+                 MATCHING_GRADE[i][j] += 1;
+
+             }
+         }
+
+    }
+
+}
 
 QVector<int> Algorithm :: storeMatchResultWithID(){
 

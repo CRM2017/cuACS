@@ -1,5 +1,4 @@
-
-						COMP 3004 project Delivery 3
+COMP 3004 project Delivery 4
 
 PROJECT NAME: 
 	Carleton University Animal Care System
@@ -22,7 +21,7 @@ RUNING INVIRONMENT:
 Linux OS ubuntu18.04 ---Course VM
 
 --------------------------------------------------------------------------------------------------------------------------------------
-PROJECT RUNNING STEPS:  --->use command line
+PROJECT RUNNING STEPS:  ---> use command line
 1. Uncompress the "cuACS.tar" file using command:
 	tar -xvf cuACS.tar
 
@@ -36,8 +35,21 @@ PROJECT RUNNING STEPS:  --->use command line
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
+NEW FEATURES IN D4
 
-NEW FEATURES in D3:
+Staff feature:
+NOTE: You have to click run ACM button before clicking "view ACM Result" Button
+      After modifying the Client Preference, please click the "Run ACM" Button to get latest machting result
+
+1. ACM Algorithm 
+       Main window -> Click "Staff" button -> Choose Client Tab -> Click "Run ACM" button ->
+       double click to select a client from the client table -> client detail window opens ->
+       click "View ACM Result" button -> case 1. The ACM result will display the animal details
+					 case 2. Nothing opened but with a prompt massage "No Animal Matched!"
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+D3 FEATURES
 
 Client feature:
 1. Edit client's own details profile and matching preferences
@@ -51,7 +63,7 @@ Staff feature:
 	-> animal view window -> Click "Edit" button -> modify any data -> Click "Save" button -> 
 	Click "update" button to see the new change
 
------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 D2 FEATURES 	
 1. View all animals (staff/client)
 
@@ -74,5 +86,30 @@ D2 FEATURES
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
+D1 FEATURES
 
+ 
+
+On stuff window:
+
+You can see an animal table with three basic attributes: ID, Name and Type on the table.
+
+View an animal details:
+
+Double clicked one of three attribute on the table, the animal details window will apprears.
+Notice: In the animal view mode, the ID, Name and Type is not editable.
+
+Create an animal:
+
+On stuff window, clicked the "Add" button, the animal creation window will appears, after filling the "ID", "Name" and "Type",
+Clicked the "Submit" button then the new animal will be added in database.
+
+Update the Animal list:
+
+After you adding a new animal and submit, clicked the "Update" button on the stuff window, the added animal will appear on the animal list table.
+
+View data in database:
+
+Open the "cuACSdb.sqlite" file with "SQLite DB Broswer" to check the database.
 

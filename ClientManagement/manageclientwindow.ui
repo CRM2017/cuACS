@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>281</width>
-     <height>241</height>
+     <height>291</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -112,6 +112,26 @@
        </property>
       </item>
      </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_33">
+      <property name="text">
+       <string>Working Hours</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QLineEdit" name="workhour"/>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_34">
+      <property name="text">
+       <string>House Size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QLineEdit" name="housesize"/>
     </item>
    </layout>
   </widget>

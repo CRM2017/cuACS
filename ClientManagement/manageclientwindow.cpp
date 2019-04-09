@@ -22,7 +22,8 @@ void ManageClientWindow::on_submitButton_clicked()
 {
     DatabaseControl dbcontrol = DataBaseControlFactory::getDatabaseControl();
     Client *newClient = new Client(_id,_name, _phone, _email,_address ,_age, _gender, _Animaltype, _Animalbreed, _Animalage, _Animalgender , _Animalcolor, _Animalweight, _Animalheight, _Animalspayed, _Animalvaccine, _Animalaggressivity, _Animaltrained,
-                                   _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee, _PriorAttribute1, _PriorAttribute2, _PriorAttribute3, _PriorAttribute4, _PriorAttribute5);
+                                   _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee, _PriorAttribute1, _PriorAttribute2, _PriorAttribute3, _PriorAttribute4,
+                                   _PriorAttribute5, _WorkHour, _HouseSize);
     qDebug()<< _Animaltype;
     dbcontrol.insertClient(newClient);
     this->close();
@@ -40,6 +41,9 @@ void ManageClientWindow::hideSaveButton(){
 }
 void ManageClientWindow::disableACMResultButton(){
     ui->ViewACMButton->setDisabled(true);
+}
+void ManageClientWindow::hideACMResultButton(){
+    ui->ViewACMButton->hide();
 }
 void ManageClientWindow::showACMResultButton(){
     ui->ViewACMButton->setDisabled(false);
@@ -213,12 +217,22 @@ void ManageClientWindow::on_PriAttComBox5_currentIndexChanged(const QString &arg
     _PriorAttribute5 = arg1;
 }
 
+void ManageClientWindow::on_workhour_textEdited(const QString &arg1)
+{
+    _WorkHour = arg1;
+}
+
+void ManageClientWindow::on_housesize_textEdited(const QString &arg1)
+{
+    _HouseSize = arg1;
+}
+
 
 void ManageClientWindow::updateClientListFromDB(int col){
     DatabaseControl _dbControl = DataBaseControlFactory::getDatabaseControl();
     QString id, name, phone, email, address, age, gender, Animaltypes, Animalbreed, Animalage,Animalgender, Animalcolor, Animalweight, Animalheight, Animalspayed, Animalvaccine,
             Animalaggressivity, Animaltrained, Animalpersonality, Animalfeeding, Animalfood, Animalappetite, Animalsource, Animalexercise, Animalskills,
-            Animallearning, Animalspace,Animalfee, PriorAttribute1, PriorAttribute2, PriorAttribute3, PriorAttribute4, PriorAttribute5;
+            Animallearning, Animalspace,Animalfee, PriorAttribute1, PriorAttribute2, PriorAttribute3, PriorAttribute4, PriorAttribute5, WorkHour, HouseSize;
     vector <vector<QString>> data;
     data = _dbControl.getClientInfo();
     id = data[0][col];
@@ -254,6 +268,8 @@ void ManageClientWindow::updateClientListFromDB(int col){
     PriorAttribute3 = data[30][col];
     PriorAttribute4 = data[31][col];
     PriorAttribute5 = data[32][col];
+    WorkHour = data[33][col];
+    HouseSize = data[34][col];
 
     ui->ID->setText(id);
     ui->name->setText(name);
@@ -290,6 +306,8 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->PriAttComBox3->setCurrentText(PriorAttribute3);
     ui->PriAttComBox4->setCurrentText(PriorAttribute4);
     ui->PriAttComBox5->setCurrentText(PriorAttribute5);
+    ui->workhour->setText(WorkHour);
+    ui->housesize->setText(HouseSize);
 
 
     ui->ID->setReadOnly(true);
@@ -326,6 +344,8 @@ void ManageClientWindow::updateClientListFromDB(int col){
     ui->PriAttComBox3->setEnabled(false);
     ui->PriAttComBox4->setEnabled(false);
     ui->PriAttComBox5->setEnabled(false);
+    ui->workhour->setReadOnly(true);
+    ui->housesize->setReadOnly(true);
 
 }
 
@@ -369,6 +389,8 @@ void ManageClientWindow::on_editButton_clicked()
     ui->PriAttComBox3->setEnabled(true);
     ui->PriAttComBox4->setEnabled(true);
     ui->PriAttComBox5->setEnabled(true);
+    ui->workhour->setReadOnly(false);
+    ui->housesize->setReadOnly(false);
 
 
     _id = ui->ID->text();
@@ -405,6 +427,8 @@ void ManageClientWindow::on_editButton_clicked()
     _PriorAttribute3 = ui->PriAttComBox3->currentText();
     _PriorAttribute4 = ui->PriAttComBox4->currentText();
     _PriorAttribute5 = ui->PriAttComBox5->currentText();
+    _WorkHour = ui->workhour->text();
+    _HouseSize = ui->housesize->text();
 
 
 
@@ -449,7 +473,9 @@ void ManageClientWindow::on_saveButton_clicked()
                          "PRIOR_ATTRIBUTE2 = :pri_att2,"
                          "PRIOR_ATTRIBUTE3 = :pri_att3,"
                          "PRIOR_ATTRIBUTE4 = :pri_att4,"
-                         "PRIOR_ATTRIBUTE5 = :pri_att5"
+                         "PRIOR_ATTRIBUTE5 = :pri_att5,"
+                         "WorkHour = :worhour,"
+                         "HouseSize = :housize"
                          " WHERE ID = :id;";
 
     qry.prepare( update_sql);
@@ -486,6 +512,9 @@ void ManageClientWindow::on_saveButton_clicked()
     qry.bindValue(":pri_att3", _PriorAttribute3);
     qry.bindValue(":pri_att4", _PriorAttribute4);
     qry.bindValue(":pri_att5", _PriorAttribute5);
+    qry.bindValue(":worhour", _WorkHour);
+    qry.bindValue(":housize", _HouseSize);
+
 
 
 
@@ -535,3 +564,5 @@ void ManageClientWindow::on_ViewACMButton_clicked()
     m.updateAnimalDetailsFromDB(_animalIndex);
     m.show();
 }
+
+

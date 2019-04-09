@@ -40,7 +40,9 @@ void StaffControl::displayAddClientWindow(){
     ManageClientControl m;
     m.hideEditButton();
     m.hideSaveButton();
+    m.hideACMResultButton();
     m.show();
+
 }
 
 

@@ -48,6 +48,20 @@
     Space Need     |           20           |           26
     Adoption Price |           21           |           27
     ---------------------------------------------------------------
+
+*************************************************************************
+    Priority Attributes and Working hours
+    -----------------------------------------
+   |Attribute Name | Index in Client Vector |
+    ---------------|------------------------|
+    prior1         |           28           |
+    prior2         |           29           |
+    prior3         |           30           |
+    prior5         |           31           |
+    prior5         |           32           |
+    work hour      |           33           |
+    house size     |           34           |
+    -----------------------------------------
 */
 
 using namespace std;
@@ -73,6 +87,7 @@ public:
     void calcTypeMatch ();
     float calcFinalGrade ();
     void adjustGradeByPriorityAttributes();
+    void adjustGradeByWorkHours();
     QVector<int> storeMatchResultWithID();
 
 

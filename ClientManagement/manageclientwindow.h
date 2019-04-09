@@ -23,6 +23,7 @@ public:
     void hideEditButton();
     void hideSaveButton();
     void disableACMResultButton();
+    void hideACMResultButton();
     void showACMResultButton();
     void updateAnimalIndex (int AnimalIndex);
 
@@ -100,6 +101,10 @@ private slots:
 
     void on_ViewACMButton_clicked();
 
+    void on_workhour_textEdited(const QString &arg1);
+
+    void on_housesize_textEdited(const QString &arg1);
+
 public slots:
     void updateClientListFromDB(int col);
 
@@ -107,7 +112,8 @@ private:
     ManageClientControl &_control;
     Ui::ManageClientWindow *ui;
     QString _id,_name, _phone, _email,_address ,_age, _gender, _Animaltype, _Animalbreed, _Animalage, _Animalgender , _Animalcolor, _Animalweight, _Animalheight, _Animalspayed, _Animalvaccine, _Animalaggressivity, _Animaltrained,
-    _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee, _PriorAttribute1, _PriorAttribute2, _PriorAttribute3, _PriorAttribute4, _PriorAttribute5;
+    _Animalpersonality, _Animalfeeding, _Animalfood, _Animalappetite, _Animalsource, _Animalexercise, _Animalskills, _Animallearning, _Animalspace, _Animalfee, _PriorAttribute1, _PriorAttribute2, _PriorAttribute3, _PriorAttribute4,
+    _PriorAttribute5, _WorkHour, _HouseSize;
     int _animalIndex;
 };
 

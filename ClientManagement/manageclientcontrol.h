@@ -16,6 +16,7 @@ public:
     void hideEditButton();
     void hideSaveButton();
     void disableACMResultButton();
+    void hideACMResultButton();
     void showACMResultButton();
     void show();
     void close();

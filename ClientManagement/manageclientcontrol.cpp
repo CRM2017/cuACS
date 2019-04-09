@@ -32,6 +32,10 @@ void ManageClientControl::hideSaveButton(){
 void ManageClientControl::disableACMResultButton(){
     _view->disableACMResultButton();
 }
+void ManageClientControl::hideACMResultButton(){
+    _view->hideACMResultButton();
+}
+
 void ManageClientControl::showACMResultButton(){
     _view->showACMResultButton();
 }

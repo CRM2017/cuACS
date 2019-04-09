@@ -141,6 +141,7 @@ void ClientWindow::on_PreferenceButton_clicked()
         ManageClientControl m;
         m.hideSubmitButton();
         m.hideSaveButton();
+        m.hideACMResultButton();
         m.updateClientInfoFromDB(index);
         m.show();
     }

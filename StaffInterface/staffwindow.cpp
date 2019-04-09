@@ -131,8 +131,6 @@ void StaffWindow::on_updateclientButton_clicked()
 void StaffWindow::on_runACMButton_clicked()
 {
     Algorithm acm;
-//    DatabaseControl c;
-//    qDebug()<<"????"<<c.getAnimalData().size();
     acm.calcFinalGrade();
-//   _control.executeACM();
+
 }

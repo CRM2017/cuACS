@@ -6,6 +6,7 @@
 #include "DatabaseManagement/databasecontrol.h"
 #include <vector>
 #include <QString>
+#include <QVector>
 
 /*
     Basic Maching Rule Attributes
@@ -27,7 +28,7 @@
     ---------------------------------------------------------------
    |Attribute Name | Index in Animal Vector |Index in Client Vector|
     ---------------|------------------------|----------------------
-    Vaccine        |           9            |           15
+    Vaccine        |           9           |           15
     Aggressivity   |           10           |           16
     Trained        |           11           |           17
     Feed Difficulty|           13           |           19
@@ -49,22 +50,41 @@
     ---------------------------------------------------------------
 */
 
-//using namespace std;
+using namespace std;
+QVector < QVector<float> > MATCHING_GRADE;
 class Algorithm
 {
 public:
     Algorithm();
     ~Algorithm();
-    double calcBasicMatch (QString animalVal, QString preferVal);
-    double calcLevelMatch (QString animalVal, QString preferVal);
-    double calcRangeMatch (QString animalVal, QString preferVal);
-    double calcTypeMatch (QString animalVal, QString preferVal);
-    double calcFinalGrade ();
+    void copyDataFromDB();
+    float calcBasicMatch (QString animalVal, QString preferVal);
+    float calcLevelMatch (QString animalVal, QString preferVal);
+    float calcRangeMatch (QString animalVal, QString preferVal);
+    void calcTypeMatch ();
+    float calcFinalGrade ();
+
 
 private:
 
-//    vector < vector<QString> > _animalData;
-//    vector < vector<QString> > _clientInfo;
+    QVector <QVector<QString>> ANIMAL_DATA;
+    QVector <QVector<QString>> CLIENT_DATA;
+
+
+/*
+    n = # of clients, m = # of animals
+    MATCHING_GRADE = {
+        {g11.g12,g13...gm},
+        {g21,g22,g23...gm},
+            ....
+        {gn1, gn2, gn3...gnm}
+    }
+*/
+
+    int ANIMAL_SIZE;
+    int CLIENT_SIZE;
+    //QVector2D machingGradest;
+
 
 
 };

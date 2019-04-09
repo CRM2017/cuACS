@@ -17,6 +17,7 @@
     Gender         |           4            |           10
     Primary Color  |           5            |           11
     Spayed         |           8            |           14
+    Vaccine        |           9            |           15
     Personality    |           12           |           18
     Food Preference|           14           |           20
     Adoption Source|           16           |           22
@@ -28,7 +29,6 @@
     ---------------------------------------------------------------
    |Attribute Name | Index in Animal Vector |Index in Client Vector|
     ---------------|------------------------|----------------------
-    Vaccine        |           9           |           15
     Aggressivity   |           10           |           16
     Trained        |           11           |           17
     Feed Difficulty|           13           |           19
@@ -42,7 +42,7 @@
     ---------------------------------------------------------------
    |Attribute Name | Index in Animal Vector |Index in Client Vector|
     ---------------|------------------------|----------------------
-    Age            |           2            |           5
+    Age            |           3            |           9
     Weight         |           6            |           12
     Height         |           7            |           13
     Space Need     |           20           |           26
@@ -51,7 +51,6 @@
 */
 
 using namespace std;
-QVector < QVector<float> > MATCHING_GRADE;
 class Algorithm
 {
 public:
@@ -59,10 +58,21 @@ public:
     ~Algorithm();
     void copyDataFromDB();
     float calcBasicMatch (QString animalVal, QString preferVal);
+
+    /*
+        Level Based Rule Formular:
+        grade = ( 1 - |client’s preference - animal’s attribute| / number of levels) * proportion of the attribute * 100
+    */
     float calcLevelMatch (QString animalVal, QString preferVal);
-    float calcRangeMatch (QString animalVal, QString preferVal);
+
+    void calcAgeRangeMatch();
+    void calcWeightRangeMatch();
+    void calcHeightRangeMatch();
+    void calcSpaceRangeMatch();
+    void calcFeeRangeMatch();
     void calcTypeMatch ();
     float calcFinalGrade ();
+
 
 
 private:

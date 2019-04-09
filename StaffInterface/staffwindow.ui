@@ -132,7 +132,7 @@
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_4">
-         <item row="0" column="0" rowspan="4">
+         <item row="0" column="0" rowspan="5">
           <widget class="QTableWidget" name="ClienListTable">
            <column>
             <property name="text">
@@ -161,17 +161,24 @@
            </column>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="0" column="2">
+          <widget class="QPushButton" name="updateclientButton">
+           <property name="text">
+            <string>Update</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
           <widget class="QPushButton" name="addClientButton">
            <property name="text">
             <string>Add Client</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="updateclientButton">
+         <item row="1" column="2">
+          <widget class="QPushButton" name="runACMButton">
            <property name="text">
-            <string>Update</string>
+            <string>Run ACM</string>
            </property>
           </widget>
          </item>
@@ -188,19 +195,6 @@
         </property>
         <property name="text">
          <string>Hint: Double Clicked Table Content to View Client Details</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="runACMButton">
-        <property name="geometry">
-         <rect>
-          <x>410</x>
-          <y>554</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Run ACM</string>
         </property>
        </widget>
       </widget>

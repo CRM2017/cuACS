@@ -511,11 +511,18 @@ void ManageClientWindow::on_saveButton_clicked()
     {
         qDebug() << "ManageClientWindow:: Databse update " << qry.lastError();
     }
-
-
-
 }*/
 
 
 
 
+
+void ManageClientWindow::on_ViewACMButton_clicked()
+{
+    ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
+    m.hideSubmitButton();
+    m.hideSaveButton();
+    m.hideUploadPhotoButton();
+    m.updateAnimalDetailsFromDB(0);
+    m.show();
+}

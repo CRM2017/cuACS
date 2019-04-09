@@ -95,6 +95,8 @@ private slots:
 
     void on_PriAttComBox5_currentIndexChanged(const QString &arg1);
 
+    void on_ViewACMButton_clicked();
+
 public slots:
     void updateClientListFromDB(int col);
 

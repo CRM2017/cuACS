@@ -29,9 +29,20 @@ void ManageClientControl::hideEditButton(){
 void ManageClientControl::hideSaveButton(){
     _view->hideSaveButton();
 }
+void ManageClientControl::disableACMResultButton(){
+    _view->disableACMResultButton();
+}
+void ManageClientControl::showACMResultButton(){
+    _view->showACMResultButton();
+}
 
 void ManageClientControl:: updateClientInfoFromDB(int col){
     _view->updateClientListFromDB(col);
+}
+
+void ManageClientControl::updateAnimalIndex(int animalIndex){
+    //_anmialIndex = animalIndex;
+    _view->updateAnimalIndex(animalIndex);
 }
 
 

@@ -3,6 +3,7 @@
 #ifndef StaffWINDOW_H
 #define StaffWINDOW_H
 
+#include <QVector>
 #include <QDialog>
 #include <memory>
 #include "DatabaseManagement/databasecontrol.h"
@@ -41,6 +42,8 @@ private:
 
     int _tableCol;
     int _tableRow;
+    QVector<int> _AnimalIndex;
+
 
 };
 

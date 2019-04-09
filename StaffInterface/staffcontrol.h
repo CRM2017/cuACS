@@ -16,7 +16,7 @@ public:
     void displayAddAnimalWindow();
     void displayAddClientWindow();
     void displayViewAnimalWindow(int col);
-    void displayViewClientWindow(int col);
+    void displayViewClientWindow(int col, int animalIndex);
     void show();
     void update();
     void close();

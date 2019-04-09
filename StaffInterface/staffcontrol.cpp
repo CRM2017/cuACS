@@ -54,12 +54,21 @@ void StaffControl::displayViewAnimalWindow(int col){
 
 }
 
-void StaffControl::displayViewClientWindow(int col){
+void StaffControl::displayViewClientWindow(int col, int animalIndex){
     ManageClientControl m;
     m.hideSubmitButton();
     m.hideEditButton();
     m.hideSaveButton();
     m.updateClientInfoFromDB(col);
+
+    if(animalIndex<0){
+        m.disableACMResultButton();
+    }
+    else {
+        m.showACMResultButton();
+    }
+
+    m.updateAnimalIndex(animalIndex);
     m.show();
 
 }

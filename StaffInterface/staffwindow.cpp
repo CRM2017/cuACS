@@ -111,7 +111,13 @@ void StaffWindow::on_ClienListTable_doubleClicked(const QModelIndex &index)
 {
     qDebug()<<"StaffWindow:: client list doblue clicked index: "<< index.row();
     _tableCol = index.row();
-    _control.displayViewClientWindow(_tableCol);
+    if (_AnimalIndex.size() != 0){
+        _control.displayViewClientWindow(_tableCol, _AnimalIndex.at(_tableCol));
+    }
+    else {
+        _control.displayViewClientWindow(_tableCol, -1);
+    }
+
 }
 
 
@@ -132,5 +138,8 @@ void StaffWindow::on_runACMButton_clicked()
 {
     Algorithm acm;
     acm.calcFinalGrade();
+    QVector<int> temp ;
+    temp = acm.storeMatchResultWithID();
+    _AnimalIndex = temp;
 
 }

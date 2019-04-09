@@ -38,6 +38,12 @@ void ManageClientWindow::hideEditButton(){
 void ManageClientWindow::hideSaveButton(){
     ui->saveButton->hide();
 }
+void ManageClientWindow::disableACMResultButton(){
+    ui->ViewACMButton->setDisabled(true);
+}
+void ManageClientWindow::showACMResultButton(){
+    ui->ViewACMButton->setDisabled(false);
+}
 
 //slots
 void ManageClientWindow::on_ID_textEdited(const QString &arg1)
@@ -514,7 +520,9 @@ void ManageClientWindow::on_saveButton_clicked()
 }*/
 
 
-
+void ManageClientWindow::updateAnimalIndex(int AnimalIndex){
+    _animalIndex = AnimalIndex;
+}
 
 
 void ManageClientWindow::on_ViewACMButton_clicked()
@@ -522,7 +530,8 @@ void ManageClientWindow::on_ViewACMButton_clicked()
     ManageAnimalControl m = ManageAnimalControlFactory::getManageAnimalControl();
     m.hideSubmitButton();
     m.hideSaveButton();
+    m.hideEditButton();
     m.hideUploadPhotoButton();
-    m.updateAnimalDetailsFromDB(0);
+    m.updateAnimalDetailsFromDB(_animalIndex);
     m.show();
 }

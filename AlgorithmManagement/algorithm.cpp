@@ -14,7 +14,6 @@ Algorithm::~Algorithm(){}
 
 void Algorithm::copyDataFromDB(){
 
-
     DatabaseControl dbControl;
     vector < vector<QString> > _animalData= dbControl.getAnimalData();
     vector < vector<QString> > _clientInfo= dbControl.getClientInfo();
@@ -38,32 +37,15 @@ void Algorithm::copyDataFromDB(){
 
     }
 
-//    qDebug()<<"cliDATA: "<< CLIENT_DATA.size();
-//    qDebug()<<"cliDATA: "<< CLIENT_DATA[0].size();
+
 
 
     qDebug()<<"aniSize: "<<  ANIMAL_SIZE;
-   // qDebug()<<"clientSize: "<<  CLIENT_SIZE;
-//    qDebug()<<"calcFinalGrade: "<<  _animalData.size();
-//    qDebug()<<"calcFinalGrade: "<<  _clientInfo.size();
+
 }
 
 float Algorithm::calcFinalGrade (){
 
-// attributes list
-
-//    qDebug()<<"clientSize: "<<  CLIENT_SIZE;
-//    for(int i=0; i< CLIENT_SIZE; i++){
-//         QVector<float> temp;
-//         for(int j=0; j< ANIMAL_SIZE; j++){
-
-//             temp.push_back(calcTypeMatch(ANIMAL_DATA[1][j],CLIENT_DATA[7][i]));
-
-//         }
-
-//         MATCHING_GRADE.push_back(temp);
-
-//    }
 
     calcTypeMatch();
     calcAgeRangeMatch();
@@ -72,8 +54,6 @@ float Algorithm::calcFinalGrade (){
     calcSpaceRangeMatch();
     calcFeeRangeMatch();
 
-    float highestGrade = 0;
-    int animalIndex = 0;
 
     for(int i=0; i< CLIENT_SIZE; i++){
          for(int j=0; j< ANIMAL_SIZE; j++){
@@ -103,9 +83,9 @@ float Algorithm::calcFinalGrade (){
 
          }
     }
+    storeMatchResultWithID();
 
 
-//    MATCHING_GRADE[0][0] += calcTypeMatch(ANIMAL_DATA[1][0],CLIENT_DATA[7][0]);
 
      qDebug()<< "mach result:" << MATCHING_GRADE.size();
      qDebug()<< "mach result:" << MATCHING_GRADE.at(19).size();
@@ -154,9 +134,7 @@ float Algorithm::calcLevelMatch(QString animalVal, QString preferVal){
          result = (1 - (abs(prefer_level - ani_level) / 4)) * 0.02 *100;
     }
 
-//    qDebug() <<"??????"<<animalVal;
-//    qDebug() <<"??????"<<preferVal;
-//    qDebug() <<"??????"<<result;
+
     return result;
 
 }
@@ -201,8 +179,7 @@ void Algorithm::calcWeightRangeMatch(){
          for(int j=0; j< ANIMAL_SIZE; j++){
              QString animal_weight = ANIMAL_DATA[6][j];
              QString prefer_weight = CLIENT_DATA[12][i];
-//                 qDebug() <<"??????"<<animal_weight.toFloat();
-//                 qDebug() <<"??????"<<prefer_weight;
+
 
              if (prefer_weight == "No Preference"){
                  MATCHING_GRADE[i][j] += 2;
@@ -343,4 +320,27 @@ void Algorithm::calcFeeRangeMatch(){
          }
 
     }
+}
+
+void Algorithm::adjustGradeByPriorityAttributes(){}
+
+QVector<int> Algorithm :: storeMatchResultWithID(){
+
+    for(int i=0; i< CLIENT_SIZE; i++){
+        float highestGrade = 0;
+        int animalIndex = 0;
+         for(int j=0; j< ANIMAL_SIZE; j++){
+             if (MATCHING_GRADE[i][j] > highestGrade){
+                 highestGrade = MATCHING_GRADE[i][j];
+                 animalIndex = j;
+             }
+
+         }
+         ANIMAL_INDEX.push_back(animalIndex);
+    }
+
+    for (int i=0; i<ANIMAL_INDEX.size(); i++){
+        qDebug()<< "animal Index:--"<<ANIMAL_INDEX.at(i);
+    }
+    return ANIMAL_INDEX;
 }

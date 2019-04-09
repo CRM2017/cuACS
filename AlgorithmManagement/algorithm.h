@@ -72,6 +72,8 @@ public:
     void calcFeeRangeMatch();
     void calcTypeMatch ();
     float calcFinalGrade ();
+    void adjustGradeByPriorityAttributes();
+    QVector<int> storeMatchResultWithID();
 
 
 
@@ -79,6 +81,7 @@ private:
 
     QVector <QVector<QString>> ANIMAL_DATA;
     QVector <QVector<QString>> CLIENT_DATA;
+    QVector <int> ANIMAL_INDEX;
 
 
 /*

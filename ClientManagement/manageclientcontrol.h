@@ -15,12 +15,16 @@ public:
     void hideSubmitButton();
     void hideEditButton();
     void hideSaveButton();
+    void disableACMResultButton();
+    void showACMResultButton();
     void show();
     void close();
+    void updateAnimalIndex(int animalIndex);
 
 
 private:
     ManageClientWindow *_view;
+    //int _anmialIndex;
 
 };
 
